@@ -3,14 +3,14 @@ backend:
   branch: main
 
 local_backend: false
-publish_mode: simple
-show_preview_links: true
+publish_mode: editorial_workflow
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
 site_url: https://benevolent-muffin-177900.netlify.app
 display_url: https://benevolent-muffin-177900.netlify.app
 logo_url: /assets/favicon.svg
+locale: "en"
 
 collections:
   - name: "website"

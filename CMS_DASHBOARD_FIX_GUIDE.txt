@@ -1,0 +1,27 @@
+D.J. O'BRIEN CMS DASHBOARD FIX
+
+This rebuild replaces the customised dashboard loader with Decap CMS's official minimal mounting method.
+
+FASTEST UPDATE METHOD
+1. Extract DJOBrien_CMS_Admin_Fix.zip.
+2. Open your GitHub repository.
+3. Select Add file > Upload files.
+4. Upload the contents of the patch:
+   - admin/index.html
+   - admin/config.yml
+   - admin/diagnostic.html
+   - _headers
+   - _redirects
+5. Commit directly to main.
+6. Wait for Netlify to show Published.
+7. Open:
+   https://benevolent-muffin-177900.netlify.app/admin/
+8. Press Ctrl + F5.
+
+If the editor is still blank, open:
+https://benevolent-muffin-177900.netlify.app/admin/diagnostic
+
+The diagnostic page will state whether Netlify Identity and Decap CMS loaded.
+
+The complete rebuilt website is also provided in:
+DJOBrien_Author_Platform_CMS_Working.zip

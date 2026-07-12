@@ -1,4 +1,5 @@
 # Netlify routing
 /admin              /admin/index.html  200
 /admin/             /admin/index.html  200
+/admin/diagnostic   /admin/diagnostic.html  200
 /admin/*            /admin/index.html  200
