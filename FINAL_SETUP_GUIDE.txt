@@ -1,0 +1,54 @@
+D.J. O'BRIEN AUTHOR PLATFORM
+FINAL CMS SETUP
+
+WHAT HAS BEEN FIXED
+- The Netlify invitation link now opens the Identity password window.
+- /admin/ now opens the author dashboard.
+- Git Gateway and Decap CMS are configured.
+- A styled 404 page is included.
+- An Author Login link appears below the Contact form.
+
+IMPORTANT
+Your GitHub repository currently needs the complete website files.
+The repository must contain index.html, admin, assets, content, and all other files from this package.
+
+UPLOAD THE FILES TO GITHUB
+1. Extract this ZIP.
+2. Open the extracted DJOBrien_Author_Platform_CMS_Final folder.
+3. Open your GitHub repository:
+   DJOBrien1-author / djobrienauthor-website
+4. Select Add file > Upload files.
+5. Drag every item from inside the extracted folder into the GitHub upload area.
+6. Include the folders admin, assets and content.
+7. Add a commit message such as:
+   Install D.J. O'Brien author website
+8. Select Commit changes.
+9. Netlify will automatically deploy the website.
+
+CREATE YOUR PASSWORD
+1. Return to Netlify Identity.
+2. Delete the pending Identity user only if the original invitation can no longer be used.
+3. Invite DJOBrien1@protonmail.com again.
+4. Open the new invitation email.
+5. Select the invitation link.
+6. The website will display the password creation window.
+7. Create a strong password.
+
+OPEN THE EDITOR
+Visit:
+https://benevolent-muffin-177900.netlify.app/admin/
+
+Sign in with:
+DJOBrien1@protonmail.com
+
+EDITING
+1. Open Edit Website Content.
+2. Change the required wording.
+3. Select Publish.
+4. Netlify will update the live site automatically.
+
+SECURITY
+- Keep registration set to Invite only.
+- Keep Git Gateway enabled.
+- Use a unique password.
+- Enable two-factor authentication on GitHub and Netlify.

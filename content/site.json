@@ -1,0 +1,170 @@
+{
+  "site": {
+    "author_name": "D.J. O’Brien",
+    "site_title": "The Dark Lair Trilogy",
+    "tagline": "Three Crystals. Three Races. One Prophecy.",
+    "hero_intro": "A completed epic fantasy trilogy of ancient evil, war, unlikely heroes and a darkness awakening after three thousand years.",
+    "start_heading": "Begin with Wyvern",
+    "start_intro": "Start with Book One and follow the completed journey through Maelstrom and Dragon Knight.",
+    "world_heading": "A World on the Edge of Darkness",
+    "world_intro": "Three crystals once sealed an ancient prison. Now the world has forgotten, the kingdoms turn against one another, and the Prince of Shade stirs in the shadows."
+  },
+  "crystals": {
+    "blue_title": "Blue Crystal",
+    "blue_text": "Blue belongs to the Humans, who originally came to these lands from the sea.",
+    "green_title": "Green Crystal",
+    "green_text": "Green belongs to the Dwarves, in recognition of their woodland home.",
+    "red_title": "Red Crystal",
+    "red_text": "Red belongs to the Faerkine and their ancient connection to the fabled, long-lost magics of the Elders, also known as the Old Ones, the original bringers of magic to the world."
+  },
+  "books": {
+    "wyvern": {
+      "title": "Wyvern",
+      "number": "Book One",
+      "description": "A mother flees through snow-covered mountains while the man she loves buys her time with his life. A child is born into a war that has already begun. Three thousand years after an ancient evil was sealed away, the crystals are found again and the Prince of Shade begins to stir.",
+      "tagline": "Save a princess. Win a lost war. Defeat Evil. Stay alive.",
+      "buy_url": "https://www.amazon.co.uk/s?k=Wyvern+D.J.+O%27Brien",
+      "video_url": "https://www.instagram.com/reel/C8uxVgJNctQ/?utm_source=ig_embed&utm_campaign=loading"
+    },
+    "maelstrom": {
+      "title": "Maelstrom",
+      "number": "Book Two",
+      "description": "The struggle widens beyond the familiar kingdoms. The Great Maelstrom and the dangers beyond the Roaring Shallows reveal the true scale of the conflict.",
+      "buy_url": "https://www.amazon.co.uk/s?k=Maelstrom+D.J.+O%27Brien",
+      "video_url": "https://www.instagram.com/reel/C9pujGItp6h/?utm_source=ig_embed&utm_campaign=loading"
+    },
+    "dragon_knight": {
+      "title": "Dragon Knight",
+      "number": "Book Three",
+      "description": "The final battle brings heroes, enemies, prophecy and ancient power together in the concluding volume of the completed trilogy.",
+      "buy_url": "https://www.amazon.co.uk/s?k=Dragon+Knight+D.J.+O%27Brien",
+      "video_url": "https://www.instagram.com/reel/DPRsSW9DWW-/?utm_source=ig_embed&utm_campaign=loading"
+    },
+    "trilogy_video_url": "https://www.instagram.com/reel/DOmZXdAASc4/?utm_source=ig_embed&utm_campaign=loading"
+  },
+  "characters": [
+    {
+      "id": "brinn",
+      "name": "Brinn Thronso",
+      "role": "Central protagonist",
+      "description": "An unlikely figure drawn towards a destiny far greater and more dangerous than the life he expected."
+    },
+    {
+      "id": "megan",
+      "name": "Princess Megan",
+      "role": "Princess and political figure",
+      "description": "A princess caught between duty, war and the possibility of uniting a shattered world."
+    },
+    {
+      "id": "ben",
+      "name": "Ben Preem",
+      "role": "Jarrian military officer",
+      "description": "A frontline officer fighting the invading Horde. His story follows the war itself and reveals its progress through the eyes of a soldier caught at its centre."
+    },
+    {
+      "id": "ultor",
+      "name": "Ultor Halfbreed",
+      "role": "Warrior and outsider",
+      "description": "A formidable presence in a world divided by old hatreds, divided races and ancient secrets."
+    },
+    {
+      "id": "helfen",
+      "name": "Helfwen and Anabel",
+      "role": "Allies within the wider conflict",
+      "description": "Key figures whose loyalties, histories and actions contribute to the trilogy's expanding conflict."
+    },
+    {
+      "id": "shade",
+      "name": "The Prince of Shade",
+      "role": "Ancient enemy",
+      "description": "A shadow gathering behind war and prophecy, tied to the evil imprisoned three thousand years before."
+    }
+  ],
+  "timeline": [
+    {
+      "period": "Three thousand years ago",
+      "title": "The Ancient War",
+      "description": "Three races stood together against a great evil."
+    },
+    {
+      "period": "After the war",
+      "title": "The Three Crystals",
+      "description": "The crystals seal the prison and preserve the world from the darkness within."
+    },
+    {
+      "period": "Generations later",
+      "title": "The World Forgets",
+      "description": "Old alliances fade, kingdoms divide, and prophecy becomes legend."
+    },
+    {
+      "period": "Book One",
+      "title": "Wyvern",
+      "description": "The crystals are found again. War spreads and the Prince of Shade stirs."
+    },
+    {
+      "period": "Book Two",
+      "title": "Maelstrom",
+      "description": "The conflict moves into a wider and more dangerous world."
+    },
+    {
+      "period": "Book Three",
+      "title": "Dragon Knight",
+      "description": "The prophecy, the races and the ancient enemy converge in the final struggle."
+    }
+  ],
+  "reviews": [
+    {
+      "quote": "A classic trilogy in the making.",
+      "source": "Reader Views"
+    },
+    {
+      "quote": "A compelling narrative filled with tension and intrigue... richly imagined and immersive.",
+      "source": "Readers’ Favorite"
+    },
+    {
+      "quote": "I couldn’t put it down... finished in two days.",
+      "source": "Booksprout reviewer"
+    },
+    {
+      "quote": "Full of likable characters and believable villains... highly compelling.",
+      "source": "Booksprout reviewer"
+    },
+    {
+      "quote": "A wonderful and epic adventure.",
+      "source": "The Book Review Crew"
+    }
+  ],
+  "about": {
+    "heading": "About D.J. O’Brien",
+    "paragraphs": [
+      "D.J. O’Brien is an Irish fantasy author and the creator of the completed Dark Lair Trilogy.",
+      "His fiction combines ancient prophecy, war, unlikely heroes, divided kingdoms and the return of a darkness believed defeated three thousand years ago."
+    ]
+  },
+  "contact": {
+    "heading": "Contact",
+    "intro": "Use this secure form for review, interview, media and publishing enquiries."
+  },
+  "news": [
+    {
+      "category": "Website Update",
+      "title": "The Official Home of The Dark Lair Trilogy",
+      "text": "The official website brings together the complete trilogy, original maps, character introductions, reviews and promotional videos in one place."
+    },
+    {
+      "category": "Series",
+      "title": "The Trilogy Is Complete",
+      "text": "Readers can begin with Wyvern, continue through Maelstrom, and conclude the journey with Dragon Knight."
+    },
+    {
+      "category": "World of Dark Lair",
+      "title": "Explore the Maps",
+      "text": "The regional map from Wyvern and the expanded world map from books two and three are available in the Cartographer's Atlas."
+    }
+  ],
+  "social": {
+    "instagram": "https://www.instagram.com/djobrien.author/",
+    "amazon": "https://www.amazon.co.uk/s?k=D.J.+O%27Brien+Dark+Lair+Trilogy",
+    "goodreads": "https://www.goodreads.com/search?q=D.J.+O%27Brien+Dark+Lair"
+  }
+}

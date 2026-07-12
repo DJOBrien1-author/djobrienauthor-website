@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#090807">
+  <title>D.J. O’Brien Author Dashboard</title>
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <style>
+    html,body{margin:0;min-height:100%;background:#090807;color:#eadfc8}
+    body:before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background:
+        radial-gradient(circle at 15% 0%,rgba(111,64,26,.18),transparent 34rem),
+        linear-gradient(rgba(8,7,6,.92),rgba(8,7,6,.98));
+      z-index:-1
+    }
+    .loading{
+      min-height:100vh;
+      display:grid;
+      place-items:center;
+      text-align:center;
+      font-family:Georgia,"Times New Roman",serif
+    }
+    .loading h1{color:#efd28a;font-weight:500;margin:.2rem 0}
+    .loading p{color:#b9ac92}
+    .mark{
+      width:58px;height:58px;margin:auto;
+      border:1px solid #c99d50;border-radius:50%;
+      display:grid;place-items:center;color:#efd28a;
+      box-shadow:0 0 20px rgba(201,157,80,.22)
+    }
+  </style>
+</head>
+<body>
+  <div class="loading" id="cms-loading">
+    <div>
+      <div class="mark">✦</div>
+      <h1>D.J. O’Brien</h1>
+      <p>Loading the Author Dashboard...</p>
+    </div>
+  </div>
+
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", function (user) {
+        if (!user) {
+          window.netlifyIdentity.open("login");
+        }
+      });
+      window.netlifyIdentity.on("logout", function () {
+        window.location.href = "/";
+      });
+    }
+  </script>
+  <script src="https://unpkg.com/decap-cms@^3.8.0/dist/decap-cms.js"></script>
+  <script>
+    window.addEventListener("load", function () {
+      var loading = document.getElementById("cms-loading");
+      if (loading) setTimeout(function(){ loading.remove(); }, 1000);
+    });
+  </script>
+</body>
+</html>

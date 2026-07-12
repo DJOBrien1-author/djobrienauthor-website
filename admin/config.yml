@@ -1,0 +1,141 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: false
+publish_mode: simple
+show_preview_links: true
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+site_url: https://benevolent-muffin-177900.netlify.app
+display_url: https://benevolent-muffin-177900.netlify.app
+logo_url: /assets/favicon.svg
+
+collections:
+  - name: "website"
+    label: "D.J. O’Brien Website"
+    files:
+      - name: "main"
+        label: "Edit Website Content"
+        file: "content/site.json"
+        format: "json"
+        fields:
+          - label: "Homepage"
+            name: "site"
+            widget: "object"
+            fields:
+              - {label: "Author Name", name: "author_name", widget: "string"}
+              - {label: "Website Title", name: "site_title", widget: "string"}
+              - {label: "Tagline", name: "tagline", widget: "string"}
+              - {label: "Opening Description", name: "hero_intro", widget: "text"}
+              - {label: "Start Heading", name: "start_heading", widget: "string"}
+              - {label: "Start Description", name: "start_intro", widget: "text"}
+              - {label: "World Heading", name: "world_heading", widget: "string"}
+              - {label: "World Introduction", name: "world_intro", widget: "text"}
+
+          - label: "The Three Crystals"
+            name: "crystals"
+            widget: "object"
+            fields:
+              - {label: "Blue Crystal Title", name: "blue_title", widget: "string"}
+              - {label: "Blue Crystal Description", name: "blue_text", widget: "text"}
+              - {label: "Green Crystal Title", name: "green_title", widget: "string"}
+              - {label: "Green Crystal Description", name: "green_text", widget: "text"}
+              - {label: "Red Crystal Title", name: "red_title", widget: "string"}
+              - {label: "Red Crystal Description", name: "red_text", widget: "text"}
+
+          - label: "Books and Videos"
+            name: "books"
+            widget: "object"
+            fields:
+              - label: "Wyvern"
+                name: "wyvern"
+                widget: "object"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Book Number", name: "number", widget: "string"}
+                  - {label: "Description", name: "description", widget: "text"}
+                  - {label: "Tagline", name: "tagline", widget: "string"}
+                  - {label: "Purchase Link", name: "buy_url", widget: "string"}
+                  - {label: "Instagram Reel Link", name: "video_url", widget: "string"}
+              - label: "Maelstrom"
+                name: "maelstrom"
+                widget: "object"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Book Number", name: "number", widget: "string"}
+                  - {label: "Description", name: "description", widget: "text"}
+                  - {label: "Purchase Link", name: "buy_url", widget: "string"}
+                  - {label: "Instagram Reel Link", name: "video_url", widget: "string"}
+              - label: "Dragon Knight"
+                name: "dragon_knight"
+                widget: "object"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Book Number", name: "number", widget: "string"}
+                  - {label: "Description", name: "description", widget: "text"}
+                  - {label: "Purchase Link", name: "buy_url", widget: "string"}
+                  - {label: "Instagram Reel Link", name: "video_url", widget: "string"}
+              - {label: "Professional Trilogy Video Link", name: "trilogy_video_url", widget: "string"}
+
+          - label: "Characters"
+            name: "characters"
+            widget: "list"
+            summary: "{{fields.name}}"
+            fields:
+              - {label: "ID", name: "id", widget: "string"}
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Role", name: "role", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+
+          - label: "Timeline"
+            name: "timeline"
+            widget: "list"
+            summary: "{{fields.period}} - {{fields.title}}"
+            fields:
+              - {label: "Period", name: "period", widget: "string"}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+
+          - label: "Reviews"
+            name: "reviews"
+            widget: "list"
+            summary: "{{fields.source}}"
+            fields:
+              - {label: "Quotation", name: "quote", widget: "text"}
+              - {label: "Source", name: "source", widget: "string"}
+
+          - label: "About D.J. O’Brien"
+            name: "about"
+            widget: "object"
+            fields:
+              - {label: "Heading", name: "heading", widget: "string"}
+              - label: "Paragraphs"
+                name: "paragraphs"
+                widget: "list"
+                field: {label: "Paragraph", name: "paragraph", widget: "text"}
+
+          - label: "Contact Page"
+            name: "contact"
+            widget: "object"
+            fields:
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Introduction", name: "intro", widget: "text"}
+
+          - label: "News"
+            name: "news"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - {label: "Category", name: "category", widget: "string"}
+              - {label: "Headline", name: "title", widget: "string"}
+              - {label: "Text", name: "text", widget: "text"}
+
+          - label: "Social Links"
+            name: "social"
+            widget: "object"
+            fields:
+              - {label: "Instagram", name: "instagram", widget: "string"}
+              - {label: "Amazon", name: "amazon", widget: "string"}
+              - {label: "Goodreads", name: "goodreads", widget: "string"}

@@ -1,0 +1,66 @@
+THE DARK LAIR TRILOGY WEBSITE
+EDITING GUIDE
+
+All text is editable.
+
+Recommended editors:
+- Visual Studio Code
+- Notepad++
+- Windows Notepad
+
+Main files:
+- index.html: homepage
+- trilogy.html: books and videos
+- world.html: regional and expanded maps
+- characters.html: character descriptions
+- timeline.html: history and chronology
+- reviews.html: review quotations
+- about.html: author biography
+- media.html: videos and press information
+- contact.html: contact form
+- privacy.html: privacy information
+
+To change text:
+1. Right-click the HTML file.
+2. Open it with a text editor.
+3. Find the sentence you want to change.
+4. Replace only the wording between the HTML tags.
+5. Save the file.
+6. Upload the whole website folder to Netlify.
+
+Map filenames:
+- wyvern-regional-map.jpeg
+- dark-lair-world-map.png
+
+Cover filenames:
+- wyvern-cover.jpg
+- maelstrom-cover.jpg
+- dragon-knight-cover.jpg
+
+To publish an update:
+1. Open the Netlify project.
+2. Go to Deploys.
+3. Drag the updated website folder into the manual deploy area.
+4. Wait for Published.
+5. Refresh the website using Ctrl+F5.
+
+
+Additional pages:
+- start.html: first-time visitor guide
+- sample.html: Wyvern preview
+- news.html: news and updates
+
+Map controls:
+The World page uses these exact files:
+- assets/wyvern-regional-map.jpeg
+- assets/dark-lair-world-map.png
+
+The correct regional map must keep the filename:
+wyvern-regional-map.jpeg
+
+
+ONLINE EDITOR
+After the one-time Git and Netlify Identity setup, visit:
+/admin/
+
+Sign in, select Website Content, edit the fields, and press Publish.
