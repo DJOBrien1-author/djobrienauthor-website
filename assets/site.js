@@ -114,3 +114,11 @@ document.querySelectorAll('[data-crystal]').forEach(button => {
     }
   });
 })();
+
+// Assign a distinct epic-fantasy scene to each public page.
+(() => {
+  const file = (window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  const page = file.replace(/\.html$/, '') || 'index';
+  const aliases = { index: 'home' };
+  document.body.classList.add(`page-${aliases[page] || page}`);
+})();

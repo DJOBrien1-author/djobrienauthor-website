@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1200" role="img" aria-labelledby="title desc">
+<title id="title">sample-sea</title><desc id="desc">Atmospheric epic fantasy background artwork for the D.J. O'Brien author website.</desc>
+<defs>
+ <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#132333"/><stop offset=".58" stop-color="#465a6d"/><stop offset="1" stop-color="#090807"/></linearGradient>
+ <radialGradient id="glow" cx="72%" cy="22%" r="48%"><stop stop-color="#a7d7ef" stop-opacity=".56"/><stop offset="1" stop-color="#a7d7ef" stop-opacity="0"/></radialGradient>
+ <linearGradient id="fog" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#e8dfc6" stop-opacity="0"/><stop offset=".5" stop-color="#e8dfc6" stop-opacity=".22"/><stop offset="1" stop-color="#e8dfc6" stop-opacity="0"/></linearGradient>
+ <filter id="blur"><feGaussianBlur stdDeviation="18"/></filter>
+</defs>
+<rect width="1920" height="1200" fill="url(#sky)"/>
+<rect width="1920" height="1200" fill="url(#glow)"/>
+<circle cx="1510" cy="210" r="88" fill="#f3d995" opacity=".58"/>
+<g opacity=".52" fill="#20150f"><path d="M0 690L180 470l140 170 170-260 210 300 210-230 190 235 160-180 180 190 180-250 340 325v330H0z"/></g>
+<g opacity=".8" fill="#120d0a"><path d="M0 820l220-210 190 145 240-270 270 285 180-160 230 190 230-220 380 270v360H0z"/></g>
+<g fill="#090807"><path d="M340 850h470l-82 75H430z"/><path d="M550 520v330h18V520z"/><path d="M570 545q170 80 0 200z"/><path d="M1120 760h410l-65 70h-275z"/><path d="M1300 500v260h16V500z"/><path d="M1316 520q135 65 0 170z"/></g><g stroke="#9ed8ff" stroke-width="8" opacity=".55"><path d="M1380 110l-110 235 95-40-75 180"/></g>
+<path d="M0 940C360 860 590 1010 900 930s570-120 1020 12v258H0z" fill="#0a0807" opacity=".96"/>
+<g filter="url(#blur)" opacity=".62"><ellipse cx="520" cy="855" rx="520" ry="55" fill="url(#fog)"/><ellipse cx="1390" cy="740" rx="430" ry="42" fill="url(#fog)"/></g>
+</svg>

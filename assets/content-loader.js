@@ -20,6 +20,11 @@
       if (value) el.setAttribute('href', value);
     });
 
+    document.querySelectorAll('[data-content-src]').forEach(el => {
+      const value = getPath(data, el.dataset.contentSrc);
+      if (value) el.setAttribute('src', value);
+    });
+
     document.querySelectorAll('[data-content-attr]').forEach(el => {
       const value = getPath(data, el.dataset.contentAttr);
       if (value) el.setAttribute('data-instgrm-permalink', value);

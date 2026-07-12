@@ -1,0 +1,31 @@
+{
+  "site": {
+    "author_name": "D.J. O’Brien",
+    "site_title": "The Dark Lair Trilogy",
+    "tagline": "Three Crystals. Three Races. One Prophecy.",
+    "hero_intro": "A completed epic fantasy trilogy of ancient evil, war, unlikely heroes and a darkness awakening after three thousand years.",
+    "start_heading": "Begin with Wyvern",
+    "start_intro": "Start with Book One and follow the completed journey through Maelstrom and Dragon Knight.",
+    "world_heading": "A World on the Edge of Darkness",
+    "world_intro": "Three crystals once sealed an ancient prison. Now the world has forgotten, the kingdoms turn against one another, and the Prince of Shade stirs in the shadows."
+  },
+  "buttons": {
+    "primary_text": "Begin the Journey",
+    "primary_url": "trilogy.html",
+    "secondary_text": "Explore the World",
+    "secondary_url": "world.html",
+    "start_primary_text": "Start Here",
+    "start_primary_url": "start.html",
+    "start_secondary_text": "Read a Preview",
+    "start_secondary_url": "sample.html"
+  },
+  "crystals": {
+    "blue_title": "Blue Crystal",
+    "blue_text": "Blue belongs to the Humans, who originally came to these lands from the sea.",
+    "green_title": "Green Crystal",
+    "green_text": "Green belongs to the Dwarves, in recognition of their woodland home.",
+    "red_title": "Red Crystal",
+    "red_text": "Red belongs to the Faerkine and their ancient connection to the fabled, long-lost magics of the Elders, also known as the Old Ones, the original bringers of magic to the world."
+  },
+  "trilogy_video_url": "https://www.instagram.com/reel/DOmZXdAASc4/?utm_source=ig_embed&utm_campaign=loading"
+}

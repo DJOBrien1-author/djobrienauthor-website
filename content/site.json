@@ -9,6 +9,16 @@
     "world_heading": "A World on the Edge of Darkness",
     "world_intro": "Three crystals once sealed an ancient prison. Now the world has forgotten, the kingdoms turn against one another, and the Prince of Shade stirs in the shadows."
   },
+  "buttons": {
+    "primary_text": "Begin the Journey",
+    "primary_url": "trilogy.html",
+    "secondary_text": "Explore the World",
+    "secondary_url": "world.html",
+    "start_primary_text": "Start Here",
+    "start_primary_url": "start.html",
+    "start_secondary_text": "Read a Preview",
+    "start_secondary_url": "sample.html"
+  },
   "crystals": {
     "blue_title": "Blue Crystal",
     "blue_text": "Blue belongs to the Humans, who originally came to these lands from the sea.",
@@ -24,21 +34,27 @@
       "description": "A mother flees through snow-covered mountains while the man she loves buys her time with his life. A child is born into a war that has already begun. Three thousand years after an ancient evil was sealed away, the crystals are found again and the Prince of Shade begins to stir.",
       "tagline": "Save a princess. Win a lost war. Defeat Evil. Stay alive.",
       "buy_url": "https://www.amazon.co.uk/s?k=Wyvern+D.J.+O%27Brien",
-      "video_url": "https://www.instagram.com/reel/C8uxVgJNctQ/?utm_source=ig_embed&utm_campaign=loading"
+      "video_url": "https://www.instagram.com/reel/C8uxVgJNctQ/?utm_source=ig_embed&utm_campaign=loading",
+      "subtitle": "Book One",
+      "cover_image": "/assets/wyvern-cover.jpg"
     },
     "maelstrom": {
       "title": "Maelstrom",
       "number": "Book Two",
       "description": "The struggle widens beyond the familiar kingdoms. The Great Maelstrom and the dangers beyond the Roaring Shallows reveal the true scale of the conflict.",
       "buy_url": "https://www.amazon.co.uk/s?k=Maelstrom+D.J.+O%27Brien",
-      "video_url": "https://www.instagram.com/reel/C9pujGItp6h/?utm_source=ig_embed&utm_campaign=loading"
+      "video_url": "https://www.instagram.com/reel/C9pujGItp6h/?utm_source=ig_embed&utm_campaign=loading",
+      "subtitle": "Book Two",
+      "cover_image": "/assets/maelstrom-cover.jpg"
     },
     "dragon_knight": {
       "title": "Dragon Knight",
       "number": "Book Three",
       "description": "The final battle brings heroes, enemies, prophecy and ancient power together in the concluding volume of the completed trilogy.",
       "buy_url": "https://www.amazon.co.uk/s?k=Dragon+Knight+D.J.+O%27Brien",
-      "video_url": "https://www.instagram.com/reel/DPRsSW9DWW-/?utm_source=ig_embed&utm_campaign=loading"
+      "video_url": "https://www.instagram.com/reel/DPRsSW9DWW-/?utm_source=ig_embed&utm_campaign=loading",
+      "subtitle": "Book Three",
+      "cover_image": "/assets/dragon-knight-cover.jpg"
     },
     "trilogy_video_url": "https://www.instagram.com/reel/DOmZXdAASc4/?utm_source=ig_embed&utm_campaign=loading"
   },
@@ -47,37 +63,43 @@
       "id": "brinn",
       "name": "Brinn Thronso",
       "role": "Central protagonist",
-      "description": "An unlikely figure drawn towards a destiny far greater and more dangerous than the life he expected."
+      "description": "An unlikely figure drawn towards a destiny far greater and more dangerous than the life he expected.",
+      "image": ""
     },
     {
       "id": "megan",
       "name": "Princess Megan",
       "role": "Princess and political figure",
-      "description": "A princess caught between duty, war and the possibility of uniting a shattered world."
+      "description": "A princess caught between duty, war and the possibility of uniting a shattered world.",
+      "image": ""
     },
     {
       "id": "ben",
       "name": "Ben Preem",
       "role": "Jarrian military officer",
-      "description": "A frontline officer fighting the invading Horde. His story follows the war itself and reveals its progress through the eyes of a soldier caught at its centre."
+      "description": "A frontline officer fighting the invading Horde. His story follows the war itself and reveals its progress through the eyes of a soldier caught at its centre.",
+      "image": ""
     },
     {
       "id": "ultor",
       "name": "Ultor Halfbreed",
       "role": "Warrior and outsider",
-      "description": "A formidable presence in a world divided by old hatreds, divided races and ancient secrets."
+      "description": "A formidable presence in a world divided by old hatreds, divided races and ancient secrets.",
+      "image": ""
     },
     {
       "id": "helfen",
       "name": "Helfwen and Anabel",
       "role": "Allies within the wider conflict",
-      "description": "Key figures whose loyalties, histories and actions contribute to the trilogy's expanding conflict."
+      "description": "Key figures whose loyalties, histories and actions contribute to the trilogy's expanding conflict.",
+      "image": ""
     },
     {
       "id": "shade",
       "name": "The Prince of Shade",
       "role": "Ancient enemy",
-      "description": "A shadow gathering behind war and prophecy, tied to the evil imprisoned three thousand years before."
+      "description": "A shadow gathering behind war and prophecy, tied to the evil imprisoned three thousand years before.",
+      "image": ""
     }
   ],
   "timeline": [
@@ -143,7 +165,12 @@
   },
   "contact": {
     "heading": "Contact",
-    "intro": "Use this secure form for review, interview, media and publishing enquiries."
+    "intro": "Use this secure form for review, interview, media and publishing enquiries.",
+    "name_label": "Name",
+    "email_label": "Email",
+    "subject_label": "Subject",
+    "message_label": "Message",
+    "submit_text": "Send enquiry"
   },
   "news": [
     {
@@ -165,6 +192,10 @@
   "social": {
     "instagram": "https://www.instagram.com/djobrien.author/",
     "amazon": "https://www.amazon.co.uk/s?k=D.J.+O%27Brien+Dark+Lair+Trilogy",
-    "goodreads": "https://www.goodreads.com/search?q=D.J.+O%27Brien+Dark+Lair"
+    "goodreads": "https://www.goodreads.com/search?q=D.J.+O%27Brien+Dark+Lair",
+    "facebook": "",
+    "youtube": "",
+    "tiktok": "",
+    "website": ""
   }
 }

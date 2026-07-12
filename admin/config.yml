@@ -3,7 +3,7 @@ backend:
   branch: main
 
 local_backend: false
-publish_mode: editorial_workflow
+publish_mode: simple
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
@@ -13,30 +13,45 @@ logo_url: /assets/favicon.svg
 locale: "en"
 
 collections:
-  - name: "website"
-    label: "D.J. O’Brien Website"
+  - name: "home_page"
+    label: "Home Page"
+    icon: "home"
     files:
-      - name: "main"
-        label: "Edit Website Content"
-        file: "content/site.json"
+      - name: "home"
+        label: "Homepage Content"
+        file: "content/home.json"
         format: "json"
         fields:
-          - label: "Homepage"
+          - label: "Hero and Homepage Text"
             name: "site"
             widget: "object"
+            collapsed: false
             fields:
-              - {label: "Author Name", name: "author_name", widget: "string"}
-              - {label: "Website Title", name: "site_title", widget: "string"}
-              - {label: "Tagline", name: "tagline", widget: "string"}
-              - {label: "Opening Description", name: "hero_intro", widget: "text"}
-              - {label: "Start Heading", name: "start_heading", widget: "string"}
-              - {label: "Start Description", name: "start_intro", widget: "text"}
-              - {label: "World Heading", name: "world_heading", widget: "string"}
-              - {label: "World Introduction", name: "world_intro", widget: "text"}
-
+              - {label: "Author Line", name: "author_name", widget: "string", hint: "The small line above the main title."}
+              - {label: "Hero Title", name: "site_title", widget: "string"}
+              - {label: "Hero Subtitle", name: "tagline", widget: "string"}
+              - {label: "Introductory Paragraph", name: "hero_intro", widget: "text"}
+              - {label: "Start Section Heading", name: "start_heading", widget: "string"}
+              - {label: "Start Section Text", name: "start_intro", widget: "text"}
+              - {label: "World Section Heading", name: "world_heading", widget: "string"}
+              - {label: "World Section Text", name: "world_intro", widget: "text"}
+          - label: "Homepage Buttons"
+            name: "buttons"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Main Button Text", name: "primary_text", widget: "string"}
+              - {label: "Main Button Link", name: "primary_url", widget: "string"}
+              - {label: "Second Button Text", name: "secondary_text", widget: "string"}
+              - {label: "Second Button Link", name: "secondary_url", widget: "string"}
+              - {label: "Start Here Button Text", name: "start_primary_text", widget: "string"}
+              - {label: "Start Here Button Link", name: "start_primary_url", widget: "string"}
+              - {label: "Preview Button Text", name: "start_secondary_text", widget: "string"}
+              - {label: "Preview Button Link", name: "start_secondary_url", widget: "string"}
           - label: "The Three Crystals"
             name: "crystals"
             widget: "object"
+            collapsed: true
             fields:
               - {label: "Blue Crystal Title", name: "blue_title", widget: "string"}
               - {label: "Blue Crystal Description", name: "blue_text", widget: "text"}
@@ -44,98 +59,144 @@ collections:
               - {label: "Green Crystal Description", name: "green_text", widget: "text"}
               - {label: "Red Crystal Title", name: "red_title", widget: "string"}
               - {label: "Red Crystal Description", name: "red_text", widget: "text"}
+          - {label: "Trilogy Instagram Video Link", name: "trilogy_video_url", widget: "string", required: false}
 
-          - label: "Books and Videos"
-            name: "books"
-            widget: "object"
-            fields:
-              - label: "Wyvern"
-                name: "wyvern"
-                widget: "object"
-                fields:
-                  - {label: "Title", name: "title", widget: "string"}
-                  - {label: "Book Number", name: "number", widget: "string"}
-                  - {label: "Description", name: "description", widget: "text"}
-                  - {label: "Tagline", name: "tagline", widget: "string"}
-                  - {label: "Purchase Link", name: "buy_url", widget: "string"}
-                  - {label: "Instagram Reel Link", name: "video_url", widget: "string"}
-              - label: "Maelstrom"
-                name: "maelstrom"
-                widget: "object"
-                fields:
-                  - {label: "Title", name: "title", widget: "string"}
-                  - {label: "Book Number", name: "number", widget: "string"}
-                  - {label: "Description", name: "description", widget: "text"}
-                  - {label: "Purchase Link", name: "buy_url", widget: "string"}
-                  - {label: "Instagram Reel Link", name: "video_url", widget: "string"}
-              - label: "Dragon Knight"
-                name: "dragon_knight"
-                widget: "object"
-                fields:
-                  - {label: "Title", name: "title", widget: "string"}
-                  - {label: "Book Number", name: "number", widget: "string"}
-                  - {label: "Description", name: "description", widget: "text"}
-                  - {label: "Purchase Link", name: "buy_url", widget: "string"}
-                  - {label: "Instagram Reel Link", name: "video_url", widget: "string"}
-              - {label: "Professional Trilogy Video Link", name: "trilogy_video_url", widget: "string"}
+  - name: "books"
+    label: "The Trilogy"
+    icon: "book"
+    files:
+      - name: "wyvern"
+        label: "Wyvern"
+        file: "content/books/wyvern.json"
+        format: "json"
+        fields: &book_fields
+          - {label: "Internal Slug", name: "slug", widget: "hidden"}
+          - {label: "Display Order", name: "order", widget: "number", value_type: "int", min: 1}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Subtitle", name: "subtitle", widget: "string", required: false}
+          - {label: "Book Number", name: "number", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Tagline", name: "tagline", widget: "string", required: false}
+          - {label: "Buy Link", name: "buy_url", widget: "string"}
+          - {label: "Cover Image", name: "cover_image", widget: "image"}
+          - {label: "Instagram Video Link", name: "video_url", widget: "string", required: false}
+      - name: "maelstrom"
+        label: "Maelstrom"
+        file: "content/books/maelstrom.json"
+        format: "json"
+        fields: *book_fields
+      - name: "dragon_knight"
+        label: "Dragon Knight"
+        file: "content/books/dragon_knight.json"
+        format: "json"
+        fields: *book_fields
 
-          - label: "Characters"
-            name: "characters"
+  - name: "characters"
+    label: "Characters"
+    icon: "people"
+    folder: "content/characters"
+    create: true
+    delete: true
+    extension: "json"
+    format: "json"
+    slug: "{{slug}}"
+    summary: "{{order}}. {{name}}"
+    sortable_fields: ["order", "name", "role"]
+    fields:
+      - {label: "Display Order", name: "order", widget: "number", value_type: "int", min: 1}
+      - {label: "Character ID", name: "id", widget: "string", hint: "Use a short unique ID, for example brinn or megan."}
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Role", name: "role", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Image", name: "image", widget: "image", required: false, hint: "Optional, reserved for future character images."}
+
+  - name: "timeline"
+    label: "Timeline"
+    icon: "schedule"
+    folder: "content/timeline"
+    create: true
+    delete: true
+    extension: "json"
+    format: "json"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{order}}. {{period}} - {{title}}"
+    sortable_fields: ["order", "period", "title"]
+    fields:
+      - {label: "Display Order", name: "order", widget: "number", value_type: "int", min: 1}
+      - {label: "Period", name: "period", widget: "string"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+
+  - name: "reviews"
+    label: "Reviews"
+    icon: "star"
+    folder: "content/reviews"
+    create: true
+    delete: true
+    extension: "json"
+    format: "json"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{order}}. {{source}}"
+    sortable_fields: ["order", "source"]
+    fields:
+      - {label: "Display Order", name: "order", widget: "number", value_type: "int", min: 1}
+      - {label: "Quote", name: "quote", widget: "text"}
+      - {label: "Source", name: "source", widget: "string"}
+
+  - name: "news"
+    label: "News"
+    icon: "article"
+    folder: "content/news"
+    create: true
+    delete: true
+    extension: "json"
+    format: "json"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{order}}. {{title}}"
+    sortable_fields: ["order", "title", "category"]
+    fields:
+      - {label: "Display Order", name: "order", widget: "number", value_type: "int", min: 1}
+      - {label: "Category", name: "category", widget: "string"}
+      - {label: "Headline", name: "title", widget: "string"}
+      - {label: "Text", name: "text", widget: "text"}
+
+  - name: "pages"
+    label: "Pages and Settings"
+    icon: "settings"
+    files:
+      - name: "about"
+        label: "About"
+        file: "content/about.json"
+        format: "json"
+        fields:
+          - {label: "Heading", name: "heading", widget: "string"}
+          - label: "Paragraphs"
+            name: "paragraphs"
             widget: "list"
-            summary: "{{fields.name}}"
-            fields:
-              - {label: "ID", name: "id", widget: "string"}
-              - {label: "Name", name: "name", widget: "string"}
-              - {label: "Role", name: "role", widget: "string"}
-              - {label: "Description", name: "description", widget: "text"}
-
-          - label: "Timeline"
-            name: "timeline"
-            widget: "list"
-            summary: "{{fields.period}} - {{fields.title}}"
-            fields:
-              - {label: "Period", name: "period", widget: "string"}
-              - {label: "Title", name: "title", widget: "string"}
-              - {label: "Description", name: "description", widget: "text"}
-
-          - label: "Reviews"
-            name: "reviews"
-            widget: "list"
-            summary: "{{fields.source}}"
-            fields:
-              - {label: "Quotation", name: "quote", widget: "text"}
-              - {label: "Source", name: "source", widget: "string"}
-
-          - label: "About D.J. O’Brien"
-            name: "about"
-            widget: "object"
-            fields:
-              - {label: "Heading", name: "heading", widget: "string"}
-              - label: "Paragraphs"
-                name: "paragraphs"
-                widget: "list"
-                field: {label: "Paragraph", name: "paragraph", widget: "text"}
-
-          - label: "Contact Page"
-            name: "contact"
-            widget: "object"
-            fields:
-              - {label: "Heading", name: "heading", widget: "string"}
-              - {label: "Introduction", name: "intro", widget: "text"}
-
-          - label: "News"
-            name: "news"
-            widget: "list"
-            summary: "{{fields.title}}"
-            fields:
-              - {label: "Category", name: "category", widget: "string"}
-              - {label: "Headline", name: "title", widget: "string"}
-              - {label: "Text", name: "text", widget: "text"}
-
-          - label: "Social Links"
-            name: "social"
-            widget: "object"
-            fields:
-              - {label: "Instagram", name: "instagram", widget: "string"}
-              - {label: "Amazon", name: "amazon", widget: "string"}
-              - {label: "Goodreads", name: "goodreads", widget: "string"}
+            min: 1
+            summary: "{{fields.paragraph}}"
+            field: {label: "Paragraph", name: "paragraph", widget: "text"}
+      - name: "contact"
+        label: "Contact"
+        file: "content/contact.json"
+        format: "json"
+        fields:
+          - {label: "Heading", name: "heading", widget: "string"}
+          - {label: "Introduction", name: "intro", widget: "text"}
+          - {label: "Name Field Label", name: "name_label", widget: "string"}
+          - {label: "Email Field Label", name: "email_label", widget: "string"}
+          - {label: "Subject Field Label", name: "subject_label", widget: "string"}
+          - {label: "Message Field Label", name: "message_label", widget: "string"}
+          - {label: "Submit Button Text", name: "submit_text", widget: "string"}
+      - name: "social"
+        label: "Social Links"
+        file: "content/social.json"
+        format: "json"
+        fields:
+          - {label: "Amazon", name: "amazon", widget: "string", required: false}
+          - {label: "Instagram", name: "instagram", widget: "string", required: false}
+          - {label: "Goodreads", name: "goodreads", widget: "string", required: false}
+          - {label: "Facebook", name: "facebook", widget: "string", required: false}
+          - {label: "YouTube", name: "youtube", widget: "string", required: false}
+          - {label: "TikTok", name: "tiktok", widget: "string", required: false}
+          - {label: "Official Website", name: "website", widget: "string", required: false}
