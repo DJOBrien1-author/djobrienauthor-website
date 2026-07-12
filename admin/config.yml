@@ -7,8 +7,8 @@ publish_mode: simple
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
-site_url: https://benevolent-muffin-177900.netlify.app
-display_url: https://benevolent-muffin-177900.netlify.app
+site_url: https://djobrienauthor.com
+display_url: https://djobrienauthor.com
 logo_url: /assets/favicon.svg
 locale: "en"
 
@@ -159,6 +159,38 @@ collections:
       - {label: "Category", name: "category", widget: "string"}
       - {label: "Headline", name: "title", widget: "string"}
       - {label: "Text", name: "text", widget: "text"}
+
+
+  - name: "appearance"
+    label: "Page Scenery"
+    icon: "image"
+    files:
+      - name: "scenery"
+        label: "Fantasy Backgrounds"
+        file: "content/appearance.json"
+        format: "json"
+        fields:
+          - {label: "Dark Overlay Strength", name: "overlay_strength", widget: "number", value_type: "int", min: 45, max: 90, hint: "Higher values darken the scenery behind the text."}
+          - label: "Page Background Images"
+            name: "backgrounds"
+            widget: "object"
+            collapsed: false
+            fields:
+              - {label: "Home", name: "home", widget: "image"}
+              - {label: "Start Here", name: "start", widget: "image"}
+              - {label: "The Trilogy", name: "trilogy", widget: "image"}
+              - {label: "The World", name: "world", widget: "image"}
+              - {label: "Characters", name: "characters", widget: "image"}
+              - {label: "Timeline", name: "timeline", widget: "image"}
+              - {label: "Reviews", name: "reviews", widget: "image"}
+              - {label: "News", name: "news", widget: "image"}
+              - {label: "About", name: "about", widget: "image"}
+              - {label: "Media", name: "media", widget: "image"}
+              - {label: "Contact", name: "contact", widget: "image"}
+              - {label: "Book Sample", name: "sample", widget: "image"}
+              - {label: "Privacy", name: "privacy", widget: "image"}
+              - {label: "Thank You", name: "thanks", widget: "image"}
+              - {label: "404 Page", name: "404", widget: "image"}
 
   - name: "pages"
     label: "Pages and Settings"

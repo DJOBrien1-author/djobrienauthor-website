@@ -197,5 +197,25 @@
     "youtube": "",
     "tiktok": "",
     "website": ""
+  },
+  "appearance": {
+    "overlay_strength": 72,
+    "backgrounds": {
+      "404": "/assets/scenery/404.webp",
+      "home": "/assets/scenery/home.webp",
+      "start": "/assets/scenery/start.webp",
+      "trilogy": "/assets/scenery/trilogy.webp",
+      "world": "/assets/scenery/world.webp",
+      "characters": "/assets/scenery/characters.webp",
+      "timeline": "/assets/scenery/timeline.webp",
+      "reviews": "/assets/scenery/reviews.webp",
+      "news": "/assets/scenery/news.webp",
+      "about": "/assets/scenery/about.webp",
+      "media": "/assets/scenery/media.webp",
+      "contact": "/assets/scenery/contact.webp",
+      "sample": "/assets/scenery/sample.webp",
+      "privacy": "/assets/scenery/privacy.webp",
+      "thanks": "/assets/scenery/thanks.webp"
+    }
   }
 }

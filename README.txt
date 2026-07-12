@@ -23,7 +23,3 @@ UPLOAD:
 4. Drag the extracted folder into the manual deploy box.
 5. Wait for Published.
 6. Refresh with Ctrl+F5.
-
-
-CINEMATIC SCENERY UPDATE
-Each public page now uses a distinct locally hosted SVG epic-fantasy background from assets/backgrounds. The scenery is assigned automatically by assets/site.js and styled by assets/styles.css. No external image host is required.

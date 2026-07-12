@@ -25,7 +25,8 @@ const data = {
   about: read('content/about.json'),
   contact: read('content/contact.json'),
   news: readFolder('content/news').map(({order,...x})=>x),
-  social: read('content/social.json')
+  social: read('content/social.json'),
+  appearance: read('content/appearance.json')
 };
 fs.writeFileSync(path.join(root, 'content/site.json'), JSON.stringify(data, null, 2) + '\n');
 console.log('Generated content/site.json from organised CMS files.');
