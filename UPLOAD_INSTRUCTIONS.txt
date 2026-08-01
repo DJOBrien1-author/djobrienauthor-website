@@ -1,0 +1,2 @@
+Upload the assets folder to the root of the GitHub repository and commit the change.
+This replaces assets/content-loader.js and fixes the editable NightCafe backgrounds.
