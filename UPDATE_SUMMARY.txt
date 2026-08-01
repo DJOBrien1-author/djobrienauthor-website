@@ -1,0 +1,16 @@
+WEBSITE UPDATE: SOUND, SCROLL EFFECTS AND EASY NEW SCROLLS
+
+Completed:
+- Sound control added to every page, off by default.
+- Visitor choice remembered in the browser.
+- Low-volume archive, sea, map and character ambience generated in-browser.
+- The Widow's Wheel, maelstrom, pirate and slaver entries receive sea ambience automatically.
+- Drawer/parchment sound and scroll-unfurl transition when opening manuscripts.
+- Reduced-motion support and a permanent mute control.
+- CMS renamed to Archive Scrolls with a clear New Scroll action.
+- New scroll images upload directly into assets/uploads/archive-scrolls.
+- Helpful defaults and field instructions added.
+- Author shortcut added to the Archives page: Author: add a new scroll.
+- Sound and effect settings added to the CMS.
+
+The ambience uses the browser's Web Audio system, so no large audio files or third-party sound licences are required.

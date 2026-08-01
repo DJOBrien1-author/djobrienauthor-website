@@ -172,6 +172,7 @@
           </article>`).join('') : '<p class="panel">No manuscripts are filed in this section yet.</p>';
       };
       renderArchives('All');
+      window.dispatchEvent(new CustomEvent('archives:rendered', { detail: { entries } }));
 
       // A permanent, public manuscript index. Every new CMS topic appears here
       // automatically and links to its full archive entry.
@@ -217,6 +218,7 @@
           ${item.manuscript_image ? `<figure class="archive-scroll-view"><a href="${esc(item.manuscript_image)}" target="_blank" rel="noopener" aria-label="Open ${esc(item.title)} at full size"><img src="${esc(item.manuscript_image)}" alt="${esc(item.hero_alt || '')}"></a><figcaption>Select the scroll to open the full-size manuscript.</figcaption></figure>` : (item.hero_image ? `<figure class="archive-hero"><img src="${esc(item.hero_image)}" alt="${esc(item.hero_alt || '')}"></figure>` : '')}
           ${item.body ? `<div class="archive-body">${renderMarkdown(item.body)}</div>` : ''}${gallery}${video}
           ${item.manuscript_image ? '' : `<p class="archive-signature">Recorded faithfully by<br><strong>Brihanon</strong><br><small>Arch Scribe of the Western Isles</small></p>`}`;
+        window.dispatchEvent(new CustomEvent('archive:loaded', { detail: item }));
         const related = document.querySelector('#archive-related');
         if (related) {
           const others = data.archives.filter(entry => entry.slug !== item.slug).slice(0,3);

@@ -163,27 +163,32 @@ collections:
 
 
   - name: "archives"
-    label: "Brihanon's Archives"
+    label: "Archive Scrolls"
+    label_singular: "Scroll"
+    description: "Select an existing scroll to replace its image, or click New Scroll to add a new manuscript to the website automatically."
     icon: "menu_book"
     folder: "content/archives"
+    media_folder: "../../assets/uploads/archive-scrolls"
+    public_folder: "/assets/uploads/archive-scrolls"
     create: true
     delete: true
+    identifier_field: "title"
     extension: "json"
     format: "json"
     slug: "{{slug}}"
     summary: "{{order}}. {{title}}"
     sortable_fields: ["order", "title", "category"]
     fields:
-      - {label: "Display Order", name: "order", widget: "number", value_type: "int", min: 1}
-      - {label: "URL Slug", name: "slug", widget: "string", hint: "Lowercase words separated by hyphens."}
-      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Display Order", name: "order", widget: "number", value_type: "int", min: 1, default: 99, hint: "Use the next available number. Lower numbers appear first."}
+      - {label: "URL Slug", name: "slug", widget: "string", pattern: ["^[a-z0-9]+(?:-[a-z0-9]+)*$", "Use lowercase words separated by hyphens, for example: pirates-and-slavers"], hint: "This becomes the page address. Do not change it after publication unless necessary."}
+      - {label: "Title", name: "title", widget: "string", hint: "The title readers will see on the archive card."}
       - {label: "Subtitle", name: "subtitle", widget: "string", required: false}
       - {label: "Category", name: "category", widget: "select", options: ["Histories", "Bestiary", "Military Studies", "Geography", "Ancient Lore", "Personal Papers", "Disputed Accounts", "New Discoveries"]}
-      - {label: "Newsletter Excerpt", name: "newsletter_excerpt", widget: "text"}
+      - {label: "Short Description", name: "newsletter_excerpt", widget: "text", hint: "One or two sentences shown beneath the scroll title."}
       - {label: "Scroll Image - Select or Replace", name: "manuscript_image", widget: "image", required: false, hint: "Click the image to replace the manuscript scroll. Upload a PNG or JPG."}
       - {label: "Legacy Hero Image", name: "hero_image", widget: "hidden", required: false}
       - {label: "Hero Image Description", name: "hero_alt", widget: "string", required: false}
-      - {label: "Full Article", name: "body", widget: "markdown"}
+      - {label: "Full Article", name: "body", widget: "markdown", required: false, hint: "Optional. Leave blank when the illuminated scroll image contains the complete manuscript."}
       - label: "Image Gallery"
         name: "gallery"
         widget: "list"
@@ -196,6 +201,23 @@ collections:
       - {label: "Hosted Video Link", name: "video_url", widget: "string", required: false, hint: "Optional YouTube or Vimeo link."}
       - {label: "Video Caption", name: "video_caption", widget: "string", required: false}
       - {label: "Search Description", name: "seo_description", widget: "text", required: false}
+
+  - name: "experience"
+    label: "Sound and Effects"
+    icon: "volume_up"
+    files:
+      - name: "experience_settings"
+        label: "Visitor Experience"
+        file: "content/experience.json"
+        format: "json"
+        fields:
+          - {label: "Sound Control Label", name: "control_label", widget: "string"}
+          - {label: "Default Volume", name: "default_volume", widget: "number", value_type: "int", min: 5, max: 40, hint: "Sound remains off until a visitor enables it."}
+          - {label: "Remember Visitor Choice", name: "remember_choice", widget: "boolean", default: true}
+          - {label: "Scroll Opening Animation", name: "scroll_transition", widget: "boolean", default: true}
+          - {label: "Archive Ambience", name: "archive_ambience", widget: "boolean", default: true}
+          - {label: "Map Ambience", name: "map_ambience", widget: "boolean", default: true}
+          - {label: "Character Ambience", name: "character_ambience", widget: "boolean", default: true}
 
   - name: "appearance"
     label: "Page Scenery"
