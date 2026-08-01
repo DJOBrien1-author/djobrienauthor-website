@@ -558,3 +558,10 @@ body[data-page="archive"]::after{
   body[data-page="archives"]::after,
   body[data-page="archive"]::after{background:linear-gradient(rgba(5,6,8,.42),rgba(5,6,8,.52))}
 }
+/* Finished illuminated manuscripts */
+.archive-scroll-card img{aspect-ratio:3/4;object-fit:contain;background:rgba(5,4,3,.72);padding:.55rem}
+.archive-scroll-view{margin:1.25rem auto 0;text-align:center}
+.archive-scroll-view a{display:inline-block;max-width:100%;cursor:zoom-in}
+.archive-scroll-view img{display:block;width:auto;max-width:100%;max-height:none;margin:auto;border:1px solid var(--line);box-shadow:0 18px 45px rgba(0,0,0,.48)}
+.archive-scroll-view figcaption{margin-top:.75rem;color:var(--muted);font-style:italic}
+@media(max-width:700px){.archive-scroll-card img{padding:.25rem}.archive-scroll-view{margin-top:.5rem}}

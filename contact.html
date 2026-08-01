@@ -1,5 +1,14 @@
 <!DOCTYPE html>
 <html lang="en"><head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-51M4TQMJJJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-51M4TQMJJJ');
+</script>
+
 <meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>Contact D.J. O’Brien</title><meta content="Contact D.J. O’Brien for review, interview, media and publishing enquiries." name="description"/>
 <link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/><link href="assets/styles.css" rel="stylesheet"/><link href="https://djobrienauthor.com/contact.html" rel="canonical"/><meta content="Contact D.J. O’Brien" property="og:title"/><meta content="Contact D.J. O’Brien for review, interview, media and publishing enquiries." property="og:description"/><meta content="website" property="og:type"/><meta content="https://djobrienauthor.com/contact.html" property="og:url"/><meta content="https://djobrienauthor.com/assets/social-share.webp" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="Contact D.J. O’Brien" name="twitter:title"/><meta content="Contact D.J. O’Brien for review, interview, media and publishing enquiries." name="twitter:description"/><meta content="https://djobrienauthor.com/assets/social-share.webp" name="twitter:image"/><link as="image" href="/assets/scenery/contact.webp" rel="preload" type="image/webp"/></head><body data-page="contact">
@@ -28,8 +37,9 @@
 </header>
 <main id="main">
 <section class="section"><div class="section-title"><h1 data-content="contact.heading">Contact</h1><div class="ornament">✦</div><p data-content="contact.intro">Use this secure form for review, interview, media and publishing enquiries.</p></div>
-<form action="/thanks.html" class="contact-form panel" data-netlify="true" method="POST" name="dark-lair-contact" netlify-honeypot="bot-field">
-<input name="form-name" type="hidden" value="dark-lair-contact"/><p hidden=""><label>Do not fill this out: <input name="bot-field"/></label></p>
+<form action="/thanks.html" class="contact-form panel" data-netlify="true" data-netlify-honeypot="bot-field" method="POST" name="dark-lair-contact">
+<input name="form-name" type="hidden" value="dark-lair-contact"/>
+<p class="hidden" hidden><label>Leave this field empty: <input name="bot-field" tabindex="-1" autocomplete="off"/></label></p>
 <label data-content="contact.name_label" for="name">Name</label><input id="name" name="name" required=""/>
 <label data-content="contact.email_label" for="email">Email</label><input id="email" name="email" required="" type="email"/>
 <label data-content="contact.subject_label" for="subject">Subject</label><input id="subject" name="subject" required=""/>

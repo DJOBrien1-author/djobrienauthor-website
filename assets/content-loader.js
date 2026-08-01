@@ -160,14 +160,14 @@
       const renderArchives = category => {
         const shown = category === 'All' ? entries : entries.filter(item => item.category === category);
         archivesList.innerHTML = shown.length ? shown.map(item => `
-          <article class="panel archive-card">
-            ${item.hero_image ? `<img src="${esc(item.hero_image)}" alt="${esc(item.hero_alt || '')}" loading="lazy">` : ''}
+          <article class="panel archive-card${item.manuscript_image ? ' archive-scroll-card' : ''}">
+            ${(item.manuscript_image || item.hero_image) ? `<img src="${esc(item.manuscript_image || item.hero_image)}" alt="${esc(item.hero_alt || '')}" loading="lazy">` : ''}
             <div class="archive-card-content">
               <p class="meta">${esc(item.category || 'Archive')} · ${esc(item.date || '')}</p>
               <h2>${esc(item.title)}</h2>
               ${item.subtitle ? `<p><em>${esc(item.subtitle)}</em></p>` : ''}
               <p>${esc(item.newsletter_excerpt || '')}</p>
-              <a class="btn" href="archive.html?entry=${encodeURIComponent(item.slug)}">Read the manuscript</a>
+              <a class="btn" href="archive.html?entry=${encodeURIComponent(item.slug)}">${item.manuscript_image ? 'Open the scroll' : 'Read the manuscript'}</a>
             </div>
           </article>`).join('') : '<p class="panel">No manuscripts are filed in this section yet.</p>';
       };
@@ -214,9 +214,9 @@
         const video = item.video_file ? `<figure class="archive-video"><video controls preload="metadata" ${item.hero_image ? `poster="${esc(item.hero_image)}"` : ''}><source src="${esc(item.video_file)}"></video>${item.video_caption ? `<figcaption>${esc(item.video_caption)}</figcaption>` : ''}</figure>` : hosted ? `<figure class="archive-video"><iframe src="${hosted}" title="${esc(item.video_caption || item.title)}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>${item.video_caption ? `<figcaption>${esc(item.video_caption)}</figcaption>` : ''}</figure>` : '';
         archiveEntry.innerHTML = `
           <header class="archive-entry-header"><p class="meta">${esc(item.category || 'Archive')} · ${esc(item.date || '')}</p><h1>${esc(item.title)}</h1>${item.subtitle ? `<p><em>${esc(item.subtitle)}</em></p>` : ''}</header>
-          ${item.hero_image ? `<figure class="archive-hero"><img src="${esc(item.hero_image)}" alt="${esc(item.hero_alt || '')}"></figure>` : ''}
-          <div class="archive-body">${renderMarkdown(item.body || '')}</div>${gallery}${video}
-          <p class="archive-signature">Recorded faithfully by<br><strong>Brihanon</strong><br><small>Arch Scribe of the Western Isles</small></p>`;
+          ${item.manuscript_image ? `<figure class="archive-scroll-view"><a href="${esc(item.manuscript_image)}" target="_blank" rel="noopener" aria-label="Open ${esc(item.title)} at full size"><img src="${esc(item.manuscript_image)}" alt="${esc(item.hero_alt || '')}"></a><figcaption>Select the scroll to open the full-size manuscript.</figcaption></figure>` : (item.hero_image ? `<figure class="archive-hero"><img src="${esc(item.hero_image)}" alt="${esc(item.hero_alt || '')}"></figure>` : '')}
+          ${item.body ? `<div class="archive-body">${renderMarkdown(item.body)}</div>` : ''}${gallery}${video}
+          ${item.manuscript_image ? '' : `<p class="archive-signature">Recorded faithfully by<br><strong>Brihanon</strong><br><small>Arch Scribe of the Western Isles</small></p>`}`;
         const related = document.querySelector('#archive-related');
         if (related) {
           const others = data.archives.filter(entry => entry.slug !== item.slug).slice(0,3);
