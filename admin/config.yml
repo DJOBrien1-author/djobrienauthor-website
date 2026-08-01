@@ -171,17 +171,17 @@ collections:
     extension: "json"
     format: "json"
     slug: "{{slug}}"
-    summary: "{{date}} - {{title}}"
-    sortable_fields: ["date", "order", "title", "category"]
+    summary: "{{order}}. {{title}}"
+    sortable_fields: ["order", "title", "category"]
     fields:
       - {label: "Display Order", name: "order", widget: "number", value_type: "int", min: 1}
       - {label: "URL Slug", name: "slug", widget: "string", hint: "Lowercase words separated by hyphens."}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Subtitle", name: "subtitle", widget: "string", required: false}
-      - {label: "Publication Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD MMMM YYYY", time_format: false}
       - {label: "Category", name: "category", widget: "select", options: ["Histories", "Bestiary", "Military Studies", "Geography", "Ancient Lore", "Personal Papers", "Disputed Accounts", "New Discoveries"]}
       - {label: "Newsletter Excerpt", name: "newsletter_excerpt", widget: "text"}
-      - {label: "Hero Image", name: "hero_image", widget: "image", required: false}
+      - {label: "Scroll Image - Select or Replace", name: "manuscript_image", widget: "image", required: false, hint: "Click the image to replace the manuscript scroll. Upload a PNG or JPG."}
+      - {label: "Legacy Hero Image", name: "hero_image", widget: "hidden", required: false}
       - {label: "Hero Image Description", name: "hero_alt", widget: "string", required: false}
       - {label: "Full Article", name: "body", widget: "markdown"}
       - label: "Image Gallery"
