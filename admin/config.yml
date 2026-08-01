@@ -161,6 +161,42 @@ collections:
       - {label: "Text", name: "text", widget: "text"}
 
 
+
+  - name: "archives"
+    label: "Brihanon's Archives"
+    icon: "menu_book"
+    folder: "content/archives"
+    create: true
+    delete: true
+    extension: "json"
+    format: "json"
+    slug: "{{slug}}"
+    summary: "{{date}} - {{title}}"
+    sortable_fields: ["date", "order", "title", "category"]
+    fields:
+      - {label: "Display Order", name: "order", widget: "number", value_type: "int", min: 1}
+      - {label: "URL Slug", name: "slug", widget: "string", hint: "Lowercase words separated by hyphens."}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Subtitle", name: "subtitle", widget: "string", required: false}
+      - {label: "Publication Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD MMMM YYYY", time_format: false}
+      - {label: "Category", name: "category", widget: "select", options: ["Histories", "Bestiary", "Military Studies", "Geography", "Ancient Lore", "Personal Papers", "Disputed Accounts", "New Discoveries"]}
+      - {label: "Newsletter Excerpt", name: "newsletter_excerpt", widget: "text"}
+      - {label: "Hero Image", name: "hero_image", widget: "image", required: false}
+      - {label: "Hero Image Description", name: "hero_alt", widget: "string", required: false}
+      - {label: "Full Article", name: "body", widget: "markdown"}
+      - label: "Image Gallery"
+        name: "gallery"
+        widget: "list"
+        required: false
+        fields:
+          - {label: "Image", name: "image", widget: "image"}
+          - {label: "Caption", name: "caption", widget: "string", required: false}
+          - {label: "Image Description", name: "alt", widget: "string", required: false}
+      - {label: "Upload Your Own Video", name: "video_file", widget: "file", required: false, hint: "Use MP4 or WebM. Keep files short and compressed."}
+      - {label: "Hosted Video Link", name: "video_url", widget: "string", required: false, hint: "Optional YouTube or Vimeo link."}
+      - {label: "Video Caption", name: "video_caption", widget: "string", required: false}
+      - {label: "Search Description", name: "seo_description", widget: "text", required: false}
+
   - name: "appearance"
     label: "Page Scenery"
     icon: "image"
@@ -191,6 +227,9 @@ collections:
               - {label: "Privacy", name: "privacy", widget: "image"}
               - {label: "Thank You", name: "thanks", widget: "image"}
               - {label: "404 Page", name: "404", widget: "image"}
+              - {label: "Brihanon Archives", name: "archives", widget: "image"}
+              - {label: "Brihanon Article", name: "archive", widget: "image"}
+              - {label: "Newsletter / Scribe Desk", name: "newsletter", widget: "image"}
 
   - name: "pages"
     label: "Pages and Settings"

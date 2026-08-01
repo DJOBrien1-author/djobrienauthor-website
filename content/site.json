@@ -189,6 +189,24 @@
       "text": "The regional map from Wyvern and the expanded world map from books two and three are available in the Cartographer's Atlas."
     }
   ],
+  "archives": [
+    {
+      "slug": "welcome-to-the-archives",
+      "title": "Welcome to the Archives",
+      "subtitle": "A note from the Arch Scribe of the Western Isles",
+      "date": "2026-08-01",
+      "category": "Personal Papers",
+      "newsletter_excerpt": "Five centuries have passed since the events now remembered as the Dark Lair Trilogy. Brihanon gathers what remains.",
+      "hero_image": "/assets/uploads/backgrounds/archive-brihanon-at-work.webp",
+      "hero_alt": "Brihanon writing by candlelight in his library",
+      "body": "I was not there when the old kingdoms faced the darkness. Five centuries separate my life from theirs. What remains are fragments: chronicles, letters, weathered maps, soldiers’ journals and songs carried across generations. Some agree. Many do not.\n\nI was born among the cloistered scribes of the Western Isles, where the histories are copied and preserved against the slow ruin of time. Five years ago, after Arch Scribe Scarro died, I was sent to the King’s Tower at Kan-Ta, Jarro. There I shall remain, advising the king when called upon and tending the records entrusted to my care.\n\nThe lands now know peace. The western kingdoms commune agreeably, and no dragon or wyvern has been seen in a hundred years. Peace, however, can persuade people that danger was never real. My purpose is not to embellish the past, but to preserve what can still be known and to admit plainly what cannot.",
+      "gallery": [],
+      "video_file": "",
+      "video_url": "",
+      "video_caption": "",
+      "seo_description": "Enter the Archives of Brihanon, Arch Scribe of the Western Isles, and explore the histories and lore of The Dark Lair Trilogy."
+    }
+  ],
   "social": {
     "instagram": "https://www.instagram.com/djobrien.author/",
     "amazon": "https://www.amazon.co.uk/s?k=D.J.+O%27Brien+Dark+Lair+Trilogy",
@@ -202,20 +220,23 @@
     "overlay_strength": 72,
     "backgrounds": {
       "404": "/assets/scenery/404.webp",
-      "home": "/assets/scenery/home.webp",
+      "home": "/assets/uploads/backgrounds/home-gathering-storm.webp",
       "start": "/assets/scenery/start.webp",
-      "trilogy": "/assets/scenery/trilogy.webp",
-      "world": "/assets/scenery/world.webp",
-      "characters": "/assets/scenery/characters.webp",
-      "timeline": "/assets/scenery/timeline.webp",
-      "reviews": "/assets/scenery/reviews.webp",
+      "trilogy": "/assets/uploads/backgrounds/trilogy-deel-roat-road.webp",
+      "world": "/assets/uploads/backgrounds/world-dark-lair-lands.webp",
+      "characters": "/assets/uploads/backgrounds/characters-great-hall.webp",
+      "timeline": "/assets/uploads/backgrounds/timeline-echoes-3000-years.webp",
+      "reviews": "/assets/uploads/backgrounds/reviews-hall-of-legends.webp",
       "news": "/assets/scenery/news.webp",
-      "about": "/assets/scenery/about.webp",
+      "about": "/assets/uploads/backgrounds/about-writers-study.webp",
       "media": "/assets/scenery/media.webp",
-      "contact": "/assets/scenery/contact.webp",
+      "contact": "/assets/uploads/backgrounds/contact-messengers-tower.webp",
       "sample": "/assets/scenery/sample.webp",
       "privacy": "/assets/scenery/privacy.webp",
-      "thanks": "/assets/scenery/thanks.webp"
+      "thanks": "/assets/scenery/thanks.webp",
+      "archives": "/assets/uploads/backgrounds/archives-brihanons-library.webp",
+      "archive": "/assets/uploads/backgrounds/archive-brihanon-at-work.webp",
+      "newsletter": "/assets/uploads/backgrounds/newsletter-scribes-desk.webp"
     }
   }
 }

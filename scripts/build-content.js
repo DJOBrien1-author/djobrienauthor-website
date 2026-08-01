@@ -25,6 +25,7 @@ const data = {
   about: read('content/about.json'),
   contact: read('content/contact.json'),
   news: readFolder('content/news').map(({order,...x})=>x),
+  archives: readFolder('content/archives').map(({order,...x})=>x),
   social: read('content/social.json'),
   appearance: read('content/appearance.json')
 };

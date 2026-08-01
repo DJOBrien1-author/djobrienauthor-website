@@ -1,20 +1,23 @@
 {
   "overlay_strength": 72,
   "backgrounds": {
-    "home": "/assets/scenery/home.webp",
+    "home": "/assets/uploads/backgrounds/home-gathering-storm.webp",
     "start": "/assets/scenery/start.webp",
-    "trilogy": "/assets/scenery/trilogy.webp",
-    "world": "/assets/scenery/world.webp",
-    "characters": "/assets/scenery/characters.webp",
-    "timeline": "/assets/scenery/timeline.webp",
-    "reviews": "/assets/scenery/reviews.webp",
+    "trilogy": "/assets/uploads/backgrounds/trilogy-deel-roat-road.webp",
+    "world": "/assets/uploads/backgrounds/world-dark-lair-lands.webp",
+    "characters": "/assets/uploads/backgrounds/characters-great-hall.webp",
+    "timeline": "/assets/uploads/backgrounds/timeline-echoes-3000-years.webp",
+    "reviews": "/assets/uploads/backgrounds/reviews-hall-of-legends.webp",
     "news": "/assets/scenery/news.webp",
-    "about": "/assets/scenery/about.webp",
+    "about": "/assets/uploads/backgrounds/about-writers-study.webp",
     "media": "/assets/scenery/media.webp",
-    "contact": "/assets/scenery/contact.webp",
+    "contact": "/assets/uploads/backgrounds/contact-messengers-tower.webp",
     "sample": "/assets/scenery/sample.webp",
     "privacy": "/assets/scenery/privacy.webp",
     "thanks": "/assets/scenery/thanks.webp",
-    "404": "/assets/scenery/404.webp"
+    "404": "/assets/scenery/404.webp",
+    "archives": "/assets/uploads/backgrounds/archives-brihanons-library.webp",
+    "archive": "/assets/uploads/backgrounds/archive-brihanon-at-work.webp",
+    "newsletter": "/assets/uploads/backgrounds/newsletter-scribes-desk.webp"
   }
 }
