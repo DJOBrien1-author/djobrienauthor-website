@@ -537,3 +537,24 @@ body[data-page="archive"]{--page-bg:url('/assets/uploads/backgrounds/archive-bri
 .archive-body hr{border:0;border-top:1px solid rgba(255,255,255,.22);margin:2rem 0}
 .archive-body code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.92em;background:rgba(0,0,0,.25);padding:.08em .3em;border-radius:.2rem}
 @media (max-width:700px){.archive-title-list{columns:1}}
+
+/* Final scenery visibility correction: keep text readable while revealing artwork */
+:root{--scene-overlay:.28}
+body::after{
+  background:
+    linear-gradient(90deg,rgba(5,6,8,.30) 0%,rgba(5,6,8,.20) 40%,rgba(5,6,8,.14) 72%,rgba(5,6,8,.22) 100%),
+    linear-gradient(180deg,rgba(4,5,7,.06),rgba(4,5,7,.28));
+}
+.hero{background:linear-gradient(90deg,rgba(6,7,9,.24),rgba(6,7,9,.04))}
+body[data-page="archives"]::after,
+body[data-page="archive"]::after{
+  background:
+    linear-gradient(90deg,rgba(5,6,8,.46),rgba(5,6,8,.30),rgba(5,6,8,.24)),
+    linear-gradient(180deg,rgba(4,5,7,.12),rgba(4,5,7,.40));
+}
+@media(max-width:760px){
+  body::after{background:linear-gradient(rgba(5,6,8,.26),rgba(5,6,8,.38))}
+  .hero{background:rgba(5,6,8,.12)}
+  body[data-page="archives"]::after,
+  body[data-page="archive"]::after{background:linear-gradient(rgba(5,6,8,.42),rgba(5,6,8,.52))}
+}

@@ -12,9 +12,9 @@
 
     const pageKey = document.body.dataset.page;
     const pageBackground = pageKey ? getPath(data, `appearance.backgrounds.${pageKey}`) : null;
-    if (pageBackground) document.body.style.setProperty('--page-bg', `url("${pageBackground}")`);
+    if (pageBackground) document.documentElement.style.setProperty('--page-bg', `url("${pageBackground}")`);
     const overlay = Number(getPath(data, 'appearance.overlay_strength'));
-    if (Number.isFinite(overlay)) document.documentElement.style.setProperty('--scene-overlay', Math.min(90, Math.max(45, overlay)) / 100);
+    if (Number.isFinite(overlay)) document.documentElement.style.setProperty('--scene-overlay', Math.min(90, Math.max(15, overlay)) / 100);
 
     document.querySelectorAll('[data-content]').forEach(el => {
       const value = getPath(data, el.dataset.content);

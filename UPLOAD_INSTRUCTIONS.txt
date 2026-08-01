@@ -1,12 +1,3 @@
-LIGHTER BACKGROUND OVERLAY PATCH
-
-1. Open your GitHub repository.
-2. Click Add file > Upload files.
-3. Drag the enclosed assets folder onto the upload page.
-4. Commit directly to the main branch.
-5. Suggested commit message: Lighten website background overlays
-6. Wait for Netlify to publish, then press Ctrl + F5 on the website.
-
-This patch changes only assets/styles.css.
-It makes the NightCafe scenes clearly visible while retaining enough shading for readable text.
-Brihanon's Archives remains slightly darker than the other pages.
+Upload the enclosed assets and content folders to the repository root.
+Commit message: Reveal NightCafe backgrounds
+After Netlify publishes, press Ctrl+F5 on the website.

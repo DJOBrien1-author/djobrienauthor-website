@@ -1,14 +1,14 @@
 {
-  "overlay_strength": 72,
+  "overlay_strength": 28,
   "backgrounds": {
     "home": "/assets/uploads/backgrounds/home-gathering-storm.webp",
-    "start": "/assets/scenery/start.webp",
+    "start": "/assets/uploads/backgrounds/trilogy-deel-roat-road.webp",
     "trilogy": "/assets/uploads/backgrounds/trilogy-deel-roat-road.webp",
     "world": "/assets/uploads/backgrounds/world-dark-lair-lands.webp",
     "characters": "/assets/uploads/backgrounds/characters-great-hall.webp",
     "timeline": "/assets/uploads/backgrounds/timeline-echoes-3000-years.webp",
     "reviews": "/assets/uploads/backgrounds/reviews-hall-of-legends.webp",
-    "news": "/assets/scenery/news.webp",
+    "news": "/assets/uploads/backgrounds/newsletter-scribes-desk.webp",
     "about": "/assets/uploads/backgrounds/about-writers-study.webp",
     "media": "/assets/scenery/media.webp",
     "contact": "/assets/uploads/backgrounds/contact-messengers-tower.webp",
