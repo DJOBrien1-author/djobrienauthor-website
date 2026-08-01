@@ -1,3 +1,9 @@
-Upload the enclosed assets and content folders to the repository root.
-Commit message: Reveal NightCafe backgrounds
-After Netlify publishes, press Ctrl+F5 on the website.
+AMBERLAY HOME BACKGROUND PATCH
+
+Upload the enclosed assets and content folders to the root of the GitHub repository.
+Commit message: Set Amberlay home and Gathering Storm trilogy backgrounds
+
+Changes:
+- Home: Amberlay crossing the Benteer Mountains
+- Start Here: Deel-Roat Road remains unchanged
+- The Trilogy: Gathering Storm

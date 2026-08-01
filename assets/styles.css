@@ -445,9 +445,9 @@ body::after{
     linear-gradient(180deg,rgba(4,5,7,.12),rgba(4,5,7,.46));
   pointer-events:none;
 }
-body[data-page="home"]{--page-bg:url('/assets/uploads/backgrounds/home-gathering-storm.webp')}
+body[data-page="home"]{--page-bg:url('/assets/uploads/backgrounds/home-amberlay-benteer-mountains.webp')}
 body[data-page="start"]{--page-bg:url('/assets/uploads/backgrounds/trilogy-deel-roat-road.webp')}
-body[data-page="trilogy"]{--page-bg:url('/assets/uploads/backgrounds/trilogy-deel-roat-road.webp')}
+body[data-page="trilogy"]{--page-bg:url('/assets/uploads/backgrounds/home-gathering-storm.webp')}
 body[data-page="world"]{--page-bg:url('/assets/uploads/backgrounds/world-dark-lair-lands.webp')}
 body[data-page="characters"]{--page-bg:url('/assets/uploads/backgrounds/characters-great-hall.webp')}
 body[data-page="timeline"]{--page-bg:url('/assets/uploads/backgrounds/timeline-echoes-3000-years.webp')}

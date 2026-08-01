@@ -1,9 +1,9 @@
 {
   "overlay_strength": 28,
   "backgrounds": {
-    "home": "/assets/uploads/backgrounds/home-gathering-storm.webp",
+    "home": "/assets/uploads/backgrounds/home-amberlay-benteer-mountains.webp",
     "start": "/assets/uploads/backgrounds/trilogy-deel-roat-road.webp",
-    "trilogy": "/assets/uploads/backgrounds/trilogy-deel-roat-road.webp",
+    "trilogy": "/assets/uploads/backgrounds/home-gathering-storm.webp",
     "world": "/assets/uploads/backgrounds/world-dark-lair-lands.webp",
     "characters": "/assets/uploads/backgrounds/characters-great-hall.webp",
     "timeline": "/assets/uploads/backgrounds/timeline-echoes-3000-years.webp",
