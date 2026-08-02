@@ -1,0 +1,9 @@
+VERSION 1.9
+
+Final ambient sound release:
+- separate Master, Ambience and Effects sliders
+- all three settings saved in the visitor's browser
+- corrected duplicate battle-effect initialisation
+- consistent initialisation whether the page is already loaded or still loading
+- sound fades out cleanly when leaving a page
+- retains home, archive, scroll, battle and world ambience from earlier versions

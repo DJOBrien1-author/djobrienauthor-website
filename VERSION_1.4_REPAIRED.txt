@@ -1,0 +1,10 @@
+VERSION 1.4 REPAIRED
+
+Confirmed present:
+- assets/sound.js
+- assets/styles.css
+- Sound controls and home-page generated ambience
+- Sound script references on all public HTML pages
+
+This repair repackages the uploaded Version 1.4 archive and confirms
+the expected sound files are physically present.
