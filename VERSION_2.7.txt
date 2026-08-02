@@ -1,0 +1,20 @@
+D.J. O'Brien Author Website - Version 2.7
+
+Archive audio correction
+
+ROOT CAUSE
+The individual manuscript page attached the quill effect to the first pointerdown or keydown event. A touch, touchpad gesture, or drag used to begin scrolling fires pointerdown, so the quill sound was incorrectly heard as soon as the reader started moving down the manuscript. It was perceived as the former parchment-scroll sound because it occurred at exactly the same interaction.
+
+CHANGES
+- Removed the pointerdown and keydown quill triggers from individual manuscript pages.
+- No manuscript reading effect is now connected to wheel, touch, pointerdown, keydown, intersection, or scroll events.
+- The archive click records a one-use manuscript-open marker before navigation.
+- The individual manuscript page consumes that marker and attempts the quill effect 900 ms after opening.
+- Extended the approved ZapSplat paper-unfold sound from 1.15 seconds to approximately 2.20 seconds.
+- Gave the extended sound a new filename to prevent browsers or Cloudflare from serving the old cached 1.15-second file.
+- Increased the archive navigation delay from 700 ms to 1500 ms so substantially more of the opening sound is heard before the new page loads.
+
+UNCHANGED
+- Archive fireplace ambience.
+- Other page ambience and effects.
+- Site design, content, CMS and navigation.

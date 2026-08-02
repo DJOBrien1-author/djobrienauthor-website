@@ -1,5 +1,5 @@
 /**
- * Dark Lair Trilogy sound engine, version 2.6.
+ * Dark Lair Trilogy sound engine, version 2.7.
  * Uses real WAV assets instead of generated Web Audio oscillators.
  */
 (function () {
@@ -88,7 +88,7 @@
     }
 
     playParchment() {
-      return this.play('assets/audio/parchment-opening-zapsplat.wav');
+      return this.play('assets/audio/parchment-opening-zapsplat-v2.wav');
     }
 
     playQuill() {
@@ -144,21 +144,19 @@
           event.preventDefault();
           const destination = link.href;
 
+          sessionStorage.setItem('dltArchiveJustOpened', '1');
           this.playParchment();
           window.setTimeout(() => {
             window.location.href = destination;
-          }, 700);
+          }, 1500);
         });
       }
 
-      // Begin the quill shortly after an individual manuscript is opened.
-      if (page === 'archive') {
-        const beginReading = () => {
-          window.setTimeout(() => this.playQuill(), 450);
-        };
-
-        document.addEventListener('pointerdown', beginReading, { once: true });
-        document.addEventListener('keydown', beginReading, { once: true });
+      // Begin the quill shortly after a manuscript page opens.
+      // Never bind this effect to pointerdown, wheel, touchmove or scrolling.
+      if (page === 'archive' && sessionStorage.getItem('dltArchiveJustOpened') === '1') {
+        sessionStorage.removeItem('dltArchiveJustOpened');
+        window.setTimeout(() => this.playQuill(), 900);
       }
     }
   }
