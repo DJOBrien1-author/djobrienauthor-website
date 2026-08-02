@@ -37,14 +37,13 @@
 </header>
 <main id="main">
 <section class="section"><div class="section-title"><h1 data-content="contact.heading">Contact</h1><div class="ornament">✦</div><p data-content="contact.intro">Use this secure form for review, interview, media and publishing enquiries.</p></div>
-<form action="/thanks.html" class="contact-form panel" data-netlify="true" data-netlify-honeypot="bot-field" method="POST" name="dark-lair-contact">
-<input name="form-name" type="hidden" value="dark-lair-contact"/>
-<p class="hidden" hidden><label>Leave this field empty: <input name="bot-field" tabindex="-1" autocomplete="off"/></label></p>
-<label data-content="contact.name_label" for="name">Name</label><input id="name" name="name" required=""/>
-<label data-content="contact.email_label" for="email">Email</label><input id="email" name="email" required="" type="email"/>
-<label data-content="contact.subject_label" for="subject">Subject</label><input id="subject" name="subject" required=""/>
-<label data-content="contact.message_label" for="message">Message</label><textarea id="message" name="message" required=""></textarea>
-<button class="btn" data-content="contact.submit_text" type="submit">Send enquiry</button>
+<form class="contact-form panel" id="contact-form">
+<label data-content="contact.name_label" for="name">Name</label><input id="name" name="name" required>
+<label data-content="contact.email_label" for="email">Email</label><input id="email" name="email" required type="email">
+<label data-content="contact.subject_label" for="subject">Subject</label><input id="subject" name="subject" required>
+<label data-content="contact.message_label" for="message">Message</label><textarea id="message" name="message" required></textarea>
+<button class="btn" data-content="contact.submit_text" type="submit">Open email message</button>
+<p class="form-note">Submitting opens your email programme with the message addressed to D.J. O’Brien. You can review it before sending.</p>
 </form><p class="admin-shortcut"><a href="/admin/">Author Login</a></p></section>
 </main>
 <footer class="site-footer">
@@ -54,5 +53,35 @@
 </footer>
 <script src="assets/content-loader.js"></script><script src="assets/sound.js"></script><script src="assets/site.js"></script>
 <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+
+
+<script>
+(function () {
+  const form = document.getElementById('contact-form');
+  if (!form) return;
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const subject = document.getElementById('subject').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    const body = [
+      'Name: ' + name,
+      'Email: ' + email,
+      '',
+      message
+    ].join('\n');
+
+    const href = 'mailto:DJOBrien1@protonmail.com'
+      + '?subject=' + encodeURIComponent(subject || 'Website enquiry')
+      + '&body=' + encodeURIComponent(body);
+
+    window.location.href = href;
+  });
+})();
+</script>
 
 </body></html>

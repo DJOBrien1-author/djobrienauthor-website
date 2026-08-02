@@ -1,5 +1,5 @@
 /**
- * Dark Lair Trilogy sound engine, version 2.3.
+ * Dark Lair Trilogy sound engine, version 2.4.
  * Uses real WAV assets instead of generated Web Audio oscillators.
  */
 (function () {
@@ -50,7 +50,6 @@
     startAmbience(name) {
       if (!this.settings.enabled) return false;
       const map = {
-        home: 'assets/audio/home-ambience.wav',
         archive: 'assets/audio/archive-ambience.wav',
         archives: 'assets/audio/archive-ambience.wav',
         world: 'assets/audio/forest-ambience.wav'
@@ -136,6 +135,15 @@
     initialiseTriggers() {
       const page = document.body ? document.body.dataset.page || '' : '';
 
+      if (page === 'archive') {
+        const playReadingEffects = () => {
+          this.playParchment();
+          window.setTimeout(() => this.playQuill(), 900);
+        };
+        document.addEventListener('pointerdown', playReadingEffects, { once: true });
+        document.addEventListener('keydown', playReadingEffects, { once: true });
+      }
+
       if (page === 'archive' || page === 'archives') {
         const selectors = [
           '#archive-entry', '.archive-entry', '.archive-card', '.manuscript',
@@ -157,21 +165,6 @@
 
             el.addEventListener('click', trigger, { passive: true });
 
-            if ('IntersectionObserver' in window) {
-              if (!this.observer) {
-                this.observer = new IntersectionObserver((entries) => {
-                  entries.forEach((entry) => {
-                    if (!entry.isIntersecting || entry.intersectionRatio < 0.5) return;
-                    const now = Date.now();
-                    if (now - this.lastScroll < 1500) return;
-                    this.lastScroll = now;
-                    this.playParchment();
-                    window.setTimeout(() => this.playQuill(), 850);
-                  });
-                }, { threshold: [0.5] });
-              }
-              this.observer.observe(el);
-            }
           });
         };
 
@@ -182,19 +175,7 @@
         }
       }
 
-      const battleKeywords = /\b(war|battle|siege|army|armies|horde|soldier|soldiers|fighting|combat)\b/i;
-      document.addEventListener('click', (event) => {
-        const target = event.target.closest('article, section, .archive-entry, .manuscript, .scroll');
-        if (!target || !battleKeywords.test(target.textContent || '')) return;
-        const now = Date.now();
-        if (now - this.lastBattle < 6000) return;
-        this.lastBattle = now;
-        this.playBattle();
-      }, { passive: true });
 
-      if (page === 'world') {
-        window.setTimeout(() => this.playRaven(), 6500);
-      }
     }
   }
 
