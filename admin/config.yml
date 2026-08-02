@@ -1,6 +1,9 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: DJOBrien1-author/djobrienauthor-website
   branch: main
+  base_url: https://djobrienauthor.com
+  auth_endpoint: api/auth
 
 local_backend: false
 publish_mode: simple
