@@ -1,5 +1,5 @@
 /**
- * Dark Lair Trilogy sound engine, version 2.5.
+ * Dark Lair Trilogy sound engine, version 2.6.
  * Uses real WAV assets instead of generated Web Audio oscillators.
  */
 (function () {
@@ -88,7 +88,7 @@
     }
 
     playParchment() {
-      return this.play('assets/audio/parchment.wav');
+      return this.play('assets/audio/parchment-opening-zapsplat.wav');
     }
 
     playQuill() {
@@ -135,16 +135,30 @@
     initialiseTriggers() {
       const page = document.body ? document.body.dataset.page || '' : '';
 
-      // Reading effects belong only to a single opened manuscript.
-      // The archive index page remains silent apart from its fireplace ambience.
-      if (page === 'archive') {
-        const playReadingEffects = () => {
+      // Play the selected manuscript-opening sound immediately when a scroll is chosen.
+      if (page === 'archives') {
+        document.addEventListener('click', (event) => {
+          const link = event.target.closest('#archives-list a, a[href*="archive.html"]');
+          if (!link) return;
+
+          event.preventDefault();
+          const destination = link.href;
+
           this.playParchment();
-          window.setTimeout(() => this.playQuill(), 900);
+          window.setTimeout(() => {
+            window.location.href = destination;
+          }, 700);
+        });
+      }
+
+      // Begin the quill shortly after an individual manuscript is opened.
+      if (page === 'archive') {
+        const beginReading = () => {
+          window.setTimeout(() => this.playQuill(), 450);
         };
 
-        document.addEventListener('pointerdown', playReadingEffects, { once: true });
-        document.addEventListener('keydown', playReadingEffects, { once: true });
+        document.addEventListener('pointerdown', beginReading, { once: true });
+        document.addEventListener('keydown', beginReading, { once: true });
       }
     }
   }
