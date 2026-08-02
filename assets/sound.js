@@ -1,5 +1,5 @@
 /**
- * Dark Lair Trilogy sound engine, version 2.4.
+ * Dark Lair Trilogy sound engine, version 2.5.
  * Uses real WAV assets instead of generated Web Audio oscillators.
  */
 (function () {
@@ -135,47 +135,17 @@
     initialiseTriggers() {
       const page = document.body ? document.body.dataset.page || '' : '';
 
+      // Reading effects belong only to a single opened manuscript.
+      // The archive index page remains silent apart from its fireplace ambience.
       if (page === 'archive') {
         const playReadingEffects = () => {
           this.playParchment();
           window.setTimeout(() => this.playQuill(), 900);
         };
+
         document.addEventListener('pointerdown', playReadingEffects, { once: true });
         document.addEventListener('keydown', playReadingEffects, { once: true });
       }
-
-      if (page === 'archive' || page === 'archives') {
-        const selectors = [
-          '#archive-entry', '.archive-entry', '.archive-card', '.manuscript',
-          '.scroll', '[data-archive-entry]', '#archives-list a', '#archives-list article'
-        ];
-
-        const attach = () => {
-          document.querySelectorAll(selectors.join(',')).forEach((el) => {
-            if (el.dataset.soundBound) return;
-            el.dataset.soundBound = '1';
-
-            const trigger = () => {
-              const now = Date.now();
-              if (now - this.lastScroll < 1200) return;
-              this.lastScroll = now;
-              this.playParchment();
-              window.setTimeout(() => this.playQuill(), 850);
-            };
-
-            el.addEventListener('click', trigger, { passive: true });
-
-          });
-        };
-
-        attach();
-        if ('MutationObserver' in window) {
-          this.mutationObserver = new MutationObserver(attach);
-          this.mutationObserver.observe(document.body, { childList: true, subtree: true });
-        }
-      }
-
-
     }
   }
 
