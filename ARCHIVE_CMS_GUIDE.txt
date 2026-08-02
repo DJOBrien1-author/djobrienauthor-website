@@ -1,0 +1,27 @@
+BRIHANON'S ARCHIVES - SIMPLE EDITOR
+====================================
+
+Open: https://djobrienauthor.com/admin/
+Choose: Archive Scrolls
+
+TO REPLACE AN EXISTING SCROLL
+1. Select the scroll title.
+2. Find "Scroll Image - Select or Replace".
+3. Click the current image and choose the replacement PNG or JPG.
+4. Change the title, manuscript label, category or description if needed.
+5. Select Save, then Publish.
+
+TO ADD A NEW SCROLL
+1. Select Archive Scrolls.
+2. Select New Scroll.
+3. Enter the Scroll Title.
+4. Enter a Manuscript Label, such as Scroll XII.
+5. Choose the Archive Category.
+6. Upload the finished Scroll Image.
+7. Add a short description.
+8. Enter the next Shelf Position number.
+9. Select Publish.
+
+The filename and website link are created automatically from the title.
+No JSON editing, filenames or GitHub work is required for normal scroll updates.
+Netlify will rebuild the website automatically after publication.
