@@ -1,6 +1,6 @@
 /**
- * Dark Lair Trilogy ambient sound engine, version 1.9.
- * Final sound release with generated ambience, scroll effects, battle effects, forest ambience, and separate volume controls.
+ * Dark Lair Trilogy ambient sound engine, version 2.0.
+ * Corrects repetitive ambience and reliably triggers dynamically loaded scroll and battle effects.
  * Uses the Web Audio API, so no external audio files are required.
  */
 (function () {
@@ -50,6 +50,10 @@
       this.battleObserver = null;
       this.lastBattleEffectAt = 0;
       this.forestEventTimer = null;
+      this.archiveEventTimer = null;
+      this.contentMutationObserver = null;
+      this.scrollObservedElements = new WeakSet();
+      this.battleObservedElements = new WeakSet();
     }
 
     initialise() {
@@ -72,7 +76,11 @@
       this.unlocked = Boolean(this.context && this.context.state === 'running');
       this._applyVolumes(0.08);
       this.dispatchEvent(new CustomEvent('unlock', { detail: this.getState() }));
-      if (this.unlocked && this.settings.enabled) this.startPageAmbience();
+      if (this.unlocked && this.settings.enabled) {
+        this.startPageAmbience();
+        this.initialiseScrollEffects();
+        this.initialiseBattleEffects();
+      }
       return this.unlocked;
     }
 
@@ -204,7 +212,7 @@
       windFilter.Q.setValueAtTime(0.45, now);
 
       const windGain = this.context.createGain();
-      windGain.gain.setValueAtTime(0.16, now);
+      windGain.gain.setValueAtTime(0.075, now);
       windSource.connect(windFilter);
       windFilter.connect(windGain);
       windGain.connect(groupGain);
@@ -215,10 +223,9 @@
       windLfo.frequency.setValueAtTime(0.075, now);
       windLfoGain.gain.setValueAtTime(0.055, now);
       windLfo.connect(windLfoGain);
-      windLfoGain.connect(windGain.gain);
 
       const humGain = this.context.createGain();
-      humGain.gain.setValueAtTime(0.012, now);
+      humGain.gain.setValueAtTime(0.026, now);
       humGain.connect(groupGain);
 
       const humOne = this.context.createOscillator();
@@ -238,7 +245,7 @@
       shimmer.type = 'sine';
       shimmer.frequency.setValueAtTime(216, now);
       const shimmerGain = this.context.createGain();
-      shimmerGain.gain.setValueAtTime(0.0015, now);
+      shimmerGain.gain.setValueAtTime(0.0045, now);
       shimmer.connect(shimmerGain);
       shimmerGain.connect(groupGain);
 
@@ -276,7 +283,7 @@
       windFilter.Q.setValueAtTime(0.7, now);
 
       const windGain = this.context.createGain();
-      windGain.gain.setValueAtTime(0.105, now);
+      windGain.gain.setValueAtTime(0.038, now);
       windSource.connect(windFilter);
       windFilter.connect(windGain);
       windGain.connect(groupGain);
@@ -288,7 +295,6 @@
       const windLfoGain = this.context.createGain();
       windLfoGain.gain.setValueAtTime(0.038, now);
       windLfo.connect(windLfoGain);
-      windLfoGain.connect(windGain.gain);
 
       const fireSource = this.context.createBufferSource();
       fireSource.buffer = this._createNoiseBuffer(3);
@@ -300,7 +306,7 @@
       fireFilter.Q.setValueAtTime(0.85, now);
 
       const fireGain = this.context.createGain();
-      fireGain.gain.setValueAtTime(0.045, now);
+      fireGain.gain.setValueAtTime(0.095, now);
       fireSource.connect(fireFilter);
       fireFilter.connect(fireGain);
       fireGain.connect(groupGain);
@@ -312,7 +318,6 @@
       const fireLfoGain = this.context.createGain();
       fireLfoGain.gain.setValueAtTime(0.018, now);
       fireLfo.connect(fireLfoGain);
-      fireLfoGain.connect(fireGain.gain);
 
       const roomGain = this.context.createGain();
       roomGain.gain.setValueAtTime(0.0075, now);
@@ -349,6 +354,8 @@
         source: windSource,
         sources: nodes
       });
+
+      this.scheduleArchiveEvent();
 
       this.dispatchEvent(new CustomEvent('ambiencestart', {
         detail: { name: 'archive' }
@@ -452,47 +459,52 @@
       if (!('IntersectionObserver' in window)) return false;
 
       const selectors = [
+        '#archive-entry',
         '.archive-entry',
         '.archive-card',
         '.manuscript',
         '.scroll',
         '[data-archive-entry]',
-        'article'
+        '#archives-list a',
+        '#archives-list article'
       ];
 
       const targets = Array.from(document.querySelectorAll(selectors.join(',')))
-        .filter((element, index, collection) => collection.indexOf(element) === index);
+        .filter((element, index, collection) => collection.indexOf(element) === index)
+        .filter((element) => !this.scrollObservedElements.has(element));
 
       if (!targets.length) return false;
 
-      this.scrollObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting || entry.intersectionRatio < 0.45) return;
+      if (!this.scrollObserver) {
+        this.scrollObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting || entry.intersectionRatio < 0.25) return;
+            if (!this.unlocked || !this.settings.enabled) return;
 
-          const now = Date.now();
-          if (now - this.lastScrollEffectAt < 2600) return;
-          this.lastScrollEffectAt = now;
+            const now = Date.now();
+            if (now - this.lastScrollEffectAt < 1800) return;
+            this.lastScrollEffectAt = now;
 
-          this.playParchmentRustle(0.75);
+            if (!this.playParchmentRustle(1)) return;
 
-          const existingTimer = this.scrollEffectTimers.get(entry.target);
-          if (existingTimer) window.clearTimeout(existingTimer);
+            const timer = window.setTimeout(() => {
+              if (this.settings.enabled && this.unlocked) this.playQuillScratch();
+            }, 650 + Math.floor(Math.random() * 550));
 
-          const timer = window.setTimeout(() => {
-            if (this.settings.enabled) this.playQuillScratch();
-          }, 1200 + Math.floor(Math.random() * 900));
-
-          this.scrollEffectTimers.set(entry.target, timer);
-          this.scrollObserver.unobserve(entry.target);
+            this.scrollEffectTimers.set(entry.target, timer);
+            this.scrollObserver.unobserve(entry.target);
+          });
+        }, {
+          threshold: [0.25, 0.5]
         });
-      }, {
-        threshold: [0.45, 0.65]
-      });
+      }
 
-      targets.forEach((target) => this.scrollObserver.observe(target));
+      targets.forEach((target) => {
+        this.scrollObservedElements.add(target);
+        this.scrollObserver.observe(target);
+      });
       return true;
     }
-
 
     playSwordClash() {
       if (!this.settings.enabled || !this.unlocked) return false;
@@ -638,21 +650,13 @@
       if (!('IntersectionObserver' in window)) return false;
 
       const keywords = [
-        'war',
-        'battle',
-        'siege',
-        'army',
-        'armies',
-        'horde',
-        'soldier',
-        'soldiers',
-        'fighting',
-        'combat'
+        'war', 'battle', 'siege', 'army', 'armies',
+        'horde', 'soldier', 'soldiers', 'fighting', 'combat'
       ];
 
       const candidates = Array.from(document.querySelectorAll(
         'main section, main article, .archive-entry, .archive-card, .manuscript, .scroll, [data-battle-scene]'
-      ));
+      )).filter((element) => !this.battleObservedElements.has(element));
 
       const targets = candidates.filter((element) => {
         if (element.hasAttribute('data-battle-scene')) return true;
@@ -662,25 +666,29 @@
 
       if (!targets.length) return false;
 
-      this.battleObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting || entry.intersectionRatio < 0.5) return;
+      if (!this.battleObserver) {
+        this.battleObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting || entry.intersectionRatio < 0.3) return;
+            if (!this.unlocked || !this.settings.enabled) return;
 
-          const now = Date.now();
-          if (now - this.lastBattleEffectAt < 9000) return;
-          this.lastBattleEffectAt = now;
+            const now = Date.now();
+            if (now - this.lastBattleEffectAt < 6500) return;
+            this.lastBattleEffectAt = now;
 
-          this.playBattleSequence();
-          this.battleObserver.unobserve(entry.target);
+            if (this.playBattleSequence()) this.battleObserver.unobserve(entry.target);
+          });
+        }, {
+          threshold: [0.3, 0.55]
         });
-      }, {
-        threshold: [0.5, 0.7]
-      });
+      }
 
-      targets.forEach((target) => this.battleObserver.observe(target));
+      targets.forEach((target) => {
+        this.battleObservedElements.add(target);
+        this.battleObserver.observe(target);
+      });
       return true;
     }
-
 
     startWorldAmbience() {
       if (!this.settings.enabled || this.activeAmbience.has('world')) return false;
@@ -703,7 +711,7 @@
       windFilter.Q.setValueAtTime(0.35, now);
 
       const windGain = this.context.createGain();
-      windGain.gain.setValueAtTime(0.095, now);
+      windGain.gain.setValueAtTime(0.04, now);
       windSource.connect(windFilter);
       windFilter.connect(windGain);
       windGain.connect(groupGain);
@@ -715,7 +723,6 @@
       const windLfoGain = this.context.createGain();
       windLfoGain.gain.setValueAtTime(0.03, now);
       windLfo.connect(windLfoGain);
-      windLfoGain.connect(windGain.gain);
 
       // Leaf rustle.
       const leavesSource = this.context.createBufferSource();
@@ -727,7 +734,7 @@
       leavesFilter.frequency.setValueAtTime(1850, now);
 
       const leavesGain = this.context.createGain();
-      leavesGain.gain.setValueAtTime(0.018, now);
+      leavesGain.gain.setValueAtTime(0.042, now);
       leavesSource.connect(leavesFilter);
       leavesFilter.connect(leavesGain);
       leavesGain.connect(groupGain);
@@ -739,7 +746,6 @@
       const leavesLfoGain = this.context.createGain();
       leavesLfoGain.gain.setValueAtTime(0.009, now);
       leavesLfo.connect(leavesLfoGain);
-      leavesLfoGain.connect(leavesGain.gain);
 
       // Very low natural resonance.
       const earthGain = this.context.createGain();
@@ -825,6 +831,77 @@
       return true;
     }
 
+
+    playFireCrackle() {
+      if (!this.settings.enabled || !this.unlocked) return false;
+      this._ensureContext();
+      if (!this.context || this.context.state !== 'running') return false;
+
+      const now = this.context.currentTime;
+      const duration = 0.12 + (Math.random() * 0.18);
+      const source = this.context.createBufferSource();
+      source.buffer = this._createNoiseBuffer(duration);
+
+      const filter = this.context.createBiquadFilter();
+      filter.type = 'bandpass';
+      filter.frequency.setValueAtTime(900 + (Math.random() * 1600), now);
+      filter.Q.setValueAtTime(1.4, now);
+
+      const gain = this.context.createGain();
+      gain.gain.setValueAtTime(0.0001, now);
+      gain.gain.exponentialRampToValueAtTime(0.035 + (Math.random() * 0.035), now + 0.008);
+      gain.gain.exponentialRampToValueAtTime(0.0001, now + duration);
+
+      source.connect(filter);
+      filter.connect(gain);
+      gain.connect(this.effectsGain);
+      source.start(now);
+      source.stop(now + duration + 0.02);
+      return true;
+    }
+
+    scheduleArchiveEvent() {
+      if (this.archiveEventTimer) window.clearTimeout(this.archiveEventTimer);
+      if (!this.activeAmbience.has('archive')) return false;
+
+      const delay = 1800 + Math.floor(Math.random() * 3200);
+      this.archiveEventTimer = window.setTimeout(() => {
+        if (this.settings.enabled && this.activeAmbience.has('archive')) {
+          this.playFireCrackle();
+          this.scheduleArchiveEvent();
+        }
+      }, delay);
+      return true;
+    }
+
+    observeDynamicContent() {
+      const root = document.querySelector('main') || document.body;
+      if (!root || !('MutationObserver' in window)) return false;
+
+      if (this.contentMutationObserver) this.contentMutationObserver.disconnect();
+      this.contentMutationObserver = new MutationObserver(() => {
+        this.initialiseScrollEffects();
+        this.initialiseBattleEffects();
+      });
+
+      this.contentMutationObserver.observe(root, {
+        childList: true,
+        subtree: true
+      });
+
+      window.setTimeout(() => {
+        this.initialiseScrollEffects();
+        this.initialiseBattleEffects();
+      }, 350);
+
+      window.setTimeout(() => {
+        this.initialiseScrollEffects();
+        this.initialiseBattleEffects();
+      }, 1400);
+
+      return true;
+    }
+
     startPageAmbience() {
       const page = document.body ? document.body.dataset.page : '';
       if (page === 'home') return this.startHomeAmbience();
@@ -834,6 +911,14 @@
     }
 
     stopAll(fadeSeconds = 0.35) {
+      if (this.archiveEventTimer) {
+        window.clearTimeout(this.archiveEventTimer);
+        this.archiveEventTimer = null;
+      }
+      if (this.contentMutationObserver) {
+        this.contentMutationObserver.disconnect();
+        this.contentMutationObserver = null;
+      }
       const stopAt = this.context ? this.context.currentTime + Math.max(0.05, fadeSeconds) : 0;
       this.activeAmbience.forEach((entry) => {
         if (entry.gain && this.context) this._ramp(entry.gain, 0, fadeSeconds);
@@ -1020,6 +1105,7 @@
     createSoundControls(engine);
     engine.initialiseScrollEffects();
     engine.initialiseBattleEffects();
+    engine.observeDynamicContent();
   };
 
   if (document.readyState === 'loading') {
