@@ -7,7 +7,7 @@
 
   const STORAGE_KEY = 'dltSoundSettingsV2';
   const OPENING_HANDOFF_KEY = 'dltManuscriptOpeningHandoffV1';
-  const OPENING_SOUND = 'assets/audio/parchment-opening-zapsplat-v5.wav';
+  const OPENING_SOUND = 'assets/audio/parchment-opening-original.wav';
   const OPENING_NAVIGATION_DELAY = 2450;
   const OPENING_HANDOFF_OVERLAP = 0.48;
   const defaults = {
@@ -85,7 +85,7 @@
     stopAmbience() {
       if (!this.ambience) return;
       this.ambience.pause();
-      this.ambience.currentTime = 0;
+      this.ambience
       this.ambience = null;
     }
 
@@ -124,7 +124,7 @@
         // overlap hides the unavoidable page-navigation gap and preserves the
         // impression of one continuous manuscript-opening movement.
         const safeOffset = Math.max(0, Math.min(elapsed - OPENING_HANDOFF_OVERLAP, audio.duration - 0.05));
-        audio.currentTime = safeOffset;
+        audio
         audio.play().catch(() => {});
       };
 
