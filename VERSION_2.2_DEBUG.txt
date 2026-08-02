@@ -1,0 +1,15 @@
+VERSION 2.2 DEBUG
+
+Temporary diagnostic build.
+
+A visible Sound Debug panel records:
+- current page and Web Audio state
+- ambience start and stop calls
+- parchment, quill, fire, battle and raven trigger calls
+- observer initialisation results
+- dynamically detected scroll and battle targets
+- pagehide, pageshow and visibility events
+- errors and method return values
+
+Use Copy log after reproducing the problem.
+This panel is temporary and will be removed after diagnosis.

@@ -664,3 +664,93 @@ body[data-page="archive"]::after{
   display: block;
   width: 100%;
 }
+
+/* Version 2.2 temporary sound diagnostics */
+.dlt-sound-debug {
+  position: fixed;
+  left: 0.75rem;
+  bottom: 0.75rem;
+  z-index: 10001;
+  width: min(31rem, calc(100vw - 1.5rem));
+  font: 12px/1.35 Consolas, "Courier New", monospace;
+  color: #f4e8c7;
+  background: rgba(8, 10, 14, 0.96);
+  border: 1px solid rgba(213, 168, 76, 0.85);
+  border-radius: 8px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.55);
+}
+
+.dlt-debug-toggle {
+  width: 100%;
+  padding: 0.55rem 0.75rem;
+  color: #f4d98c;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+  font-weight: 700;
+}
+
+.dlt-debug-body {
+  padding: 0 0.7rem 0.7rem;
+}
+
+.dlt-debug-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.9rem;
+  margin-bottom: 0.45rem;
+  color: #c8d8ed;
+}
+
+.dlt-debug-actions {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 0.45rem;
+}
+
+.dlt-debug-actions button {
+  padding: 0.25rem 0.5rem;
+  color: #f4e8c7;
+  background: #242a34;
+  border: 1px solid #596579;
+  border-radius: 4px;
+  cursor: pointer;
+  font: inherit;
+}
+
+.dlt-debug-log {
+  max-height: 13rem;
+  margin: 0;
+  padding: 0.45rem 0.45rem 0.45rem 1.9rem;
+  overflow: auto;
+  color: #dbe8f7;
+  background: #06080b;
+  border: 1px solid #303846;
+}
+
+.dlt-debug-log li {
+  margin: 0 0 0.2rem;
+  overflow-wrap: anywhere;
+}
+
+.dlt-debug-log .is-warn {
+  color: #ffd27a;
+}
+
+.dlt-debug-log .is-error {
+  color: #ff8d8d;
+}
+
+@media (max-width: 640px) {
+  .dlt-sound-debug {
+    left: 0.4rem;
+    bottom: 0.4rem;
+    width: calc(100vw - 0.8rem);
+  }
+
+  .dlt-debug-log {
+    max-height: 9rem;
+  }
+}

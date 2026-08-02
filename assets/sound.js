@@ -1,6 +1,6 @@
 /**
- * Dark Lair Trilogy ambient sound engine, version 2.0.
- * Corrects repetitive ambience and reliably triggers dynamically loaded scroll and battle effects.
+ * Dark Lair Trilogy ambient sound engine, version 2.2 debug.
+ * Diagnostic build that records page ambience, scroll, battle, unlock, observer and cancellation activity.
  * Uses the Web Audio API, so no external audio files are required.
  */
 (function () {
@@ -1096,11 +1096,213 @@
     update();
   }
 
+
+  function createSoundDebugPanel(engine) {
+    if (!document.body || document.getElementById('dlt-sound-debug')) return;
+
+    const panel = document.createElement('aside');
+    panel.id = 'dlt-sound-debug';
+    panel.className = 'dlt-sound-debug';
+    panel.innerHTML = `
+      <button class="dlt-debug-toggle" type="button" aria-expanded="true">
+        Sound Debug
+      </button>
+      <div class="dlt-debug-body">
+        <div class="dlt-debug-summary">
+          <span data-debug-page></span>
+          <span data-debug-context></span>
+        </div>
+        <div class="dlt-debug-actions">
+          <button type="button" data-debug-copy>Copy log</button>
+          <button type="button" data-debug-clear>Clear</button>
+        </div>
+        <ol class="dlt-debug-log" aria-live="polite"></ol>
+      </div>
+    `;
+
+    document.body.appendChild(panel);
+
+    const body = panel.querySelector('.dlt-debug-body');
+    const toggle = panel.querySelector('.dlt-debug-toggle');
+    const logList = panel.querySelector('.dlt-debug-log');
+    const pageLabel = panel.querySelector('[data-debug-page]');
+    const contextLabel = panel.querySelector('[data-debug-context]');
+    const copyButton = panel.querySelector('[data-debug-copy]');
+    const clearButton = panel.querySelector('[data-debug-clear]');
+    const entries = [];
+
+    const page = document.body ? (document.body.dataset.page || 'unknown') : 'unknown';
+    pageLabel.textContent = `Page: ${page}`;
+
+    const updateContext = () => {
+      const state = engine.getState();
+      contextLabel.textContent =
+        `Audio: ${state.contextState}; unlocked: ${state.unlocked}; ambience: ${state.activeAmbience.join(', ') || 'none'}`;
+    };
+
+    const add = (message, level = 'info') => {
+      const time = new Date().toLocaleTimeString();
+      const text = `${time}  ${message}`;
+      entries.push(text);
+      if (entries.length > 120) entries.shift();
+
+      const item = document.createElement('li');
+      item.className = `is-${level}`;
+      item.textContent = text;
+      logList.appendChild(item);
+
+      while (logList.children.length > 40) {
+        logList.removeChild(logList.firstElementChild);
+      }
+      logList.scrollTop = logList.scrollHeight;
+      updateContext();
+      console.log(`[DLT Debug] ${message}`);
+    };
+
+    window.DLTSoundDebug = {
+      add,
+      entries,
+      snapshot() {
+        const state = engine.getState();
+        add(`SNAPSHOT ${JSON.stringify(state)}`);
+        return state;
+      }
+    };
+
+    toggle.addEventListener('click', () => {
+      const open = body.hidden;
+      body.hidden = !open;
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+
+    clearButton.addEventListener('click', () => {
+      entries.length = 0;
+      logList.innerHTML = '';
+      add('Log cleared');
+    });
+
+    copyButton.addEventListener('click', async () => {
+      const text = entries.join('\n');
+      try {
+        await navigator.clipboard.writeText(text);
+        add('Log copied to clipboard');
+      } catch (error) {
+        add(`Copy failed: ${error.message}`, 'error');
+      }
+    });
+
+    const wrap = (methodName) => {
+      const original = engine[methodName];
+      if (typeof original !== 'function') {
+        add(`MISSING method: ${methodName}`, 'error');
+        return;
+      }
+
+      engine[methodName] = function (...args) {
+        add(`CALL ${methodName}(${args.map((arg) => JSON.stringify(arg)).join(', ')})`);
+        try {
+          const result = original.apply(this, args);
+          if (result && typeof result.then === 'function') {
+            return result.then((value) => {
+              add(`RESULT ${methodName}: ${JSON.stringify(value)}`);
+              return value;
+            }).catch((error) => {
+              add(`ERROR ${methodName}: ${error.message}`, 'error');
+              throw error;
+            });
+          }
+          add(`RESULT ${methodName}: ${JSON.stringify(result)}`);
+          return result;
+        } catch (error) {
+          add(`ERROR ${methodName}: ${error.message}`, 'error');
+          throw error;
+        }
+      };
+    };
+
+    [
+      'unlock',
+      'setEnabled',
+      'setMasterVolume',
+      'setAmbienceVolume',
+      'setEffectsVolume',
+      'startPageAmbience',
+      'startHomeAmbience',
+      'startArchiveAmbience',
+      'startWorldAmbience',
+      'playParchmentRustle',
+      'playQuillScratch',
+      'playFireCrackle',
+      'playSwordClash',
+      'playShieldImpact',
+      'playBattleRumble',
+      'playBattleSequence',
+      'playRavenCall',
+      'initialiseScrollEffects',
+      'initialiseBattleEffects',
+      'observeDynamicContent',
+      'stopAmbience',
+      'stopAll'
+    ].forEach(wrap);
+
+    [
+      'ready',
+      'unlock',
+      'change',
+      'ambiencestart',
+      'ambiencestop',
+      'stopall'
+    ].forEach((eventName) => {
+      engine.addEventListener(eventName, (event) => {
+        add(`EVENT ${eventName}: ${JSON.stringify(event.detail || {})}`);
+      });
+    });
+
+    window.addEventListener('pagehide', () => add('WINDOW pagehide fired', 'warn'));
+    window.addEventListener('pageshow', () => add('WINDOW pageshow fired'));
+    document.addEventListener('visibilitychange', () => {
+      add(`VISIBILITY ${document.visibilityState}`);
+    });
+
+    const countTargets = () => {
+      const scrollSelectors = [
+        '#archive-entry', '.archive-entry', '.archive-card', '.manuscript',
+        '.scroll', '[data-archive-entry]', '#archives-list a', '#archives-list article'
+      ];
+      const battleSelectors =
+        'main section, main article, .archive-entry, .archive-card, .manuscript, .scroll, [data-battle-scene]';
+
+      add(
+        `DOM targets: scroll=${document.querySelectorAll(scrollSelectors.join(',')).length}; ` +
+        `battle candidates=${document.querySelectorAll(battleSelectors).length}`
+      );
+    };
+
+    add(`Debug panel initialised on page "${page}"`);
+    countTargets();
+    updateContext();
+
+    window.setTimeout(() => {
+      add('Delayed diagnostic at 1 second');
+      countTargets();
+      engine.startPageAmbience();
+      engine.initialiseScrollEffects();
+      engine.initialiseBattleEffects();
+    }, 1000);
+
+    window.setTimeout(() => {
+      add('Delayed diagnostic at 4 seconds');
+      countTargets();
+      window.DLTSoundDebug.snapshot();
+    }, 4000);
+  }
+
   const engine = new DarkLairSoundEngine();
   window.DarkLairSound = engine;
   window.DLTSound = engine; // Short backwards-compatible name.
 
   const startSoundSystem = () => {
+    createSoundDebugPanel(engine);
     engine.initialise();
     createSoundControls(engine);
     engine.initialiseScrollEffects();
