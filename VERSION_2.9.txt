@@ -1,0 +1,9 @@
+D.J. O'Brien Author Website - Version 2.9
+
+Archive manuscript audio correction:
+- The selected ZapSplat paper-opening sound has been extended to approximately 3.17 seconds.
+- Its level has been raised and limited gently so it is clearly audible without becoming harsh.
+- Navigation waits approximately 3.15 seconds, allowing the opening sound to continue through the full scroll-opening action.
+- The post-load quill trigger has been removed because quill.wav was the louder sound heard when the manuscript page finished opening.
+- No manuscript, pointer, wheel, touch or scrolling event triggers a parchment sound while reading.
+- All pages now load assets/sound-v2.9.js to prevent stale JavaScript caching.
