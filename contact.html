@@ -37,13 +37,18 @@
 </header>
 <main id="main">
 <section class="section"><div class="section-title"><h1 data-content="contact.heading">Contact</h1><div class="ornament">✦</div><p data-content="contact.intro">Use this secure form for review, interview, media and publishing enquiries.</p></div>
-<form class="contact-form panel" id="contact-form">
+<form action="https://formsubmit.co/DJOBrien1@protonmail.com" class="contact-form panel" id="contact-form" method="POST">
+<input name="_subject" type="hidden" value="New enquiry from djobrienauthor.com">
+<input name="_next" type="hidden" value="https://djobrienauthor.com/thanks.html">
+<input name="_template" type="hidden" value="table">
+<input name="_captcha" type="hidden" value="true">
+<input name="_honey" style="display:none" tabindex="-1" type="text">
 <label data-content="contact.name_label" for="name">Name</label><input id="name" name="name" required>
 <label data-content="contact.email_label" for="email">Email</label><input id="email" name="email" required type="email">
 <label data-content="contact.subject_label" for="subject">Subject</label><input id="subject" name="subject" required>
 <label data-content="contact.message_label" for="message">Message</label><textarea id="message" name="message" required></textarea>
-<button class="btn" data-content="contact.submit_text" type="submit">Open email message</button>
-<p class="form-note">Submitting opens your email programme with the message addressed to D.J. O’Brien. You can review it before sending.</p>
+<button class="btn" data-content="contact.submit_text" type="submit">Send enquiry</button>
+<p class="form-note">Your message will be sent securely to D.J. O’Brien. Your own email programme is not required.</p>
 </form><p class="admin-shortcut"><a href="/admin/">Author Login</a></p></section>
 </main>
 <footer class="site-footer">
@@ -55,33 +60,5 @@
 <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 
 
-<script>
-(function () {
-  const form = document.getElementById('contact-form');
-  if (!form) return;
-
-  form.addEventListener('submit', function (event) {
-    event.preventDefault();
-
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const subject = document.getElementById('subject').value.trim();
-    const message = document.getElementById('message').value.trim();
-
-    const body = [
-      'Name: ' + name,
-      'Email: ' + email,
-      '',
-      message
-    ].join('\n');
-
-    const href = 'mailto:DJOBrien1@protonmail.com'
-      + '?subject=' + encodeURIComponent(subject || 'Website enquiry')
-      + '&body=' + encodeURIComponent(body);
-
-    window.location.href = href;
-  });
-})();
-</script>
 
 </body></html>

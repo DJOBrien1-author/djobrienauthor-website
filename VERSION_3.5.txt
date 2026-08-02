@@ -1,0 +1,11 @@
+VERSION 3.5 - CONTACT FORM REPAIR
+
+- Replaced the mailto-only contact form with a real HTTPS form submission.
+- All contact enquiries are addressed to DJOBrien1@protonmail.com.
+- Visitors no longer need a configured email application.
+- Successful submissions return to the existing thanks.html page.
+- Added CAPTCHA and a hidden spam honeypot.
+- Website design and audio system remain unchanged.
+
+IMPORTANT FIRST-USE STEP
+The first test submission will cause FormSubmit to send an activation email to DJOBrien1@protonmail.com. Open that email and approve the form once. After activation, later enquiries will be delivered normally.
