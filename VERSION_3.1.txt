@@ -1,0 +1,8 @@
+D.J. O'Brien Author Website - Version 3.1
+
+Archive manuscript audio refinement:
+- Added low-mid body and restrained indoor warmth to the selected ZapSplat paper sound.
+- Softened excessive high-frequency thinness.
+- Extended the natural tail to 4.48 seconds.
+- Added a 0.48-second hand-off overlap so browser navigation cannot expose an audible pause.
+- Opening audio remains click-triggered only and never responds to manuscript scrolling.
