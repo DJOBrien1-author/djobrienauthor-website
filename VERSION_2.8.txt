@@ -1,0 +1,14 @@
+VERSION 2.8 - MANUSCRIPT OPENING AUDIO CACHE FIX
+
+Root cause corrected:
+- Version 2.7 renamed the WAV, but pages still loaded assets/sound.js under its old URL.
+- Browsers and Cloudflare could therefore reuse the cached Version 2.6 JavaScript, which still selected the previous opening sound.
+- The new 2.17-second WAV was also interrupted because navigation began after only 1.5 seconds.
+
+Changes:
+- Renamed assets/sound.js to assets/sound-v2.8.js and updated every HTML page.
+- This forces browsers and Cloudflare to fetch the new event logic.
+- Increased manuscript navigation delay to 2.3 seconds, allowing the complete 2.17-second sound to finish.
+- Removed both obsolete parchment-opening WAV files from the complete website package.
+- Kept the selected file: assets/audio/parchment-opening-zapsplat-v2.wav.
+- Quill remains independent of pointer, wheel, touch and scroll events.
