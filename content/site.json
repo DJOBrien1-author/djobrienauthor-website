@@ -33,7 +33,7 @@
       "number": "Book One",
       "description": "A mother flees through snow-covered mountains while the man she loves buys her time with his life. A child is born into a war that has already begun. Three thousand years after an ancient evil was sealed away, the crystals are found again and the Prince of Shade begins to stir.",
       "tagline": "Save a princess. Win a lost war. Defeat Evil. Stay alive.",
-      "buy_url": "https://www.amazon.co.uk/s?k=Wyvern+D.J.+O%27Brien",
+      "buy_url": "https://www.amazon.com/s?k=Wyvern+D.J.+O%27Brien",
       "video_url": "https://www.instagram.com/reel/C8uxVgJNctQ/?utm_source=ig_embed&utm_campaign=loading",
       "subtitle": "Book One",
       "cover_image": "/assets/wyvern-cover.jpg"
@@ -42,7 +42,7 @@
       "title": "Maelstrom",
       "number": "Book Two",
       "description": "The struggle widens beyond the familiar kingdoms. The Great Maelstrom and the dangers beyond the Roaring Shallows reveal the true scale of the conflict.",
-      "buy_url": "https://www.amazon.co.uk/s?k=Maelstrom+D.J.+O%27Brien",
+      "buy_url": "https://www.amazon.com/s?k=Maelstrom+D.J.+O%27Brien",
       "video_url": "https://www.instagram.com/reel/C9pujGItp6h/?utm_source=ig_embed&utm_campaign=loading",
       "subtitle": "Book Two",
       "cover_image": "/assets/maelstrom-cover.jpg"
@@ -51,7 +51,7 @@
       "title": "Dragon Knight",
       "number": "Book Three",
       "description": "The final battle brings heroes, enemies, prophecy and ancient power together in the concluding volume of the completed trilogy.",
-      "buy_url": "https://www.amazon.co.uk/s?k=Dragon+Knight+D.J.+O%27Brien",
+      "buy_url": "https://www.amazon.com/s?k=Dragon+Knight+D.J.+O%27Brien",
       "video_url": "https://www.instagram.com/reel/DPRsSW9DWW-/?utm_source=ig_embed&utm_campaign=loading",
       "subtitle": "Book Three",
       "cover_image": "/assets/dragon-knight-cover.jpg"
@@ -310,20 +310,20 @@
     },
     {
       "slug": "of-wizards-and-warlocks",
-      "title": "Of Wizards and Warlocks, Wielders and Leechers",
+      "title": "Of Wizards and Warlocks, Wielders and Teachers",
       "subtitle": "Scroll VII",
       "date": "2026-08-01",
       "category": "Ancient Lore",
-      "newsletter_excerpt": "A finished illuminated manuscript from Brihanon’s Archives: Of Wizards and Warlocks, Wielders and Leechers.",
+      "newsletter_excerpt": "A finished illuminated manuscript from Brihanon’s Archives: Of Wizards and Warlocks, Wielders and Teachers.",
       "hero_image": "/assets/uploads/archive-scrolls/of-wizards-and-warlocks.png",
-      "hero_alt": "Brihanon’s manuscript concerning wizards, warlocks, wielders and leechers.",
+      "hero_alt": "Brihanon’s manuscript concerning wizards, warlocks, wielders and teachers.",
       "manuscript_image": "/assets/uploads/archive-scrolls/of-wizards-and-warlocks.png",
       "body": "",
       "gallery": [],
       "video_file": "",
       "video_url": "",
       "video_caption": "",
-      "seo_description": "Read Of Wizards and Warlocks, Wielders and Leechers, an illuminated manuscript from Brihanon’s Archives in the world of The Dark Lair Trilogy."
+      "seo_description": "Read Of Wizards and Warlocks, Wielders and Teachers, an illuminated manuscript from Brihanon’s Archives in the world of The Dark Lair Trilogy."
     },
     {
       "slug": "the-kingdoms-of-the-west",
@@ -396,7 +396,7 @@
   ],
   "social": {
     "instagram": "https://www.instagram.com/djobrien.author/",
-    "amazon": "https://www.amazon.co.uk/s?k=D.J.+O%27Brien+Dark+Lair+Trilogy",
+    "amazon": "https://www.amazon.com/s?k=D.J.+O%27Brien+Dark+Lair+Trilogy",
     "goodreads": "https://www.goodreads.com/search?q=D.J.+O%27Brien+Dark+Lair",
     "facebook": "",
     "youtube": "",
