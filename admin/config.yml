@@ -1,9 +1,6 @@
 backend:
-  name: github
-  repo: DJOBrien1-author/djobrienauthor-website
+  name: git-gateway
   branch: main
-  base_url: https://djobrienauthor.com
-  auth_endpoint: api/auth
 
 local_backend: false
 publish_mode: simple
@@ -166,47 +163,39 @@ collections:
 
 
   - name: "archives"
-    label: "Archive Scrolls"
-    label_singular: "Scroll"
-    description: "Select a scroll to edit or replace its image. Use New Scroll to publish another manuscript. The website updates automatically after you save."
+    label: "Brihanon's Archives"
     icon: "menu_book"
     folder: "content/archives"
-    media_folder: "../../assets/uploads/archive-scrolls"
-    public_folder: "/assets/uploads/archive-scrolls"
     create: true
     delete: true
     extension: "json"
     format: "json"
     slug: "{{slug}}"
-    identifier_field: "title"
     summary: "{{order}}. {{title}}"
     sortable_fields: ["order", "title", "category"]
-    view_groups:
-      - label: "Category"
-        field: "category"
     fields:
-      - {label: "Scroll Title", name: "title", widget: "string", hint: "The title shown beneath the scroll on the Archives page."}
-      - {label: "Manuscript Label", name: "subtitle", widget: "string", required: false, hint: "For example: Manuscript I or Scroll XII."}
-      - {label: "Archive Category", name: "category", widget: "select", options: ["Histories", "Bestiary", "Military Studies", "Geography", "Ancient Lore", "Personal Papers", "Disputed Accounts", "New Discoveries"]}
-      - {label: "Scroll Image - Select or Replace", name: "manuscript_image", widget: "image", required: false, choose_url: false, hint: "Click the current image to replace it, or choose a PNG or JPG for a new scroll."}
-      - {label: "Short Description", name: "newsletter_excerpt", widget: "text", required: false, hint: "One or two sentences shown on the scroll card."}
-      - {label: "Shelf Position", name: "order", widget: "number", value_type: "int", min: 1, default: 99, hint: "Lower numbers appear first. Use the next available number for a new scroll."}
-      - {label: "Image Description", name: "hero_alt", widget: "string", required: false, hint: "A short description for visitors using screen readers."}
-      - {label: "Additional Article Text", name: "body", widget: "markdown", required: false, hint: "Optional. Leave blank when the scroll image contains the complete manuscript."}
-      - {label: "Search Description", name: "seo_description", widget: "text", required: false, hint: "Optional description for search engines."}
+      - {label: "Display Order", name: "order", widget: "number", value_type: "int", min: 1}
+      - {label: "URL Slug", name: "slug", widget: "string", hint: "Lowercase words separated by hyphens."}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Subtitle", name: "subtitle", widget: "string", required: false}
+      - {label: "Category", name: "category", widget: "select", options: ["Histories", "Bestiary", "Military Studies", "Geography", "Ancient Lore", "Personal Papers", "Disputed Accounts", "New Discoveries"]}
+      - {label: "Newsletter Excerpt", name: "newsletter_excerpt", widget: "text"}
+      - {label: "Scroll Image - Select or Replace", name: "manuscript_image", widget: "image", required: false, hint: "Click the image to replace the manuscript scroll. Upload a PNG or JPG."}
       - {label: "Legacy Hero Image", name: "hero_image", widget: "hidden", required: false}
-      - label: "Optional Image Gallery"
+      - {label: "Hero Image Description", name: "hero_alt", widget: "string", required: false}
+      - {label: "Full Article", name: "body", widget: "markdown"}
+      - label: "Image Gallery"
         name: "gallery"
         widget: "list"
         required: false
-        collapsed: true
         fields:
           - {label: "Image", name: "image", widget: "image"}
           - {label: "Caption", name: "caption", widget: "string", required: false}
           - {label: "Image Description", name: "alt", widget: "string", required: false}
-      - {label: "Optional Uploaded Video", name: "video_file", widget: "file", required: false}
-      - {label: "Optional Hosted Video Link", name: "video_url", widget: "string", required: false}
+      - {label: "Upload Your Own Video", name: "video_file", widget: "file", required: false, hint: "Use MP4 or WebM. Keep files short and compressed."}
+      - {label: "Hosted Video Link", name: "video_url", widget: "string", required: false, hint: "Optional YouTube or Vimeo link."}
       - {label: "Video Caption", name: "video_caption", widget: "string", required: false}
+      - {label: "Search Description", name: "seo_description", widget: "text", required: false}
 
   - name: "appearance"
     label: "Page Scenery"

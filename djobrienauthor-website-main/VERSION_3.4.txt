@@ -1,0 +1,6 @@
+D.J. O'Brien Author Website - Version 3.4
+
+Change:
+- Increased only the manuscript-opening playback volume to twice the normal effects level, capped safely at full browser volume.
+- The original ZapSplat WAV remains completely unchanged.
+- Opening timing, cross-page continuation, ambience and all other sounds remain unchanged.

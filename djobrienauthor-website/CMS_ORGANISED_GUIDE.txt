@@ -1,0 +1,24 @@
+D.J. O’BRIEN PROFESSIONAL CMS ORGANISATION
+
+This package preserves the public website design and reorganises Decap CMS into clear dashboard sections.
+
+CMS SECTIONS
+- Home Page
+- The Trilogy, with one editor for each book
+- Characters, one entry per character
+- Timeline, one entry per event
+- Reviews, one entry per review
+- News, one entry per news item
+- About
+- Contact
+- Social Links
+- Media Library remains Decap CMS Media Library
+
+HOW IT WORKS
+The CMS saves content into separate JSON files. Netlify runs npm run build and automatically generates content/site.json for the existing website loader. The public design remains unchanged.
+
+INSTALLATION
+Upload the complete contents of this folder to the root of the GitHub repository and commit to main. Netlify will deploy automatically.
+
+IMPORTANT
+Do not remove package.json, scripts/build-content.js, or the build command in netlify.toml. They are what combine the organised CMS entries for the live website.

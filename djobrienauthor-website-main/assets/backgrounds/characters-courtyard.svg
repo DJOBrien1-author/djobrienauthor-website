@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1200" role="img" aria-labelledby="title desc">
+<title id="title">characters-courtyard</title><desc id="desc">Atmospheric epic fantasy background artwork for the D.J. O'Brien author website.</desc>
+<defs>
+ <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#18241c"/><stop offset=".58" stop-color="#4a4b32"/><stop offset="1" stop-color="#090807"/></linearGradient>
+ <radialGradient id="glow" cx="72%" cy="22%" r="48%"><stop stop-color="#d2a95d" stop-opacity=".56"/><stop offset="1" stop-color="#d2a95d" stop-opacity="0"/></radialGradient>
+ <linearGradient id="fog" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#e8dfc6" stop-opacity="0"/><stop offset=".5" stop-color="#e8dfc6" stop-opacity=".22"/><stop offset="1" stop-color="#e8dfc6" stop-opacity="0"/></linearGradient>
+ <filter id="blur"><feGaussianBlur stdDeviation="18"/></filter>
+</defs>
+<rect width="1920" height="1200" fill="url(#sky)"/>
+<rect width="1920" height="1200" fill="url(#glow)"/>
+<circle cx="1510" cy="210" r="88" fill="#f3d995" opacity=".58"/>
+<g opacity=".52" fill="#20150f"><path d="M0 690L180 470l140 170 170-260 210 300 210-230 190 235 160-180 180 190 180-250 340 325v330H0z"/></g>
+<g opacity=".8" fill="#120d0a"><path d="M0 820l220-210 190 145 240-270 270 285 180-160 230 190 230-220 380 270v360H0z"/></g>
+<g fill="#080706"><path d="M-60 980l70-260h-38l55-165h-33l48-150 48 150h-33l55 165h-38l70 260z"/><path d="M120 980l70-260h-38l55-165h-33l48-150 48 150h-33l55 165h-38l70 260z"/><path d="M300 980l70-260h-38l55-165h-33l48-150 48 150h-33l55 165h-38l70 260z"/><path d="M480 980l70-260h-38l55-165h-33l48-150 48 150h-33l55 165h-38l70 260z"/><path d="M660 980l70-260h-38l55-165h-33l48-150 48 150h-33l55 165h-38l70 260z"/><path d="M840 980l70-260h-38l55-165h-33l48-150 48 150h-33l55 165h-38l70 260z"/><path d="M1020 980l70-260h-38l55-165h-33l48-150 48 150h-33l55 165h-38l70 260z"/><path d="M1200 980l70-260h-38l55-165h-33l48-150 48 150h-33l55 165h-38l70 260z"/><path d="M1380 980l70-260h-38l55-165h-33l48-150 48 150h-33l55 165h-38l70 260z"/><path d="M1560 980l70-260h-38l55-165h-33l48-150 48 150h-33l55 165h-38l70 260z"/><path d="M1740 980l70-260h-38l55-165h-33l48-150 48 150h-33l55 165h-38l70 260z"/></g><g fill="#15100c"><rect x="760" y="620" width="420" height="240"/><path d="M730 620l240-180 240 180z"/></g>
+<path d="M0 940C360 860 590 1010 900 930s570-120 1020 12v258H0z" fill="#0a0807" opacity=".96"/>
+<g filter="url(#blur)" opacity=".62"><ellipse cx="520" cy="855" rx="520" ry="55" fill="url(#fog)"/><ellipse cx="1390" cy="740" rx="430" ry="42" fill="url(#fog)"/></g>
+</svg>

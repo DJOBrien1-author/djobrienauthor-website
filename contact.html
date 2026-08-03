@@ -23,6 +23,7 @@
 <nav aria-label="Main navigation">
 <ul>
 <li><a href="index.html">Home</a></li><li><a href="start.html">Start Here</a></li>
+<li><a href="free.html">Free Book</a></li>
 <li><a href="trilogy.html">The Trilogy</a></li>
 <li><a href="world.html">The World</a></li>
 <li><a href="characters.html">Characters</a></li>
@@ -37,18 +38,14 @@
 </header>
 <main id="main">
 <section class="section"><div class="section-title"><h1 data-content="contact.heading">Contact</h1><div class="ornament">✦</div><p data-content="contact.intro">Use this secure form for review, interview, media and publishing enquiries.</p></div>
-<form action="https://formsubmit.co/DJOBrien1@protonmail.com" class="contact-form panel" id="contact-form" method="POST">
-<input name="_subject" type="hidden" value="New enquiry from djobrienauthor.com">
-<input name="_next" type="hidden" value="https://djobrienauthor.com/thanks.html">
-<input name="_template" type="hidden" value="table">
-<input name="_captcha" type="hidden" value="true">
-<input name="_honey" style="display:none" tabindex="-1" type="text">
-<label data-content="contact.name_label" for="name">Name</label><input id="name" name="name" required>
-<label data-content="contact.email_label" for="email">Email</label><input id="email" name="email" required type="email">
-<label data-content="contact.subject_label" for="subject">Subject</label><input id="subject" name="subject" required>
-<label data-content="contact.message_label" for="message">Message</label><textarea id="message" name="message" required></textarea>
+<form action="/thanks.html" class="contact-form panel" data-netlify="true" data-netlify-honeypot="bot-field" method="POST" name="dark-lair-contact">
+<input name="form-name" type="hidden" value="dark-lair-contact"/>
+<p class="hidden" hidden><label>Leave this field empty: <input name="bot-field" tabindex="-1" autocomplete="off"/></label></p>
+<label data-content="contact.name_label" for="name">Name</label><input id="name" name="name" required=""/>
+<label data-content="contact.email_label" for="email">Email</label><input id="email" name="email" required="" type="email"/>
+<label data-content="contact.subject_label" for="subject">Subject</label><input id="subject" name="subject" required=""/>
+<label data-content="contact.message_label" for="message">Message</label><textarea id="message" name="message" required=""></textarea>
 <button class="btn" data-content="contact.submit_text" type="submit">Send enquiry</button>
-<p class="form-note">Your message will be sent securely to D.J. O’Brien. Your own email programme is not required.</p>
 </form><p class="admin-shortcut"><a href="/admin/">Author Login</a></p></section>
 </main>
 <footer class="site-footer">
@@ -56,9 +53,6 @@
 <div class="footer-links"><a data-content-href="social.instagram" href="https://www.instagram.com/djobrien.author/" rel="noopener" target="_blank">Follow on Instagram</a><a data-content-href="social.amazon" href="https://www.amazon.co.uk/s?k=D.J.+O%27Brien+Dark+Lair+Trilogy" rel="noopener" target="_blank">Amazon</a><a data-content-href="social.goodreads" href="https://www.goodreads.com/search?q=D.J.+O%27Brien+Dark+Lair" rel="noopener" target="_blank">Goodreads</a><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a></div>
 <p>© <span id="year">2026</span> D.J. O’Brien. All rights reserved.</p>
 </footer>
-<script src="assets/content-loader.js"></script><script src="assets/sound-v3.4.js"></script><script src="assets/site.js"></script>
+<script src="assets/content-loader.js"></script><script src="assets/site.js"></script>
 <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
-
-
-
 </body></html>

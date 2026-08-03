@@ -4,15 +4,7 @@ const root = path.resolve(__dirname, '..');
 const read = p => JSON.parse(fs.readFileSync(path.join(root, p), 'utf8'));
 const readFolder = folder => fs.readdirSync(path.join(root, folder))
   .filter(name => name.endsWith('.json'))
-  .map(name => {
-    const item = read(path.join(folder, name));
-    // Decap CMS creates new archive filenames from the title. The filename is
-    // therefore a safe fallback URL slug, so authors never need to type one.
-    if (folder === 'content/archives' && !item.slug) {
-      item.slug = path.basename(name, '.json');
-    }
-    return item;
-  })
+  .map(name => read(path.join(folder, name)))
   .sort((a,b) => (Number(a.order)||9999) - (Number(b.order)||9999));
 const home = read('content/home.json');
 const bookEntries = readFolder('content/books');

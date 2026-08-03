@@ -1,0 +1,7 @@
+Version 3.6 - Cloudflare GitHub CMS Login
+
+- Replaced the Netlify Git Gateway backend with the GitHub backend.
+- Removed the Netlify Identity widget and login handlers from admin/index.html.
+- Added Cloudflare Pages Functions at /api/auth and /api/callback.
+- Uses GITHUB_CLIENT_ID and GITHUB_CLIENT_SECRET stored in Cloudflare.
+- Website content, design, audio and contact form are otherwise unchanged.

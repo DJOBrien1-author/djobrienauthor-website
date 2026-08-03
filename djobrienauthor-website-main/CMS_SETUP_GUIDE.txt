@@ -1,0 +1,53 @@
+D.J. O'BRIEN AUTHOR PLATFORM
+ONE-TIME CMS SETUP
+
+IMPORTANT
+This editable version cannot work from manual drag-and-drop alone.
+The website must be linked to a GitHub or GitLab repository because the editor saves changes into that repository. Netlify then republishes the site automatically.
+
+FIRST DEPLOYMENT
+1. Extract this ZIP.
+2. Upload it to your existing Netlify site as a manual deploy to confirm the design still works.
+3. In Netlify, open:
+   Project configuration > Build & deploy > Continuous deployment > Repository.
+4. Choose Link repository or Push to new repository.
+5. Connect a GitHub account and create or select a repository.
+6. Confirm that the repository's main branch is named main.
+7. Netlify should then deploy automatically from that repository.
+
+ENABLE THE PASSWORD-PROTECTED EDITOR
+1. Open:
+   Project configuration > Identity.
+2. Select Enable Identity.
+3. Set registration to Invite only.
+4. Go to:
+   Identity > Services > Git Gateway.
+5. Select Enable Git Gateway.
+6. Invite yourself as the only Identity user, using the email address you want for the admin login.
+7. Open the invitation email and set a strong password.
+8. Visit:
+   https://YOUR-SITE-ADDRESS/admin/
+9. Sign in and edit the website content.
+10. Select Publish. Netlify will rebuild the live site automatically.
+
+SECURITY
+- Keep Identity registration set to Invite only.
+- Do not invite anyone else unless you want them to edit the site.
+- Enable two-factor authentication on your Netlify account.
+- Use a unique password.
+
+WHAT IS EDITABLE IN THE DASHBOARD
+- Homepage wording
+- Crystal descriptions
+- All three book descriptions
+- Purchase links
+- Instagram Reel links
+- Characters
+- Timeline
+- Reviews
+- About page
+- Contact introduction
+- News
+- Social links
+
+The maps and covers remain replaceable by uploading files with the same filenames in the assets folder.

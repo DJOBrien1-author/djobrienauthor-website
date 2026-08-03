@@ -1,0 +1,8 @@
+FREE BOOK PAGE PATCH
+
+Added free.html, a dedicated Wyvern reader-magnet page linked to BookFunnel.
+BookFunnel reader link: https://dl.bookfunnel.com/7pvwtmp78h
+Added “Free Book” to the main navigation on public pages.
+Added “Get Wyvern Free” to the home-page calls to action.
+Added responsive styling and SEO/social metadata.
+Added free.html to sitemap.xml.

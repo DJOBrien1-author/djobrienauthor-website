@@ -1,0 +1,15 @@
+BRIHANON'S ARCHIVES - EASY SCROLL REPLACEMENT
+
+The Archives editor now includes a field labelled:
+  Scroll Image - Select or Replace
+
+After signing into https://djobrienauthor.com/admin:
+1. Open Brihanon's Archives.
+2. Select a manuscript.
+3. Change the title if needed.
+4. Click the current image in "Scroll Image - Select or Replace" and upload the replacement.
+5. Save and publish.
+
+Modern publication dates have been removed from the public archive cards and manuscript pages.
+
+IMPORTANT: Decap CMS uses Netlify Identity with Git Gateway. A site owner must have an invited/registered Netlify Identity account. If login says "No user found", open Netlify > Identity and invite the email address you want to use. This account setting cannot be created by a website ZIP.
