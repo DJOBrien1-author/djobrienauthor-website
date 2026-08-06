@@ -1,0 +1,6 @@
+READ A PREVIEW READABILITY FIX
+
+Copy the assets folder over the matching assets folder in your website and replace styles.css.
+
+This patch changes only the Read a Preview page styling. It restores a light parchment panel,
+dark readable text, stronger contrast and a clearer secondary button.
