@@ -1,0 +1,19 @@
+BRIHANON'S ARCHIVES HEADING FIX
+
+This patch changes only the displayed archive title:
+
+Of Wizards and Warlocks, Wielders and Teachers
+TO
+Of Wizards and Warlocks, Wielders and Leechers
+
+It updates:
+- the Manuscript Index heading
+- the scroll card heading
+
+The scroll artwork/image is not changed.
+
+INSTALLATION
+1. Extract this ZIP.
+2. Copy the content folder into the root of your current website repository.
+3. Allow the two matching files to replace the existing files.
+4. Commit and push the change to GitHub.
