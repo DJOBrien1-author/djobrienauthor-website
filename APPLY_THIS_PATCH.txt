@@ -1,10 +1,10 @@
-WYVERN PROLOGUE VISIBLE-TEXT PATCH
+A TALE OF TERROR IMAGE REPLACEMENT PATCH
 
-Replace BOTH files:
-1. sample.html
-2. assets/styles.css
+Copy the folders in this ZIP over the matching folders in your website.
+Choose Replace when prompted.
 
-Then deploy and perform a hard refresh with Ctrl+F5.
+Replaced website image:
+/assets/uploads/archive-scrolls/a-tale-of-terror.png
 
-This patch includes the full prologue and a high-specificity light parchment override
-so older dark manuscript styles cannot make the text unreadable.
+This corrects the A Tale of Terror parchment by removing the unwanted oversized illuminated A.
+The archive title, category, numbering, links and manuscript text remain unchanged.
