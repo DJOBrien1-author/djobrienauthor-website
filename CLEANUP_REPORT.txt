@@ -1,0 +1,14 @@
+D.J. O’BRIEN WEBSITE CONSOLIDATION
+
+Completed:
+- Kept one deployable website tree.
+- Removed the two nested duplicate website copies and embedded .git repository.
+- Removed the obsolete Welcome and Brinn archive source records.
+- Corrected Wyverns and Dragons, The First Human Wars, and Wizards and Warlocks, Wielders and Leechers.
+- Renumbered the ten remaining archive scrolls sequentially I to X.
+- Updated Brihanon’s introduction to the approved five-centuries-later wording.
+- Rebuilt content/site.json successfully from the cleaned source files.
+- Removed the temporary admin Office file, obsolete content-loader backup, and stray root site.json.
+- Validated every JSON file after rebuilding.
+
+Deploy the CONTENTS of this folder to the repository root.
