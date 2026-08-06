@@ -1,6 +1,8 @@
-READ A PREVIEW READABILITY FIX
+WYVERN FULL PROLOGUE PATCH
 
-Copy the assets folder over the matching assets folder in your website and replace styles.css.
+Copy sample.html and the assets folder over the matching files in your website.
+Replace the existing files when prompted.
 
-This patch changes only the Read a Preview page styling. It restores a light parchment panel,
-dark readable text, stronger contrast and a clearer secondary button.
+This patch replaces the back-cover blurb with the complete user-supplied Wyvern prologue,
+adds a Prologue heading, scene dividers, comfortable long-form reading spacing,
+and retains the Discover Wyvern and Return to Start Here buttons.
