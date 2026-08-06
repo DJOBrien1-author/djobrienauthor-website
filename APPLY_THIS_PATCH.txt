@@ -1,4 +1,4 @@
-A TALE OF TERROR IMAGE REPLACEMENT PATCH
+A TALE OF TERROR CORRECTED SCROLL PATCH
 
 Copy the folders in this ZIP over the matching folders in your website.
 Choose Replace when prompted.
@@ -6,5 +6,5 @@ Choose Replace when prompted.
 Replaced website image:
 /assets/uploads/archive-scrolls/a-tale-of-terror.png
 
-This corrects the A Tale of Terror parchment by removing the unwanted oversized illuminated A.
-The archive title, category, numbering, links and manuscript text remain unchanged.
+This version uses the corrected A Tale of Terror scroll supplied by you.
+The archive title, category, numbering, links and source record remain unchanged.
