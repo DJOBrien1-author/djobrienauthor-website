@@ -192,7 +192,7 @@
   "archives": [
     {
       "slug": "welcome-to-the-archives",
-      "title": "Welcome to the Archives",
+      "title": "",
       "subtitle": "A note from the Arch Scribe of the Western Isles",
       "date": "2026-08-01",
       "category": "Personal Papers",
@@ -225,11 +225,11 @@
     },
     {
       "slug": "on-the-birth-of-brinn-thronso",
-      "title": "On the Birth of Brinn Thronso",
+      "title": "",
       "subtitle": "Scroll II",
       "date": "2026-08-01",
       "category": "Personal Papers",
-      "newsletter_excerpt": "A finished illuminated manuscript from Brihanon’s Archives: On the Birth of Brinn Thronso.",
+      "newsletter_excerpt": "A finished illuminated manuscript from Brihanon’s Archives: .",
       "hero_image": "/assets/uploads/archive-scrolls/on-the-birth-of-brinn-thronso.png",
       "hero_alt": "The Royal Archives of Kan-Ta record concerning the birth of Brinn Thronso.",
       "manuscript_image": "/assets/uploads/archive-scrolls/on-the-birth-of-brinn-thronso.png",
@@ -238,15 +238,15 @@
       "video_file": "",
       "video_url": "",
       "video_caption": "",
-      "seo_description": "Read On the Birth of Brinn Thronso, an illuminated manuscript from Brihanon’s Archives in the world of The Dark Lair Trilogy."
+      "seo_description": "Read , an illuminated manuscript from Brihanon’s Archives in the world of The Dark Lair Trilogy."
     },
     {
       "slug": "a-treatise-concerning-dragons-and-wyverns",
-      "title": "A Treatise Concerning Dragons and Wyverns",
+      "title": "Wyverns and Dragons",
       "subtitle": "Scroll III",
       "date": "2026-08-01",
       "category": "Bestiary",
-      "newsletter_excerpt": "A finished illuminated manuscript from Brihanon’s Archives: A Treatise Concerning Dragons and Wyverns.",
+      "newsletter_excerpt": "A finished illuminated manuscript from Brihanon’s Archives: Wyverns and Dragons.",
       "hero_image": "/assets/uploads/archive-scrolls/a-treatise-concerning-dragons-and-wyverns.png",
       "hero_alt": "Brihanon’s treatise concerning dragons and wyverns.",
       "manuscript_image": "/assets/uploads/archive-scrolls/a-treatise-concerning-dragons-and-wyverns.png",
@@ -255,7 +255,7 @@
       "video_file": "",
       "video_url": "",
       "video_caption": "",
-      "seo_description": "Read A Treatise Concerning Dragons and Wyverns, an illuminated manuscript from Brihanon’s Archives in the world of The Dark Lair Trilogy."
+      "seo_description": "Read Wyverns and Dragons, an illuminated manuscript from Brihanon’s Archives in the world of The Dark Lair Trilogy."
     },
     {
       "slug": "the-three-crystals",
@@ -276,11 +276,11 @@
     },
     {
       "slug": "the-wars-of-men-before-the-great-darkness",
-      "title": "The Wars of Men Before the Great Darkness",
+      "title": "The First Human Wars",
       "subtitle": "Scroll V",
       "date": "2026-08-01",
       "category": "Histories",
-      "newsletter_excerpt": "A finished illuminated manuscript from Brihanon’s Archives: The Wars of Men Before the Great Darkness.",
+      "newsletter_excerpt": "A finished illuminated manuscript from Brihanon’s Archives: The First Human Wars.",
       "hero_image": "/assets/uploads/archive-scrolls/the-wars-of-men-before-the-great-darkness.png",
       "hero_alt": "Brihanon’s record of the wars of men before the Great Darkness.",
       "manuscript_image": "/assets/uploads/archive-scrolls/the-wars-of-men-before-the-great-darkness.png",
@@ -289,7 +289,7 @@
       "video_file": "",
       "video_url": "",
       "video_caption": "",
-      "seo_description": "Read The Wars of Men Before the Great Darkness, an illuminated manuscript from Brihanon’s Archives in the world of The Dark Lair Trilogy."
+      "seo_description": "Read The First Human Wars, an illuminated manuscript from Brihanon’s Archives in the world of The Dark Lair Trilogy."
     },
     {
       "slug": "concerning-the-elders",
@@ -310,11 +310,11 @@
     },
     {
       "slug": "of-wizards-and-warlocks",
-      "title": "Of Wizards and Warlocks, Wielders and Teachers",
+      "title": "Of Wizards and Warlocks, Wielders and Leechers",
       "subtitle": "Scroll VII",
       "date": "2026-08-01",
       "category": "Ancient Lore",
-      "newsletter_excerpt": "A finished illuminated manuscript from Brihanon’s Archives: Of Wizards and Warlocks, Wielders and Teachers.",
+      "newsletter_excerpt": "A finished illuminated manuscript from Brihanon’s Archives: Of Wizards and Warlocks, Wielders and Leechers.",
       "hero_image": "/assets/uploads/archive-scrolls/of-wizards-and-warlocks.png",
       "hero_alt": "Brihanon’s manuscript concerning wizards, warlocks, wielders and teachers.",
       "manuscript_image": "/assets/uploads/archive-scrolls/of-wizards-and-warlocks.png",
@@ -323,7 +323,7 @@
       "video_file": "",
       "video_url": "",
       "video_caption": "",
-      "seo_description": "Read Of Wizards and Warlocks, Wielders and Teachers, an illuminated manuscript from Brihanon’s Archives in the world of The Dark Lair Trilogy."
+      "seo_description": "Read Of Wizards and Warlocks, Wielders and Leechers, an illuminated manuscript from Brihanon’s Archives in the world of The Dark Lair Trilogy."
     },
     {
       "slug": "the-kingdoms-of-the-west",
