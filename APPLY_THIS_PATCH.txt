@@ -1,8 +1,10 @@
-WYVERN FULL PROLOGUE PATCH
+WYVERN PROLOGUE VISIBLE-TEXT PATCH
 
-Copy sample.html and the assets folder over the matching files in your website.
-Replace the existing files when prompted.
+Replace BOTH files:
+1. sample.html
+2. assets/styles.css
 
-This patch replaces the back-cover blurb with the complete user-supplied Wyvern prologue,
-adds a Prologue heading, scene dividers, comfortable long-form reading spacing,
-and retains the Discover Wyvern and Return to Start Here buttons.
+Then deploy and perform a hard refresh with Ctrl+F5.
+
+This patch includes the full prologue and a high-specificity light parchment override
+so older dark manuscript styles cannot make the text unreadable.
