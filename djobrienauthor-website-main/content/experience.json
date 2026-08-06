@@ -1,9 +1,0 @@
-{
-  "control_label": "Archive ambience",
-  "default_volume": 18,
-  "scroll_transition": true,
-  "remember_choice": true,
-  "archive_ambience": true,
-  "map_ambience": true,
-  "character_ambience": true
-}

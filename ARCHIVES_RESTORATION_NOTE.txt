@@ -1,0 +1,9 @@
+BRIHANON'S ARCHIVES RESTORATION
+
+Restored:
+- Scroll X: Pirates and Slavers
+- Scroll XI: The Widow's Wheel
+- Scroll XII: The Karesh People
+
+The archive now contains twelve manuscripts with unique sequential Roman numerals.
+The manuscript index, category filters and cards are generated automatically from content/archives.

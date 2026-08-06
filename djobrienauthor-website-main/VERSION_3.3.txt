@@ -1,8 +1,0 @@
-D.J. O'Brien Author Website - Version 3.3
-
-Manuscript opening timing refinement:
-- Keeps the original, untouched ZapSplat WAV.
-- Reduces the delay before opening a manuscript from 2.45 seconds to 0.7 seconds.
-- Continues the same recording at the correct point after page navigation.
-- No cropping, stretching, EQ, filtering, fading or volume processing.
-- No sounds are triggered by scrolling.

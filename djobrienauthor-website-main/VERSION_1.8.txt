@@ -1,9 +1,0 @@
-VERSION 1.8
-
-Added world-page forest ambience:
-- soft woodland wind
-- light leaf rustle
-- subtle natural low resonance
-- occasional raven call after 5 to 12 seconds
-- automatic activation on world.html
-- generated with the Web Audio API, no external sound files

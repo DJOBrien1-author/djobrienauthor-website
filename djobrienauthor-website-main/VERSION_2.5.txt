@@ -1,6 +1,0 @@
-VERSION 2.5
-
-Archive sound correction:
-- the Brihanon's Archives index page no longer triggers parchment or quill sounds while scrolling
-- parchment and quill effects are reserved for an individually opened manuscript
-- archive fireplace ambience remains unchanged

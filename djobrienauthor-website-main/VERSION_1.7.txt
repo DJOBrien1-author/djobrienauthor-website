@@ -1,9 +1,0 @@
-VERSION 1.7
-
-Added restrained battle-scene effects:
-- short sword clash
-- shield impact
-- distant battlefield rumble
-- automatic detection of war-related sections
-- nine-second cooldown to avoid repeated noise
-- generated with the Web Audio API, no external sound files

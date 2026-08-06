@@ -1,8 +1,0 @@
-VERSION 1.6
-
-Added scroll-reading effects for Brihanon's Archives:
-- parchment rustle when a manuscript/scroll enters view
-- quill scratching shortly afterwards
-- short cooldown to prevent overlapping effects
-- effects play only on archive pages
-- uses generated Web Audio API sounds, no external audio files

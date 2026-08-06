@@ -1,7 +1,0 @@
-{
-  "name": "djobrien-author-website",
-  "private": true,
-  "scripts": {
-    "build": "node scripts/build-content.js"
-  }
-}

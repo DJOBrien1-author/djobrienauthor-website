@@ -1,9 +1,0 @@
-D.J. O'Brien Author Website - Version 3.0
-
-Manuscript opening audio hand-off update:
-- The selected ZapSplat opening sound now continues onto the individual manuscript page.
-- Navigation begins before the recording ends.
-- The destination page resumes the same recording at the elapsed position.
-- The sound has a longer, gentler tail on the fully opened manuscript.
-- No opening or parchment sound is attached to scrolling.
-- Fireplace ambience remains unchanged.
