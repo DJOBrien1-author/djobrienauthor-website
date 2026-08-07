@@ -141,6 +141,33 @@ body[data-page="home"] .books-stage .book-card:hover{
 }
 </style>
 
+
+<style id="homepage-books-polish-v6">
+/* Homepage V6 polish:
+   - move trilogy covers a little further right
+   - tighten spacing
+   - raise the group slightly
+*/
+body[data-page="home"] .books-stage{
+  gap:.28rem !important;
+  padding-right:.35vw !important;
+  transform:translate(26px,-12px) !important;
+}
+@media (max-width:1100px){
+  body[data-page="home"] .books-stage{
+    gap:.22rem !important;
+    padding-right:0 !important;
+    transform:translate(14px,-8px) !important;
+  }
+}
+@media (max-width:760px){
+  body[data-page="home"] .books-stage{
+    transform:none !important;
+    gap:.35rem !important;
+  }
+}
+</style>
+
 </head><body data-page="home">
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">

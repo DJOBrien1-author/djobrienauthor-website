@@ -1,13 +1,12 @@
-DARK LAIR HOMEPAGE PATCH V5
+DARK LAIR HOMEPAGE PATCH V6
 
-Changes only:
-- reduces the three homepage book covers,
-- keeps all three exactly uniform,
-- moves the book group further to the right so more of the Wyvern background remains visible.
+Polish changes only:
+- trilogy cover group moved ~26px further right on desktop,
+- raised ~12px,
+- gaps between covers tightened,
+- mobile layout left unchanged.
 
-Desktop size: 165 x 264 px each.
-No background artwork changes in this patch.
-
-Apply by extracting into the website root and replacing index.html.
-The artwork file is included only so the patch remains self-contained.
+Apply:
+Extract into the website root and replace index.html.
+The background image is included so the patch is self-contained.
 Then refresh with Ctrl+F5.
