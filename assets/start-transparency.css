@@ -17,3 +17,56 @@ body[data-page="start"] .start-feature h2,
 body[data-page="start"] .grid-3 > .panel h3{
   text-shadow:0 2px 3px rgba(0,0,0,.9);
 }
+
+
+/* V3: reduce the featured "Begin with Wyvern" block to about half its former footprint */
+body[data-page="start"] .start-feature{
+  width:min(52%, 610px) !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+  padding:14px 16px !important;
+  gap:14px !important;
+}
+
+body[data-page="start"] .start-feature .book-cover,
+body[data-page="start"] .start-feature img{
+  width:132px !important;
+  max-width:132px !important;
+  height:auto !important;
+}
+
+body[data-page="start"] .start-feature h2{
+  margin:.2rem 0 .35rem !important;
+}
+
+body[data-page="start"] .start-feature p{
+  margin:.25rem 0 .5rem !important;
+  line-height:1.45 !important;
+}
+
+body[data-page="start"] .start-feature .button-row,
+body[data-page="start"] .start-feature .actions{
+  gap:.45rem !important;
+}
+
+body[data-page="start"] .start-feature .btn{
+  padding:.68rem .95rem !important;
+}
+
+@media(max-width:900px){
+  body[data-page="start"] .start-feature{
+    width:min(78%, 610px) !important;
+  }
+}
+
+@media(max-width:640px){
+  body[data-page="start"] .start-feature{
+    width:92% !important;
+    padding:12px !important;
+  }
+  body[data-page="start"] .start-feature .book-cover,
+  body[data-page="start"] .start-feature img{
+    width:108px !important;
+    max-width:108px !important;
+  }
+}
