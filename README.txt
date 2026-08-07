@@ -1,20 +1,17 @@
-DARK LAIR TRILOGY — BRIHANON'S ARCHIVES REDESIGN PATCH 1
+HOMEPAGE DIRECT OVERRIDE PATCH V4
 
-Files in this patch:
-- archives.html
-- assets/content-loader.js
-- assets/styles.css
-- assets/artwork/jesus-da-silva/archives-dragons.webp
+This is an actual code patch, not a mock-up.
 
-What it changes:
-- Uses original commissioned Jesus Da Silva dragon artwork as the Archives page visual background.
-- Replaces the card grid with a two-panel Archives layout.
-- Left panel: clickable rolled-scroll source records.
-- Right panel: selected manuscript opens inside an aged bound-ledger presentation.
-- Uses the existing archive manuscript content; no new lore or provenance is invented.
-- Keeps the full-record page available through "Open the full record".
-- Adds the agreed artist-credit footer on the Archives page.
-- Re-enables the existing archive ambience / parchment opening sound script on this page.
+It changes only the homepage:
+- centres the original Wyvern-cover dragon,
+- forces all three trilogy cover thumbnails into identical 220 x 352 px display boxes,
+- removes the previous stagger/rotation,
+- uses inline !important overrides in index.html so the existing shared stylesheet cannot override the fix,
+- uses a new background filename to bypass cache.
 
-Important:
-This patch does NOT rewrite the manuscript wording. The current manuscript images remain the source content until each archive entry is individually proofread and converted into the cleaner ledger transcription design.
+Files:
+index.html
+assets/artwork/jesus-da-silva/home-wyvern-cover-dragon-centered-v4.webp
+
+Apply by extracting into the website root and replacing matching files.
+Then Ctrl+F5.
