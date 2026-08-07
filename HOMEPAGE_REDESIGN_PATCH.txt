@@ -1,0 +1,13 @@
+DARK LAIR TRILOGY - HOMEPAGE REDESIGN PATCH 1
+
+Changes made:
+1. Replaced the previous generated homepage background with a genuine crop made from the recovered original dragon artwork.
+2. Preserved the existing homepage layout, book covers, navigation and content.
+3. Adjusted the homepage overlay and image positioning for readable text while keeping the dragon eye prominent.
+4. Added the agreed creative credits to the homepage footer:
+   - Jesus Da Silva - original artwork
+   - Emmanuel Omenda - additional dragon artwork
+   - Saniya Aslam - maps
+   - Lesia S. (germancreative) - cover title design
+
+No other pages have been redesigned in this patch.

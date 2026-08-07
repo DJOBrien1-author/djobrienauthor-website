@@ -445,7 +445,7 @@ body::after{
     linear-gradient(180deg,rgba(4,5,7,.12),rgba(4,5,7,.46));
   pointer-events:none;
 }
-body[data-page="home"]{--page-bg:url('/assets/uploads/backgrounds/home-amberlay-benteer-mountains.webp')}
+body[data-page="home"]{--page-bg:url('/assets/artwork/jesus-da-silva/home-dragon-eye.webp');--scene-overlay:.62}
 body[data-page="start"]{--page-bg:url('/assets/uploads/backgrounds/trilogy-deel-roat-road.webp')}
 body[data-page="trilogy"]{--page-bg:url('/assets/uploads/backgrounds/home-gathering-storm.webp')}
 body[data-page="world"]{--page-bg:url('/assets/uploads/backgrounds/world-dark-lair-lands.webp')}
@@ -460,10 +460,11 @@ body[data-page="sample"]{--page-bg:url('/assets/scenery/sample.webp')}
 body[data-page="privacy"]{--page-bg:url('/assets/scenery/privacy.webp')}
 body[data-page="thanks"]{--page-bg:url('/assets/scenery/thanks.webp')}
 body[data-page="404"]{--page-bg:url('/assets/scenery/404.webp')}
+body[data-page="home"]::before{background-position:center 38%}
 main{background:transparent}
 .hero{
   position:relative;
-  background:linear-gradient(90deg,rgba(6,7,9,.48),rgba(6,7,9,.08));
+  background:linear-gradient(90deg,rgba(6,7,9,.78) 0%,rgba(6,7,9,.46) 42%,rgba(6,7,9,.08) 72%,rgba(6,7,9,.02) 100%);
 }
 .section{
   position:relative;
@@ -787,4 +788,9 @@ body[data-page="sample"] .prologue-manuscript .btn.secondary:focus-visible{
   body[data-page="sample"] .prologue-text{
     line-height:1.72 !important;
   }
+}
+
+/* Homepage authentic artwork positioning */
+@media(max-width:760px){
+  body[data-page="home"]::before{background-position:68% center}
 }
