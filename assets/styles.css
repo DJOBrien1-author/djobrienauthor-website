@@ -445,7 +445,7 @@ body::after{
     linear-gradient(180deg,rgba(4,5,7,.12),rgba(4,5,7,.46));
   pointer-events:none;
 }
-body[data-page="home"]{--page-bg:url('/assets/artwork/jesus-da-silva/home-dragon-eye.webp');--scene-overlay:.62}
+body[data-page="home"]{--page-bg:url('/assets/uploads/backgrounds/home-amberlay-benteer-mountains.webp')}
 body[data-page="start"]{--page-bg:url('/assets/uploads/backgrounds/trilogy-deel-roat-road.webp')}
 body[data-page="trilogy"]{--page-bg:url('/assets/uploads/backgrounds/home-gathering-storm.webp')}
 body[data-page="world"]{--page-bg:url('/assets/uploads/backgrounds/world-dark-lair-lands.webp')}
@@ -460,11 +460,10 @@ body[data-page="sample"]{--page-bg:url('/assets/scenery/sample.webp')}
 body[data-page="privacy"]{--page-bg:url('/assets/scenery/privacy.webp')}
 body[data-page="thanks"]{--page-bg:url('/assets/scenery/thanks.webp')}
 body[data-page="404"]{--page-bg:url('/assets/scenery/404.webp')}
-body[data-page="home"]::before{background-position:center 38%}
 main{background:transparent}
 .hero{
   position:relative;
-  background:linear-gradient(90deg,rgba(6,7,9,.78) 0%,rgba(6,7,9,.46) 42%,rgba(6,7,9,.08) 72%,rgba(6,7,9,.02) 100%);
+  background:linear-gradient(90deg,rgba(6,7,9,.48),rgba(6,7,9,.08));
 }
 .section{
   position:relative;
@@ -790,7 +789,259 @@ body[data-page="sample"] .prologue-manuscript .btn.secondary:focus-visible{
   }
 }
 
-/* Homepage authentic artwork positioning */
-@media(max-width:760px){
-  body[data-page="home"]::before{background-position:68% center}
+
+/* Brihanon's Archives definitive source-scroll / ledger layout */
+body[data-page="archives"]{
+  --page-bg:url('/assets/artwork/jesus-da-silva/archives-dragons.webp');
+  --scene-overlay:.70;
+}
+body[data-page="archives"]::before{
+  background-position:center 26%;
+  background-size:cover;
+  filter:saturate(.82) contrast(1.02);
+}
+body[data-page="archives"]::after{
+  background:
+    linear-gradient(90deg,rgba(4,4,5,.88) 0%,rgba(6,5,5,.77) 48%,rgba(7,6,6,.66) 100%),
+    radial-gradient(circle at 75% 24%,rgba(157,91,37,.14),transparent 34rem);
+}
+.archive-room{
+  position:relative;
+  z-index:2;
+  min-height:calc(100vh - 70px);
+  padding:clamp(1.2rem,3vw,3rem);
+}
+.archive-room-inner{
+  width:min(1500px,100%);
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:minmax(370px,.86fr) minmax(560px,1.14fr);
+  gap:clamp(1.2rem,2.5vw,2.6rem);
+  align-items:start;
+}
+.archive-source-panel{
+  position:sticky;
+  top:92px;
+  padding:clamp(1.1rem,2.3vw,2rem);
+  border:1px solid rgba(201,157,80,.48);
+  background:
+    linear-gradient(145deg,rgba(11,9,8,.94),rgba(20,13,9,.86)),
+    rgba(0,0,0,.6);
+  box-shadow:0 24px 60px rgba(0,0,0,.55);
+  backdrop-filter:blur(5px);
+}
+.archive-heading{
+  padding-bottom:1.25rem;
+  border-bottom:1px solid rgba(201,157,80,.28);
+}
+.archive-heading h1{
+  margin:.15rem 0 .75rem;
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-size:clamp(2.5rem,4vw,4.4rem);
+  line-height:1;
+  color:var(--gold-light);
+  font-weight:600;
+}
+.archive-introduction{
+  margin:.65rem 0;
+  color:#e1d5be;
+  font-size:1.04rem;
+  line-height:1.7;
+}
+.archive-byline{
+  margin:.6rem 0 0;
+  color:var(--gold);
+  font-style:italic;
+}
+.archive-scroll-heading{
+  margin:1.45rem 0 .9rem;
+}
+.archive-scroll-heading h2{
+  margin:0;
+  color:var(--gold-light);
+  font-family:"Cormorant Garamond",Georgia,serif;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  font-size:1.2rem;
+}
+.archive-scroll-heading p{
+  margin:.35rem 0 0;
+  color:var(--muted);
+  font-size:.92rem;
+}
+.archive-scroll-list{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:.65rem .8rem;
+}
+.archive-roll{
+  position:relative;
+  min-height:74px;
+  border:0;
+  color:#342316;
+  cursor:pointer;
+  text-align:left;
+  padding:.72rem 1rem .72rem 1.15rem;
+  background:
+    linear-gradient(90deg,rgba(73,42,18,.52),transparent 7%,transparent 93%,rgba(73,42,18,.52)),
+    linear-gradient(#d7bd8e,#ead4aa 24%,#d9be91 71%,#b89461);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.4),
+    inset 0 -2px 5px rgba(84,46,18,.35),
+    0 7px 16px rgba(0,0,0,.34);
+  border-radius:28px 8px 8px 28px;
+  transition:transform .18s ease,filter .18s ease,box-shadow .18s ease;
+}
+.archive-roll::before,
+.archive-roll::after{
+  content:"";
+  position:absolute;
+  top:7px;
+  bottom:7px;
+  width:8px;
+  border-radius:50%;
+  background:linear-gradient(90deg,#7f582f,#c39d69,#795128);
+  box-shadow:0 0 0 1px rgba(73,42,18,.38);
+}
+.archive-roll::before{left:-2px}
+.archive-roll::after{right:-2px}
+.archive-roll:hover,
+.archive-roll:focus-visible{
+  transform:translateY(-2px);
+  filter:brightness(1.06);
+  outline:none;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.45),0 11px 22px rgba(0,0,0,.46);
+}
+.archive-roll[aria-pressed="true"]{
+  box-shadow:0 0 0 2px var(--gold),0 14px 28px rgba(0,0,0,.55);
+}
+.archive-roll-number{
+  display:block;
+  color:#76501f;
+  font-family:"Cinzel",Georgia,serif;
+  font-size:.7rem;
+  letter-spacing:.08em;
+}
+.archive-roll-title{
+  display:block;
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-size:1.02rem;
+  line-height:1.04;
+  font-weight:700;
+  margin:.08rem 0;
+}
+.archive-roll-category{
+  display:block;
+  font-size:.73rem;
+  opacity:.72;
+}
+.archive-loading{color:var(--muted)}
+.archive-ledger{
+  min-height:780px;
+  max-height:calc(100vh - 115px);
+  overflow:auto;
+  scrollbar-color:#9f7640 #24180f;
+  scrollbar-width:thin;
+  padding:clamp(.8rem,1.6vw,1.15rem);
+  border:1px solid rgba(201,157,80,.52);
+  background:
+    linear-gradient(90deg,rgba(24,15,9,.98),rgba(45,29,16,.98) 3%,rgba(24,15,9,.98) 6%,rgba(16,11,8,.98));
+  box-shadow:0 28px 70px rgba(0,0,0,.62);
+}
+.archive-ledger-page,
+.archive-ledger-placeholder{
+  min-height:730px;
+  padding:clamp(1.5rem,4vw,3.2rem);
+  color:#332417;
+  background:
+    radial-gradient(circle at 13% 8%,rgba(125,78,36,.11),transparent 18rem),
+    radial-gradient(circle at 86% 88%,rgba(86,49,23,.09),transparent 16rem),
+    linear-gradient(90deg,rgba(122,78,37,.12),transparent 3%,transparent 97%,rgba(96,60,29,.12)),
+    #d9c39a;
+  box-shadow:
+    inset 0 0 45px rgba(80,48,22,.20),
+    inset 0 0 0 1px rgba(77,47,24,.23);
+}
+.archive-ledger-header{
+  text-align:center;
+  border-bottom:1px solid rgba(79,48,24,.32);
+  margin-bottom:1.35rem;
+  padding-bottom:1rem;
+}
+.archive-ledger-header .meta{
+  color:#7c552b;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.archive-ledger-header h2,
+.archive-ledger-placeholder h2{
+  margin:.2rem 0;
+  color:#2f2117;
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-size:clamp(2.25rem,4vw,4.1rem);
+  line-height:1.04;
+}
+.archive-ledger-subtitle{
+  margin:.35rem 0 0;
+  color:#654725;
+  font-style:italic;
+}
+.archive-ledger-manuscript{
+  margin:0 auto;
+  max-width:780px;
+}
+.archive-ledger-manuscript a{
+  display:block;
+}
+.archive-ledger-manuscript img{
+  width:100%;
+  height:auto;
+  border:1px solid rgba(74,44,21,.28);
+  box-shadow:0 11px 28px rgba(58,34,17,.20);
+}
+.archive-ledger .archive-body{
+  color:#382718;
+  font-size:1.12rem;
+  line-height:1.8;
+}
+.archive-ledger-actions{
+  text-align:center;
+  margin-top:1.4rem;
+}
+.archive-ledger-actions .btn{
+  margin-top:0;
+}
+.archive-ledger-placeholder{
+  display:grid;
+  place-content:center;
+  text-align:center;
+}
+.archive-ledger-placeholder .meta{color:#805b2d}
+body[data-page="archives"] .site-footer{
+  position:relative;
+  z-index:3;
+}
+body[data-page="archives"] .creative-credits{
+  max-width:1080px;
+  margin:1.1rem auto .8rem;
+  font-size:.92rem;
+}
+@media(max-width:1100px){
+  .archive-room-inner{grid-template-columns:minmax(330px,.78fr) minmax(500px,1.22fr)}
+  .archive-scroll-list{grid-template-columns:1fr}
+}
+@media(max-width:920px){
+  .archive-room{padding:.8rem}
+  .archive-room-inner{grid-template-columns:1fr}
+  .archive-source-panel{position:relative;top:auto}
+  .archive-scroll-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .archive-ledger{max-height:none;min-height:0}
+  .archive-ledger-page,.archive-ledger-placeholder{min-height:0}
+}
+@media(max-width:600px){
+  .archive-scroll-list{grid-template-columns:1fr}
+  .archive-source-panel{padding:1rem}
+  .archive-ledger{padding:.45rem}
+  .archive-ledger-page,.archive-ledger-placeholder{padding:1.15rem .8rem}
+  .archive-roll{min-height:66px}
 }
