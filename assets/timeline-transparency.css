@@ -22,3 +22,15 @@ body[data-page="timeline"] .timeline-card h3,
 body[data-page="timeline"] .timeline-card p{
   text-shadow:0 2px 3px rgba(0,0,0,.86) !important;
 }
+
+
+/* V2: use the full original dragon artwork and shift it upward
+   so the wyvern's lower body and feet are visible. */
+body[data-page="timeline"]{
+  --page-bg:url('/assets/artwork/jesus-da-silva/timeline-original-dragon-full.webp') !important;
+}
+
+body[data-page="timeline"]::before{
+  background-position:50% 78% !important;
+  transform:scale(1.0) !important;
+}

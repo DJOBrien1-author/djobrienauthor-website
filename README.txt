@@ -1,14 +1,21 @@
-DARK LAIR TRILOGY — TIMELINE TRANSPARENCY PATCH V1
+DARK LAIR TRILOGY — TIMELINE BACKGROUND POSITION PATCH V2
 
-Changes only the Timeline information panels:
-- applies the same translucent treatment used on the approved Start Here panels,
-- preserves panel sizes and layout,
-- preserves the Timeline background artwork,
-- adds a subtle text shadow for readability.
+Purpose:
+Move the Timeline background composition upward so more of the wyvern's
+lower body and feet are visible.
+
+What changed:
+- Uses the full original commissioned dragon artwork rather than the
+  earlier cropped landscape derivative.
+- Positions that artwork lower in its source frame (78% vertical position),
+  which visually moves the dragon upward in the browser viewport.
+- Preserves the approved Start Here-level transparency on the Timeline boxes.
+- No other pages are changed.
 
 Files:
 - timeline.html
 - assets/timeline-transparency.css
+- assets/artwork/jesus-da-silva/timeline-original-dragon-full.webp
 
 Apply:
 Extract into the website root and replace/add the files above.
