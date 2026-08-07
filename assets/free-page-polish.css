@@ -1,0 +1,78 @@
+/* Free Book page refinement to match the approved Start Here styling */
+
+body[data-page="free"] .free-book-grid{
+  max-width:900px !important;
+  grid-template-columns:240px minmax(0,1fr) !important;
+  gap:18px !important;
+  align-items:center !important;
+}
+
+/* Reduce the Wyvern cover while keeping it clearly readable */
+body[data-page="free"] .free-book-cover img{
+  width:240px !important;
+  max-width:240px !important;
+  margin:0 auto !important;
+}
+
+/* Match Start Here transparency */
+body[data-page="free"] .free-book-copy{
+  padding:14px 16px !important;
+  background:linear-gradient(
+    145deg,
+    rgba(20,16,12,.30),
+    rgba(8,10,13,.34)
+  ) !important;
+  backdrop-filter:blur(2px) !important;
+  -webkit-backdrop-filter:blur(2px) !important;
+  box-shadow:0 12px 28px rgba(0,0,0,.28) !important;
+}
+
+/* Tighten the wording */
+body[data-page="free"] .free-book-copy h1{
+  margin:.05rem 0 .25rem !important;
+  font-size:clamp(2.35rem,4.5vw,4rem) !important;
+  line-height:.95 !important;
+}
+body[data-page="free"] .free-book-kicker{
+  margin:.1rem 0 .45rem !important;
+}
+body[data-page="free"] .free-book-copy .lead{
+  margin:.15rem 0 .45rem !important;
+  line-height:1.42 !important;
+}
+body[data-page="free"] .free-book-points{
+  margin:.5rem 0 .6rem !important;
+}
+body[data-page="free"] .free-book-points li{
+  margin:.28rem 0 !important;
+}
+body[data-page="free"] .free-book-actions{
+  margin-top:.45rem !important;
+  gap:6px !important;
+  flex-wrap:nowrap !important;
+}
+body[data-page="free"] .free-book-actions .btn{
+  margin:0 !important;
+  padding:.62rem .85rem !important;
+  white-space:nowrap !important;
+}
+body[data-page="free"] .free-book-note{
+  margin-top:.5rem !important;
+  line-height:1.35 !important;
+}
+
+/* Keep mobile readable rather than forcing desktop proportions */
+@media(max-width:820px){
+  body[data-page="free"] .free-book-grid{
+    max-width:92% !important;
+    grid-template-columns:1fr !important;
+    gap:14px !important;
+  }
+  body[data-page="free"] .free-book-cover img{
+    width:210px !important;
+    max-width:210px !important;
+  }
+  body[data-page="free"] .free-book-actions{
+    flex-wrap:wrap !important;
+  }
+}

@@ -1,19 +1,14 @@
-DARK LAIR TRILOGY — START HERE PATCH V7
+DARK LAIR TRILOGY — FREE BOOK PAGE PATCH V1
 
-Fixes the over-narrow V6 layout.
-
-Changes:
-- keeps the Begin with Wyvern card centred,
-- makes it about 15–20% wider,
-- keeps the Wyvern cover at the successful current size,
-- tightens wording without forcing excessive line wrapping,
-- keeps both buttons on one clean horizontal row,
-- preserves the stronger transparency,
-- leaves the three lower information panels unchanged.
+Changes only the Free Book page:
+- reduces the Wyvern cover size to match the tighter Start Here proportions,
+- makes the Get Wyvern Free panel much more transparent,
+- tightens the wording and vertical spacing,
+- reduces the gap between the two buttons,
+- keeps the content centred and compact,
+- leaves all other pages unchanged.
 
 Apply:
-Extract into the website root and replace:
-- start.html
-- assets/start-transparency.css
-
-Then refresh Start Here with Ctrl+F5.
+Extract into the website root and replace free.html.
+Add assets/free-page-polish.css.
+Then Ctrl+F5 on the Free Book page.
