@@ -1,16 +1,15 @@
-DARK LAIR TRILOGY — WORLD PAGE PATCH V3
+DARK LAIR TRILOGY — TIMELINE TRANSPARENCY PATCH V1
 
-Changes only the three lower information boxes:
-- Wyvern
-- Maelstrom
-- Dragon Knight
+Changes only the Timeline information panels:
+- applies the same translucent treatment used on the approved Start Here panels,
+- preserves panel sizes and layout,
+- preserves the Timeline background artwork,
+- adds a subtle text shadow for readability.
 
-They now use the same translucent treatment as the approved Start Here panels.
-The compact map and all other World-page changes from V2 are preserved.
+Files:
+- timeline.html
+- assets/timeline-transparency.css
 
 Apply:
-Extract into the website root and replace:
-- world.html
-- assets/world-map-compact.css
-
-Then Ctrl+F5 on /world.
+Extract into the website root and replace/add the files above.
+Then Ctrl+F5 on /timeline.
