@@ -1,0 +1,19 @@
+DARK LAIR TRILOGY — WYVERN HOMEPAGE BACKGROUND PATCH
+
+Purpose:
+Replace the current homepage dragon background with a wide crop made directly
+from the original Jesus Da Silva artwork used for Wyvern.
+
+No AI-generated artwork is included.
+
+Files:
+- index.html
+- assets/styles.css
+- assets/artwork/jesus-da-silva/home-wyvern-original.webp
+
+Apply:
+Extract this ZIP into the website root and allow matching files to replace the
+existing versions.
+
+This patch changes only the homepage background/preload. Other pages are left
+unchanged.
