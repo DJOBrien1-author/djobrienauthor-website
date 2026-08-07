@@ -70,3 +70,39 @@ body[data-page="start"] .start-feature .btn{
     max-width:108px !important;
   }
 }
+
+
+/* V4 final Start Here polish */
+body[data-page="start"] .start-feature,
+body[data-page="start"] .grid-3 > .panel{
+  background:linear-gradient(
+    145deg,
+    rgba(24,18,14,.45),
+    rgba(8,10,13,.47)
+  ) !important;
+}
+
+/* Tighten only the Begin with Wyvern block by roughly another 10–15% vertically */
+body[data-page="start"] .start-feature{
+  padding:10px 14px !important;
+  gap:10px !important;
+}
+
+body[data-page="start"] .start-feature h2{
+  margin:.1rem 0 .22rem !important;
+}
+
+body[data-page="start"] .start-feature p{
+  margin:.15rem 0 .35rem !important;
+  line-height:1.36 !important;
+}
+
+body[data-page="start"] .start-feature .button-row,
+body[data-page="start"] .start-feature .actions{
+  margin-top:.15rem !important;
+  gap:.4rem !important;
+}
+
+body[data-page="start"] .start-feature .btn{
+  padding:.58rem .88rem !important;
+}
