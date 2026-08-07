@@ -1,17 +1,13 @@
-HOMEPAGE DIRECT OVERRIDE PATCH V4
+DARK LAIR HOMEPAGE PATCH V5
 
-This is an actual code patch, not a mock-up.
+Changes only:
+- reduces the three homepage book covers,
+- keeps all three exactly uniform,
+- moves the book group further to the right so more of the Wyvern background remains visible.
 
-It changes only the homepage:
-- centres the original Wyvern-cover dragon,
-- forces all three trilogy cover thumbnails into identical 220 x 352 px display boxes,
-- removes the previous stagger/rotation,
-- uses inline !important overrides in index.html so the existing shared stylesheet cannot override the fix,
-- uses a new background filename to bypass cache.
+Desktop size: 165 x 264 px each.
+No background artwork changes in this patch.
 
-Files:
-index.html
-assets/artwork/jesus-da-silva/home-wyvern-cover-dragon-centered-v4.webp
-
-Apply by extracting into the website root and replacing matching files.
-Then Ctrl+F5.
+Apply by extracting into the website root and replacing index.html.
+The artwork file is included only so the patch remains self-contained.
+Then refresh with Ctrl+F5.

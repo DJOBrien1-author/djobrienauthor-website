@@ -75,6 +75,72 @@ body[data-page="home"] .books-stage .book-card:hover{
 }
 </style>
 
+
+<style id="homepage-books-right-v5">
+/* Homepage V5: smaller uniform book covers, moved further right. */
+body[data-page="home"] .books-stage{
+  display:flex !important;
+  align-items:flex-start !important;
+  justify-content:flex-end !important;
+  gap:.55rem !important;
+  width:44% !important;
+  margin-left:auto !important;
+  padding-right:2.2vw !important;
+  box-sizing:border-box !important;
+}
+body[data-page="home"] .books-stage .book-card{
+  flex:0 0 165px !important;
+  width:165px !important;
+  height:264px !important;
+  margin:0 !important;
+  transform:none !important;
+}
+body[data-page="home"] .books-stage .book-card img{
+  display:block !important;
+  width:165px !important;
+  height:264px !important;
+  max-width:none !important;
+  object-fit:cover !important;
+  object-position:center !important;
+}
+body[data-page="home"] .books-stage .book-card:hover{
+  transform:translateY(-6px) scale(1.015) !important;
+}
+@media (max-width:1100px){
+  body[data-page="home"] .books-stage{
+    width:46% !important;
+    padding-right:1.2vw !important;
+    gap:.4rem !important;
+  }
+  body[data-page="home"] .books-stage .book-card{
+    flex-basis:145px !important;
+    width:145px !important;
+    height:232px !important;
+  }
+  body[data-page="home"] .books-stage .book-card img{
+    width:145px !important;
+    height:232px !important;
+  }
+}
+@media (max-width:760px){
+  body[data-page="home"] .books-stage{
+    width:100% !important;
+    justify-content:center !important;
+    padding-right:0 !important;
+    margin-top:1rem !important;
+  }
+  body[data-page="home"] .books-stage .book-card{
+    flex-basis:27vw !important;
+    width:27vw !important;
+    height:43.2vw !important;
+  }
+  body[data-page="home"] .books-stage .book-card img{
+    width:27vw !important;
+    height:43.2vw !important;
+  }
+}
+</style>
+
 </head><body data-page="home">
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
