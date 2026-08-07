@@ -445,7 +445,7 @@ body::after{
     linear-gradient(180deg,rgba(4,5,7,.12),rgba(4,5,7,.46));
   pointer-events:none;
 }
-body[data-page="home"]{--page-bg:url('/assets/artwork/jesus-da-silva/home-wyvern-original.webp');--scene-overlay:.62}
+body[data-page="home"]{--page-bg:url('/assets/artwork/jesus-da-silva/home-wyvern-cover-dragon-v2.webp');--scene-overlay:.50}
 body[data-page="start"]{--page-bg:url('/assets/artwork/jesus-da-silva/start-original-fighters.webp');--scene-overlay:.58}
 body[data-page="trilogy"]{--page-bg:url('/assets/artwork/jesus-da-silva/trilogy-original-dragons.webp');--scene-overlay:.60}
 body[data-page="world"]{--page-bg:url('/assets/artwork/jesus-da-silva/world-original-maelstrom.webp');--scene-overlay:.62}
@@ -1048,7 +1048,7 @@ body[data-page="archives"] .creative-credits{
 
 
 /* 2026-08-07 original commissioned artwork landing-page treatment */
-body[data-page="home"]::before{background-position:center 38%}
+body[data-page="home"]::before{background-position:center center}
 body[data-page="start"]::before{background-position:50% 42%}
 body[data-page="trilogy"]::before{background-position:50% 44%}
 body[data-page="world"]::before{background-position:50% 45%}
