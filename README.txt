@@ -1,17 +1,19 @@
-DARK LAIR TRILOGY — START HERE PATCH V6
+DARK LAIR TRILOGY — START HERE PATCH V7
 
-Changes only the "Begin with Wyvern" feature card:
-- recentres the card,
-- removes the previous left shift,
-- tightens the gaps between Book One, heading and synopsis,
-- places the two buttons almost flush together,
-- reduces outer padding so the card hugs the content,
-- keeps the Wyvern cover at 185px so it remains easy to see,
-- preserves the current transparency and lower three panels.
+Fixes the over-narrow V6 layout.
+
+Changes:
+- keeps the Begin with Wyvern card centred,
+- makes it about 15–20% wider,
+- keeps the Wyvern cover at the successful current size,
+- tightens wording without forcing excessive line wrapping,
+- keeps both buttons on one clean horizontal row,
+- preserves the stronger transparency,
+- leaves the three lower information panels unchanged.
 
 Apply:
 Extract into the website root and replace:
 - start.html
 - assets/start-transparency.css
 
-Then Ctrl+F5 on Start Here.
+Then refresh Start Here with Ctrl+F5.

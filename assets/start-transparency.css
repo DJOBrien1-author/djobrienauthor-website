@@ -107,3 +107,91 @@ body[data-page="start"] .start-feature .hero-actions .btn{
     flex-wrap:wrap !important;
   }
 }
+
+
+/* V7: rebalance the centred Begin with Wyvern panel after V6 became too narrow */
+body[data-page="start"] .start-feature{
+  width:62% !important;
+  max-width:760px !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+  padding:10px 12px !important;
+  gap:10px !important;
+  grid-template-columns:185px minmax(330px,1fr) !important;
+  align-items:center !important;
+}
+
+/* Keep the cover size that worked well */
+body[data-page="start"] .start-feature img{
+  width:185px !important;
+  max-width:185px !important;
+  height:auto !important;
+  margin:0 !important;
+}
+
+/* Tighten wording without forcing narrow wrapping */
+body[data-page="start"] .start-feature .meta{
+  margin:0 0 2px !important;
+}
+body[data-page="start"] .start-feature h2{
+  margin:0 0 4px !important;
+  line-height:1.14 !important;
+}
+body[data-page="start"] .start-feature p{
+  margin:0 0 6px !important;
+  line-height:1.34 !important;
+  max-width:none !important;
+}
+
+/* Keep the buttons on one clean horizontal row */
+body[data-page="start"] .start-feature .hero-actions{
+  display:flex !important;
+  flex-direction:row !important;
+  flex-wrap:nowrap !important;
+  align-items:center !important;
+  gap:6px !important;
+  margin:2px 0 0 !important;
+}
+body[data-page="start"] .start-feature .hero-actions .btn{
+  margin:0 !important;
+  padding:.58rem .8rem !important;
+  white-space:nowrap !important;
+}
+
+/* Preserve the more transparent treatment */
+body[data-page="start"] .start-feature{
+  background:linear-gradient(
+    145deg,
+    rgba(20,16,12,.30),
+    rgba(8,10,13,.34)
+  ) !important;
+}
+
+@media(max-width:900px){
+  body[data-page="start"] .start-feature{
+    width:78% !important;
+    max-width:760px !important;
+    grid-template-columns:165px minmax(280px,1fr) !important;
+  }
+  body[data-page="start"] .start-feature img{
+    width:165px !important;
+    max-width:165px !important;
+  }
+}
+
+@media(max-width:640px){
+  body[data-page="start"] .start-feature{
+    width:92% !important;
+    grid-template-columns:1fr !important;
+    padding:10px !important;
+  }
+  body[data-page="start"] .start-feature img{
+    width:150px !important;
+    max-width:150px !important;
+    margin:0 auto 6px !important;
+  }
+  body[data-page="start"] .start-feature .hero-actions{
+    justify-content:center !important;
+    flex-wrap:wrap !important;
+  }
+}
