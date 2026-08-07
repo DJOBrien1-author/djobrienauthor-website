@@ -1,17 +1,17 @@
-DARK LAIR TRILOGY — TRILOGY PAGE COMPACT PATCH V1
+DARK LAIR TRILOGY — WORLD PAGE MAP PATCH V1
 
-Changes the three book information panels on /trilogy:
-- reduces their desktop width to roughly half the previous footprint,
-- centres each panel,
-- gives them the same transparency level as the approved Start Here panel,
-- keeps each book cover clearly visible,
-- tightens internal spacing,
-- leaves the video blocks and background artwork unchanged.
+Changes only the map panel on /world:
+- reduces the desktop map box to roughly 25% of its previous width,
+- centres it,
+- gives it the same transparency level as the approved Start Here panel,
+- keeps the map image fitted inside the smaller panel,
+- tightens any map controls,
+- leaves the background artwork and page title unchanged.
 
 Files:
-- trilogy.html
-- assets/trilogy-compact.css
+- world.html
+- assets/world-map-compact.css
 
 Apply:
 Extract into the website root and replace/add the files above.
-Then Ctrl+F5 on /trilogy.
+Then Ctrl+F5 on /world.

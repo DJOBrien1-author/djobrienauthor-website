@@ -1,0 +1,56 @@
+/* World page: compact transparent map panel */
+
+body[data-page="world"] .map-shell{
+  width:25% !important;
+  max-width:430px !important;
+  min-width:320px !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+  padding:10px !important;
+  background:linear-gradient(
+    145deg,
+    rgba(20,16,12,.30),
+    rgba(8,10,13,.34)
+  ) !important;
+  backdrop-filter:blur(2px) !important;
+  -webkit-backdrop-filter:blur(2px) !important;
+  box-shadow:0 12px 28px rgba(0,0,0,.28) !important;
+}
+
+/* Fit the map cleanly inside the reduced panel */
+body[data-page="world"] .map-shell img,
+body[data-page="world"] .map-shell .map-image{
+  width:100% !important;
+  height:auto !important;
+  max-width:100% !important;
+  display:block !important;
+}
+
+/* Tighten controls above/below the map if they are inside the same section */
+body[data-page="world"] .map-tabs,
+body[data-page="world"] .map-actions{
+  gap:6px !important;
+  margin-top:6px !important;
+  margin-bottom:6px !important;
+}
+
+body[data-page="world"] .map-tabs .btn,
+body[data-page="world"] .map-actions .btn{
+  margin:0 !important;
+  padding:.58rem .8rem !important;
+}
+
+@media(max-width:900px){
+  body[data-page="world"] .map-shell{
+    width:48% !important;
+    max-width:520px !important;
+  }
+}
+
+@media(max-width:640px){
+  body[data-page="world"] .map-shell{
+    width:90% !important;
+    min-width:0 !important;
+    padding:8px !important;
+  }
+}
