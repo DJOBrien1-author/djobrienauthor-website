@@ -1,15 +1,12 @@
-DARK LAIR TRILOGY — START HERE FINAL POLISH PATCH V4
+Start Here Layout Patch V5
 
-Changes only the Start Here page:
-- increases panel transparency slightly from V3,
-- reduces the vertical footprint of the "Begin with Wyvern" block by roughly another 10–15%,
-- tightens internal spacing and button padding,
-- preserves the smaller centred layout from V3,
-- leaves the three lower panel sizes and page artwork unchanged.
+Changes:
+- Increased panel transparency.
+- Begin with Wyvern panel narrowed.
+- Cover remains large (185px).
+- Reduced internal padding.
+- Shifted feature slightly left.
 
-Apply:
-Extract into the website root and replace:
-- start.html
-- assets/start-transparency.css
-
-Then refresh Start Here with Ctrl+F5.
+Replace:
+assets/start-transparency.css
+start.html (if applicable)
