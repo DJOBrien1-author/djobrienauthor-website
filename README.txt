@@ -1,19 +1,16 @@
-DARK LAIR TRILOGY — WORLD PAGE MAP PATCH V2
+DARK LAIR TRILOGY — WORLD PAGE PATCH V3
 
-This corrects V1 by targeting the actual World-page class: .atlas-frame.
+Changes only the three lower information boxes:
+- Wyvern
+- Maelstrom
+- Dragon Knight
 
-Changes:
-- reduces the desktop map box to about 25% of its former full-width footprint,
-- centres it,
-- applies the same translucent treatment as the approved Start Here panel,
-- scales the map image to fit inside the smaller box,
-- tightens the map controls,
-- leaves the page title and background artwork unchanged.
+They now use the same translucent treatment as the approved Start Here panels.
+The compact map and all other World-page changes from V2 are preserved.
 
-Files:
+Apply:
+Extract into the website root and replace:
 - world.html
 - assets/world-map-compact.css
 
-Apply:
-Extract into the website root and replace the matching files.
 Then Ctrl+F5 on /world.

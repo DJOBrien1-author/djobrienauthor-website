@@ -68,3 +68,25 @@ body[data-page="world"] .map-tools .btn{
     max-width:none !important;
   }
 }
+
+
+/* V3: Make the three lower World-page information boxes match Start Here transparency */
+body[data-page="world"] .world-grid > .panel,
+body[data-page="world"] .grid-3 > .panel{
+  background:linear-gradient(
+    145deg,
+    rgba(20,16,12,.30),
+    rgba(8,10,13,.34)
+  ) !important;
+  backdrop-filter:blur(2px) !important;
+  -webkit-backdrop-filter:blur(2px) !important;
+  box-shadow:0 12px 28px rgba(0,0,0,.28) !important;
+}
+
+/* Preserve readability */
+body[data-page="world"] .world-grid > .panel p,
+body[data-page="world"] .grid-3 > .panel p,
+body[data-page="world"] .world-grid > .panel h3,
+body[data-page="world"] .grid-3 > .panel h3{
+  text-shadow:0 2px 3px rgba(0,0,0,.88) !important;
+}
