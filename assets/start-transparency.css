@@ -1,29 +1,19 @@
-/* Start Here page transparency refinement */
+/* Stronger transparency for Start Here panels */
 body[data-page="start"] .start-feature,
 body[data-page="start"] .grid-3 > .panel{
-  background:
-    linear-gradient(
-      145deg,
-      rgba(31,23,17,.72),
-      rgba(8,10,13,.74)
-    ) !important;
-  backdrop-filter:blur(1.5px) !important;
-  -webkit-backdrop-filter:blur(1.5px) !important;
-  box-shadow:0 16px 38px rgba(0,0,0,.38) !important;
+  background:linear-gradient(
+    145deg,
+    rgba(24,18,14,.52),
+    rgba(8,10,13,.54)
+  ) !important;
+  backdrop-filter:blur(2px) !important;
+  -webkit-backdrop-filter:blur(2px) !important;
+  box-shadow:0 12px 28px rgba(0,0,0,.28) !important;
 }
 
-/* Keep the featured Wyvern panel slightly richer for text readability */
-body[data-page="start"] .start-feature{
-  background:
-    linear-gradient(
-      145deg,
-      rgba(31,23,17,.74),
-      rgba(8,10,13,.76)
-    ) !important;
-}
-
-/* Preserve good contrast while allowing more artwork through */
 body[data-page="start"] .start-feature p,
-body[data-page="start"] .grid-3 > .panel p{
-  text-shadow:0 1px 2px rgba(0,0,0,.78);
+body[data-page="start"] .grid-3 > .panel p,
+body[data-page="start"] .start-feature h2,
+body[data-page="start"] .grid-3 > .panel h3{
+  text-shadow:0 2px 3px rgba(0,0,0,.9);
 }
