@@ -34,3 +34,8 @@ body[data-page="timeline"]::before{
   background-position:50% 87% !important;
   transform:scale(1.0) !important;
 }
+
+/* V6: brighten Timeline background artwork by 20% */
+body[data-page="timeline"]::before{
+  filter:brightness(1.2) !important;
+}

@@ -1,14 +1,13 @@
-DARK LAIR TRILOGY — TIMELINE BACKGROUND CORRECTION PATCH V5
+DARK LAIR TRILOGY — TIMELINE BRIGHTNESS PATCH V6
 
-Correction:
-The previous V4 moved the artwork in the wrong direction.
+Purpose:
+Brighten the Timeline background artwork by 20%.
 
-This patch:
-- changes the Timeline background position to 50% 87%,
-- moves the visible wyvern artwork UP relative to the viewport,
-- aims to reveal more of the lower legs and feet,
-- preserves the approved Timeline transparency,
-- changes no other page.
+Changes:
+- Adds CSS brightness(1.2) to the Timeline background artwork only.
+- Keeps the approved 87% vertical position exactly unchanged.
+- Keeps the approved translucent Timeline panels unchanged.
+- No other pages are affected.
 
 Files:
 - timeline.html
