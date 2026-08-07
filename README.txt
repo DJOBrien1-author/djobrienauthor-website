@@ -1,19 +1,20 @@
-DARK LAIR TRILOGY — TIMELINE BRIGHTNESS PATCH V6
+DARK LAIR TRILOGY — MEDIA TRANSPARENCY PATCH V1
 
 Purpose:
-Brighten the Timeline background artwork by 20%.
+Make the Media and Press Kit boxes translucent to match the approved Start Here style.
 
 Changes:
-- Adds CSS brightness(1.2) to the Timeline background artwork only.
-- Keeps the approved 87% vertical position exactly unchanged.
-- Keeps the approved translucent Timeline panels unchanged.
-- No other pages are affected.
+- Author Biography box: translucent
+- Book Covers box: translucent
+- Interview Topics box: translucent
+- Featured video containers: translucent
+- Keeps existing dimensions, wording, videos, artwork and layout unchanged
+- No other pages are affected
 
 Files:
-- timeline.html
-- assets/timeline-transparency.css
-- assets/artwork/jesus-da-silva/timeline-original-dragon-full.webp
+- media.html
+- assets/media-transparency.css
 
 Apply:
 Extract into the website root and replace/add the included files.
-Then Ctrl+F5 on /timeline.
+Then Ctrl+F5 on /media.

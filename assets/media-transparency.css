@@ -1,0 +1,32 @@
+/* MEDIA PAGE — match approved Start Here transparency */
+
+/* Top three information boxes */
+body[data-page="media"] .grid-3 > .panel{
+  background:linear-gradient(
+    145deg,
+    rgba(20,16,12,.30),
+    rgba(8,10,13,.34)
+  ) !important;
+  backdrop-filter:blur(2px) !important;
+  -webkit-backdrop-filter:blur(2px) !important;
+  box-shadow:0 12px 28px rgba(0,0,0,.28) !important;
+}
+
+/* Featured video containers */
+body[data-page="media"] .video-frame{
+  background:linear-gradient(
+    145deg,
+    rgba(20,16,12,.30),
+    rgba(8,10,13,.34)
+  ) !important;
+  backdrop-filter:blur(2px) !important;
+  -webkit-backdrop-filter:blur(2px) !important;
+  box-shadow:0 12px 28px rgba(0,0,0,.28) !important;
+}
+
+/* Preserve text readability over the Maelstrom artwork */
+body[data-page="media"] .panel h3,
+body[data-page="media"] .panel p,
+body[data-page="media"] .video-frame h3{
+  text-shadow:0 2px 3px rgba(0,0,0,.86) !important;
+}
