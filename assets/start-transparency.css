@@ -39,3 +39,71 @@ body[data-page="start"] .start-feature .button-row{
   gap:.45rem !important;
   margin-top:.25rem !important;
 }
+
+
+/* V6: centre and tighten the Begin with Wyvern panel */
+body[data-page="start"] .start-feature{
+  width:52% !important;
+  max-width:620px !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+  padding:8px 10px !important;
+  gap:8px !important;
+  grid-template-columns:185px minmax(0,1fr) !important;
+}
+
+/* Keep the cover clearly visible */
+body[data-page="start"] .start-feature img{
+  width:185px !important;
+  max-width:185px !important;
+  margin:0 !important;
+}
+
+/* Remove excess vertical gaps between the wording */
+body[data-page="start"] .start-feature .meta{
+  margin:0 0 2px !important;
+}
+body[data-page="start"] .start-feature h2{
+  margin:0 0 3px !important;
+  line-height:1.12 !important;
+}
+body[data-page="start"] .start-feature p{
+  margin:0 0 4px !important;
+  line-height:1.30 !important;
+}
+
+/* Keep the two clickable buttons tight together */
+body[data-page="start"] .start-feature .hero-actions{
+  gap:4px !important;
+  margin:2px 0 0 !important;
+  flex-wrap:nowrap !important;
+}
+body[data-page="start"] .start-feature .hero-actions .btn{
+  padding:.55rem .78rem !important;
+  margin:0 !important;
+  white-space:nowrap !important;
+}
+
+@media(max-width:900px){
+  body[data-page="start"] .start-feature{
+    width:72% !important;
+    max-width:620px !important;
+  }
+}
+
+@media(max-width:640px){
+  body[data-page="start"] .start-feature{
+    width:92% !important;
+    grid-template-columns:1fr !important;
+    padding:8px 10px !important;
+  }
+  body[data-page="start"] .start-feature img{
+    width:150px !important;
+    max-width:150px !important;
+    margin:0 auto 4px !important;
+  }
+  body[data-page="start"] .start-feature .hero-actions{
+    justify-content:center !important;
+    flex-wrap:wrap !important;
+  }
+}
