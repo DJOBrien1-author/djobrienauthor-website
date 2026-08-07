@@ -445,17 +445,17 @@ body::after{
     linear-gradient(180deg,rgba(4,5,7,.12),rgba(4,5,7,.46));
   pointer-events:none;
 }
-body[data-page="home"]{--page-bg:url('/assets/uploads/backgrounds/home-amberlay-benteer-mountains.webp')}
-body[data-page="start"]{--page-bg:url('/assets/uploads/backgrounds/trilogy-deel-roat-road.webp')}
-body[data-page="trilogy"]{--page-bg:url('/assets/uploads/backgrounds/home-gathering-storm.webp')}
-body[data-page="world"]{--page-bg:url('/assets/uploads/backgrounds/world-dark-lair-lands.webp')}
-body[data-page="characters"]{--page-bg:url('/assets/uploads/backgrounds/characters-great-hall.webp')}
-body[data-page="timeline"]{--page-bg:url('/assets/uploads/backgrounds/timeline-echoes-3000-years.webp')}
-body[data-page="reviews"]{--page-bg:url('/assets/uploads/backgrounds/reviews-hall-of-legends.webp')}
-body[data-page="news"]{--page-bg:url('/assets/uploads/backgrounds/newsletter-scribes-desk.webp')}
-body[data-page="about"]{--page-bg:url('/assets/uploads/backgrounds/about-writers-study.webp')}
-body[data-page="media"]{--page-bg:url('/assets/scenery/media.webp')}
-body[data-page="contact"]{--page-bg:url('/assets/uploads/backgrounds/contact-messengers-tower.webp')}
+body[data-page="home"]{--page-bg:url('/assets/artwork/jesus-da-silva/home-dragon-eye.webp');--scene-overlay:.62}
+body[data-page="start"]{--page-bg:url('/assets/artwork/jesus-da-silva/start-original-fighters.webp');--scene-overlay:.58}
+body[data-page="trilogy"]{--page-bg:url('/assets/artwork/jesus-da-silva/trilogy-original-dragons.webp');--scene-overlay:.60}
+body[data-page="world"]{--page-bg:url('/assets/artwork/jesus-da-silva/world-original-maelstrom.webp');--scene-overlay:.62}
+body[data-page="characters"]{--page-bg:url('/assets/artwork/jesus-da-silva/characters-original-fighters.webp');--scene-overlay:.62}
+body[data-page="timeline"]{--page-bg:url('/assets/artwork/jesus-da-silva/timeline-original-dragon.webp');--scene-overlay:.67}
+body[data-page="reviews"]{--page-bg:url('/assets/artwork/jesus-da-silva/reviews-original-axe-clash.webp');--scene-overlay:.66}
+body[data-page="news"]{--page-bg:url('/assets/artwork/jesus-da-silva/news-original-dragon-fire.webp');--scene-overlay:.67}
+body[data-page="about"]{--page-bg:url('/assets/artwork/jesus-da-silva/about-original-dragon.webp');--scene-overlay:.72}
+body[data-page="media"]{--page-bg:url('/assets/artwork/jesus-da-silva/media-original-maelstrom.webp');--scene-overlay:.66}
+body[data-page="contact"]{--page-bg:url('/assets/artwork/jesus-da-silva/contact-original-dragons.webp');--scene-overlay:.72}
 body[data-page="sample"]{--page-bg:url('/assets/scenery/sample.webp')}
 body[data-page="privacy"]{--page-bg:url('/assets/scenery/privacy.webp')}
 body[data-page="thanks"]{--page-bg:url('/assets/scenery/thanks.webp')}
@@ -568,7 +568,7 @@ body[data-page="archive"]::after{
 
 
 /* Free Wyvern reader-magnet page */
-body[data-page="free"]{--page-bg:url('/assets/uploads/backgrounds/home-gathering-storm.webp');--scene-overlay:.44}
+body[data-page="free"]{--page-bg:url('/assets/artwork/jesus-da-silva/free-original-dragon-fire.webp');--scene-overlay:.60}
 .free-book-hero{padding-top:clamp(2rem,5vw,5rem)}
 .free-book-grid{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:minmax(250px,390px) minmax(0,1fr);gap:clamp(2rem,6vw,5rem);align-items:center}
 .free-book-cover{text-align:center}
@@ -1044,4 +1044,44 @@ body[data-page="archives"] .creative-credits{
   .archive-ledger{padding:.45rem}
   .archive-ledger-page,.archive-ledger-placeholder{padding:1.15rem .8rem}
   .archive-roll{min-height:66px}
+}
+
+
+/* 2026-08-07 original commissioned artwork landing-page treatment */
+body[data-page="home"]::before{background-position:center 38%}
+body[data-page="start"]::before{background-position:50% 42%}
+body[data-page="trilogy"]::before{background-position:50% 44%}
+body[data-page="world"]::before{background-position:50% 45%}
+body[data-page="characters"]::before{background-position:50% 48%}
+body[data-page="timeline"]::before{background-position:50% 50%}
+body[data-page="reviews"]::before{background-position:50% 45%}
+body[data-page="news"]::before{background-position:52% 40%}
+body[data-page="about"]::before{background-position:50% 52%}
+body[data-page="media"]::before{background-position:50% 47%}
+body[data-page="contact"]::before{background-position:50% 48%}
+body[data-page="free"]::before{background-position:50% 40%}
+
+.creative-credits{
+  max-width:1120px;
+  margin:1.15rem auto .8rem;
+  padding:0 1rem;
+  color:rgba(232,211,164,.76);
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-size:.92rem;
+  font-style:italic;
+  line-height:1.55;
+  text-align:center;
+}
+.creative-credits strong{
+  color:#e2bf6c;
+  font-style:normal;
+  font-weight:600;
+}
+@media(max-width:760px){
+  .creative-credits{font-size:.82rem}
+  body[data-page="home"]::before{background-position:68% center}
+  body[data-page="start"]::before,
+  body[data-page="characters"]::before{background-position:48% center}
+  body[data-page="world"]::before,
+  body[data-page="media"]::before{background-position:55% center}
 }

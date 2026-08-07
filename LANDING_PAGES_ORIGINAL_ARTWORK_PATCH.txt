@@ -1,0 +1,28 @@
+DARK LAIR TRILOGY — LANDING PAGES ORIGINAL ARTWORK PATCH 1
+
+This patch updates the remaining main landing pages to use web-optimised
+derivatives of the original commissioned artwork already supplied by the author.
+
+Pages updated:
+- Start Here
+- The Trilogy
+- The World
+- Characters
+- Timeline
+- Reviews
+- News
+- About
+- Media
+- Contact
+- Free Book
+
+It also:
+- preserves the approved homepage dragon-eye treatment,
+- preserves the new Brihanon's Archives layout,
+- adds the agreed creative credits to these landing-page footers,
+- updates image preload references where applicable.
+
+No individual Brihanon scroll/manuscript page has been redesigned in this patch.
+
+Apply by extracting the ZIP into the website root and allowing matching files
+to replace the existing versions.
