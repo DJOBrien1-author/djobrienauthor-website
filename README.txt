@@ -1,12 +1,14 @@
-DARK LAIR HOMEPAGE PATCH V6
+DARK LAIR TRILOGY — START HERE TRANSPARENCY PATCH
 
-Polish changes only:
-- trilogy cover group moved ~26px further right on desktop,
-- raised ~12px,
-- gaps between covers tightened,
-- mobile layout left unchanged.
+Changes only the Start Here page.
+
+- Makes the "Begin with Wyvern" panel more transparent.
+- Makes the three lower information panels more transparent.
+- Keeps the gold borders and text readability.
+- Adds a light backdrop blur and text shadow so the original artwork can show through safely.
+- Does not alter the homepage or any other page.
 
 Apply:
-Extract into the website root and replace index.html.
-The background image is included so the patch is self-contained.
-Then refresh with Ctrl+F5.
+Extract into the website root and replace start.html.
+The new file assets/start-transparency.css will be added.
+Then refresh Start Here with Ctrl+F5.
