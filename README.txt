@@ -1,16 +1,13 @@
-DARK LAIR TRILOGY — TIMELINE BACKGROUND POSITION PATCH V2
+DARK LAIR TRILOGY — TIMELINE BACKGROUND POSITION PATCH V3
 
 Purpose:
-Move the Timeline background composition upward so more of the wyvern's
-lower body and feet are visible.
+Move the Timeline wyvern background image slightly higher than V2.
 
-What changed:
-- Uses the full original commissioned dragon artwork rather than the
-  earlier cropped landscape derivative.
-- Positions that artwork lower in its source frame (78% vertical position),
-  which visually moves the dragon upward in the browser viewport.
-- Preserves the approved Start Here-level transparency on the Timeline boxes.
-- No other pages are changed.
+Change:
+- Vertical background position adjusted from 78% to 72%.
+- This reveals a little more of the wyvern's lower body and feet.
+- Approved Timeline transparency is preserved.
+- No other pages or layout elements are changed.
 
 Files:
 - timeline.html

@@ -31,6 +31,6 @@ body[data-page="timeline"]{
 }
 
 body[data-page="timeline"]::before{
-  background-position:50% 78% !important;
+  background-position:50% 72% !important;
   transform:scale(1.0) !important;
 }
