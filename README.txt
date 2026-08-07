@@ -1,18 +1,17 @@
-DARK LAIR TRILOGY — FREE BOOK PAGE PATCH V2
+DARK LAIR TRILOGY — TRILOGY PAGE COMPACT PATCH V1
 
-This version corrects the selectors to match the actual Free Book page HTML.
+Changes the three book information panels on /trilogy:
+- reduces their desktop width to roughly half the previous footprint,
+- centres each panel,
+- gives them the same transparency level as the approved Start Here panel,
+- keeps each book cover clearly visible,
+- tightens internal spacing,
+- leaves the video blocks and background artwork unchanged.
 
-Changes:
-- reduces the Wyvern cover to 250px,
-- reduces the overall hero width,
-- gives the Get Wyvern Free panel the same transparency feel as Start Here,
-- tightens heading, paragraph, bullets and note spacing,
-- keeps the two buttons close together on one row,
-- leaves the rest of the site unchanged.
+Files:
+- trilogy.html
+- assets/trilogy-compact.css
 
 Apply:
-Extract into the website root and replace:
-- free.html
-- assets/free-page-polish.css
-
-Then Ctrl+F5 on /free.
+Extract into the website root and replace/add the files above.
+Then Ctrl+F5 on /trilogy.
