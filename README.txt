@@ -1,13 +1,14 @@
-DARK LAIR TRILOGY — TIMELINE SHOW FEET PATCH V4
+DARK LAIR TRILOGY — TIMELINE BACKGROUND CORRECTION PATCH V5
 
-Purpose:
-Move the Timeline wyvern background higher so the feet are visible.
+Correction:
+The previous V4 moved the artwork in the wrong direction.
 
-Change:
-- Vertical background position set to 57%.
-- Previous applied position was 72%, so this moves the artwork upward by 15 percentage points.
-- Approved Timeline transparency is preserved.
-- No other pages or layout elements are changed.
+This patch:
+- changes the Timeline background position to 50% 87%,
+- moves the visible wyvern artwork UP relative to the viewport,
+- aims to reveal more of the lower legs and feet,
+- preserves the approved Timeline transparency,
+- changes no other page.
 
 Files:
 - timeline.html
