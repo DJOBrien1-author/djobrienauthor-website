@@ -1,12 +1,16 @@
-/* World page: compact transparent map panel */
+/* WORLD PAGE MAP PATCH V2 — correct selectors for the actual page */
 
-body[data-page="world"] .map-shell{
+/* Reduce the visible map box to roughly 25% of the previous full-width footprint */
+body[data-page="world"] .atlas-frame{
   width:25% !important;
   max-width:430px !important;
-  min-width:320px !important;
-  margin-left:auto !important;
-  margin-right:auto !important;
-  padding:10px !important;
+  min-width:0 !important;
+  margin:0 auto !important;
+  padding:8px !important;
+  overflow:hidden !important;
+  max-height:none !important;
+
+  /* Match the approved Start Here transparency */
   background:linear-gradient(
     145deg,
     rgba(20,16,12,.30),
@@ -17,40 +21,50 @@ body[data-page="world"] .map-shell{
   box-shadow:0 12px 28px rgba(0,0,0,.28) !important;
 }
 
-/* Fit the map cleanly inside the reduced panel */
-body[data-page="world"] .map-shell img,
-body[data-page="world"] .map-shell .map-image{
+/* Scale the map itself to fit the smaller box cleanly */
+body[data-page="world"] .atlas-frame #map-image{
   width:100% !important;
-  height:auto !important;
   max-width:100% !important;
+  height:auto !important;
   display:block !important;
+  transform:none !important;
 }
 
-/* Tighten controls above/below the map if they are inside the same section */
-body[data-page="world"] .map-tabs,
-body[data-page="world"] .map-actions{
-  gap:6px !important;
-  margin-top:6px !important;
-  margin-bottom:6px !important;
-}
-
-body[data-page="world"] .map-tabs .btn,
-body[data-page="world"] .map-actions .btn{
+/* Keep caption compact */
+body[data-page="world"] .atlas-frame figcaption{
+  padding:5px 2px 1px !important;
   margin:0 !important;
-  padding:.58rem .8rem !important;
+  line-height:1.2 !important;
 }
 
+/* Tighten map selector and tool controls */
+body[data-page="world"] .map-switch{
+  gap:6px !important;
+  margin-bottom:8px !important;
+}
+
+body[data-page="world"] .map-tools{
+  gap:6px !important;
+  margin:8px 0 16px !important;
+}
+
+body[data-page="world"] .map-switch button,
+body[data-page="world"] .map-tools .btn{
+  margin:0 !important;
+  padding:.55rem .75rem !important;
+}
+
+/* Tablet/mobile: keep it usable */
 @media(max-width:900px){
-  body[data-page="world"] .map-shell{
+  body[data-page="world"] .atlas-frame{
     width:48% !important;
-    max-width:520px !important;
+    max-width:480px !important;
   }
 }
 
 @media(max-width:640px){
-  body[data-page="world"] .map-shell{
-    width:90% !important;
-    min-width:0 !important;
-    padding:8px !important;
+  body[data-page="world"] .atlas-frame{
+    width:88% !important;
+    max-width:none !important;
   }
 }

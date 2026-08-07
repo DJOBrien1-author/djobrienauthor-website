@@ -1,17 +1,19 @@
-DARK LAIR TRILOGY — WORLD PAGE MAP PATCH V1
+DARK LAIR TRILOGY — WORLD PAGE MAP PATCH V2
 
-Changes only the map panel on /world:
-- reduces the desktop map box to roughly 25% of its previous width,
+This corrects V1 by targeting the actual World-page class: .atlas-frame.
+
+Changes:
+- reduces the desktop map box to about 25% of its former full-width footprint,
 - centres it,
-- gives it the same transparency level as the approved Start Here panel,
-- keeps the map image fitted inside the smaller panel,
-- tightens any map controls,
-- leaves the background artwork and page title unchanged.
+- applies the same translucent treatment as the approved Start Here panel,
+- scales the map image to fit inside the smaller box,
+- tightens the map controls,
+- leaves the page title and background artwork unchanged.
 
 Files:
 - world.html
 - assets/world-map-compact.css
 
 Apply:
-Extract into the website root and replace/add the files above.
+Extract into the website root and replace the matching files.
 Then Ctrl+F5 on /world.
