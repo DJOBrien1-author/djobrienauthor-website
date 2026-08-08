@@ -1,6 +1,13 @@
-BRIHANON'S ARCHIVES — 50% LIGHTER BACKGROUND PATCH
+BRIHANON'S ARCHIVES — CORRECTED 50% LIGHTER PATCH
 
-This patch changes only the Archives page background treatment.
-The approved red leather Dark Lair Trilogy background image is kept unchanged.
-The dark overlay is reduced to make the background approximately 50% lighter.
-No HTML, JSON, scroll images, navigation, links, or other website files are changed.
+This fixes the previous brightness mistake.
+
+Changes made:
+1. Removes the incorrect extra body[data-page="archives"]::before overlay.
+2. Halves the opacity of the ACTUAL definitive Archives dark overlay:
+   .88 -> .44
+   .77 -> .385
+   .66 -> .33
+3. Leaves the approved red leather Dark Lair Trilogy background image unchanged.
+
+No HTML, JSON, scroll images, links, navigation, or other pages are changed.
