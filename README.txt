@@ -1,20 +1,16 @@
-DARK LAIR TRILOGY — MEDIA TRANSPARENCY PATCH V1
+BRIHANON'S ARCHIVES BACKGROUND PATCH
 
 Purpose:
-Make the Media and Press Kit boxes translucent to match the approved Start Here style.
+Replaces ONLY the Brihanon's Archives page background.
 
-Changes:
-- Author Biography box: translucent
-- Book Covers box: translucent
-- Interview Topics box: translucent
-- Featured video containers: translucent
-- Keeps existing dimensions, wording, videos, artwork and layout unchanged
-- No other pages are affected
+Replacement file:
+assets/uploads/backgrounds/archives-brihanons-library.webp
 
-Files:
-- media.html
-- assets/media-transparency.css
+Source:
+The red leather repeating Dark Lair Trilogy image supplied by D.J. O'Brien in chat.
 
-Apply:
-Extract into the website root and replace/add the included files.
-Then Ctrl+F5 on /media.
+No HTML, CSS, JavaScript, scroll images, content files, or other page backgrounds are changed.
+
+Artwork credit to retain on the website:
+Artwork by Jesus Da Silva
+Cover title design by Lesia S. (germancreative)
