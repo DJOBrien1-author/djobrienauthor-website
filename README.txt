@@ -1,8 +1,11 @@
-BRIHANON'S ARCHIVES BACKGROUND PATCH
+BRIHANON'S ARCHIVES BACKGROUND FIX v2
 
-This patch changes only the Archives background image.
-It replaces:
-assets/uploads/backgrounds/archives-brihanons-library.webp
+Cause found:
+A later CSS rule in the Ultimate Base Version overrode the Archives background and still pointed to:
+/assets/artwork/jesus-da-silva/archives-dragons.webp
 
-No HTML, CSS, JSON, scroll images, navigation, links, or other website files are changed.
-Built to apply safely over the current ULTIMATE BASE VERSION.
+This patch changes that one definitive rule to:
+/assets/uploads/backgrounds/archives-brihanons-library.webp
+
+It also supplies the chosen red leather Dark Lair Trilogy image at that path.
+No HTML, JSON, scroll images, navigation, links, or other website files are changed.

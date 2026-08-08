@@ -792,7 +792,7 @@ body[data-page="sample"] .prologue-manuscript .btn.secondary:focus-visible{
 
 /* Brihanon's Archives definitive source-scroll / ledger layout */
 body[data-page="archives"]{
-  --page-bg:url('/assets/artwork/jesus-da-silva/archives-dragons.webp');
+  --page-bg:url('/assets/uploads/backgrounds/archives-brihanons-library.webp');
   --scene-overlay:.70;
 }
 body[data-page="archives"]::before{
