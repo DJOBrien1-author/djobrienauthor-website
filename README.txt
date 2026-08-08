@@ -1,11 +1,6 @@
-BRIHANON'S ARCHIVES BACKGROUND FIX v2
+BRIHANON'S ARCHIVES — 50% LIGHTER BACKGROUND PATCH
 
-Cause found:
-A later CSS rule in the Ultimate Base Version overrode the Archives background and still pointed to:
-/assets/artwork/jesus-da-silva/archives-dragons.webp
-
-This patch changes that one definitive rule to:
-/assets/uploads/backgrounds/archives-brihanons-library.webp
-
-It also supplies the chosen red leather Dark Lair Trilogy image at that path.
+This patch changes only the Archives page background treatment.
+The approved red leather Dark Lair Trilogy background image is kept unchanged.
+The dark overlay is reduced to make the background approximately 50% lighter.
 No HTML, JSON, scroll images, navigation, links, or other website files are changed.
