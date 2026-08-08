@@ -1,0 +1,13 @@
+BRIHANON’S ARCHIVES REBUILD PATCH — 8 AUGUST 2026
+
+Contains:
+- all 12 newly completed manuscript images, renamed cleanly for the website
+- exactly 12 archive records, in a clean sequential index
+- corrected “Wielders and Leechers” wording
+- The Golden City (Lee’s’e), The Widow’s Wheel, Pirates and Slavers, The Karesh
+- rebuilt Archives landing page and manuscript display styling
+- regenerated content/site.json so the patch works immediately
+- archive-page artwork credits preserved in the footer
+
+INSTALL: copy the contents of this ZIP over the website root, replacing matching files, then commit/push as usual.
+No other website sections are changed by this patch.

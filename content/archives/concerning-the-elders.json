@@ -1,18 +1,18 @@
 {
-  "order": 5,
-  "slug": "concerning-the-elders",
-  "title": "Concerning the Elders",
-  "subtitle": "Scroll V",
-  "date": "2026-08-01",
+  "order": 2,
+  "slug": "the-three-crystals",
+  "title": "The Three Crystals",
+  "subtitle": "Manuscript 2",
+  "date": "2026-08-08",
   "category": "Ancient Lore",
-  "newsletter_excerpt": "A finished illuminated manuscript from Brihanon’s Archives: Concerning the Elders.",
-  "hero_image": "/assets/uploads/archive-scrolls/concerning-the-elders.png",
-  "hero_alt": "Brihanon’s manuscript concerning the Elders.",
-  "manuscript_image": "/assets/uploads/archive-scrolls/concerning-the-elders.png",
+  "newsletter_excerpt": "A surviving record transcribed and preserved in Brihanon’s Archives: The Three Crystals.",
+  "hero_image": "/assets/uploads/archive-scrolls/the-three-crystals.png",
+  "hero_alt": "Brihanon’s manuscript, The Three Crystals.",
+  "manuscript_image": "/assets/uploads/archive-scrolls/the-three-crystals.png",
   "body": "",
   "gallery": [],
   "video_file": "",
   "video_url": "",
   "video_caption": "",
-  "seo_description": "Read Concerning the Elders, an illuminated manuscript from Brihanon’s Archives in the world of The Dark Lair Trilogy."
+  "seo_description": "Read The Three Crystals, preserved in Brihanon’s Archives in the world of The Dark Lair Trilogy."
 }

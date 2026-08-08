@@ -1,18 +1,18 @@
 {
-  "order": 8,
-  "slug": "the-golden-city",
-  "title": "The Golden City",
-  "subtitle": "Scroll VIII",
-  "date": "2026-08-01",
+  "order": 6,
+  "slug": "the-kingdoms-of-the-west",
+  "title": "The Kingdoms of the West",
+  "subtitle": "Manuscript 6",
+  "date": "2026-08-08",
   "category": "Geography",
-  "newsletter_excerpt": "A finished illuminated manuscript from Brihanon’s Archives: The Golden City.",
-  "hero_image": "/assets/uploads/archive-scrolls/the-golden-city.png",
-  "hero_alt": "Brihanon’s archive scroll concerning the Golden City.",
-  "manuscript_image": "/assets/uploads/archive-scrolls/the-golden-city.png",
+  "newsletter_excerpt": "A surviving record transcribed and preserved in Brihanon’s Archives: The Kingdoms of the West.",
+  "hero_image": "/assets/uploads/archive-scrolls/the-kingdoms-of-the-west.png",
+  "hero_alt": "Brihanon’s manuscript, The Kingdoms of the West.",
+  "manuscript_image": "/assets/uploads/archive-scrolls/the-kingdoms-of-the-west.png",
   "body": "",
   "gallery": [],
   "video_file": "",
   "video_url": "",
   "video_caption": "",
-  "seo_description": "Read The Golden City, an illuminated manuscript from Brihanon’s Archives in the world of The Dark Lair Trilogy."
+  "seo_description": "Read The Kingdoms of the West, preserved in Brihanon’s Archives in the world of The Dark Lair Trilogy."
 }
