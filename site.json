@@ -1,6 +1,6 @@
 {
   "site": {
-    "author_name": "D.J. O\u2019Brien",
+    "author_name": "D.J. O’Brien",
     "site_title": "The Dark Lair Trilogy",
     "tagline": "Three Crystals. Three Races. One Prophecy.",
     "hero_intro": "A completed epic fantasy trilogy of ancient evil, war, unlikely heroes and a darkness awakening after three thousand years.",
@@ -33,7 +33,7 @@
       "number": "Book One",
       "description": "A mother flees through snow-covered mountains while the man she loves buys her time with his life. A child is born into a war that has already begun. Three thousand years after an ancient evil was sealed away, the crystals are found again and the Prince of Shade begins to stir.",
       "tagline": "Save a princess. Win a lost war. Defeat Evil. Stay alive.",
-      "buy_url": "https://www.amazon.co.uk/s?k=Wyvern+D.J.+O%27Brien",
+      "buy_url": "https://www.amazon.com/dp/B0CNBMD817",
       "video_url": "https://www.instagram.com/reel/C8uxVgJNctQ/?utm_source=ig_embed&utm_campaign=loading",
       "subtitle": "Book One",
       "cover_image": "/assets/wyvern-cover.jpg"
@@ -42,7 +42,7 @@
       "title": "Maelstrom",
       "number": "Book Two",
       "description": "The struggle widens beyond the familiar kingdoms. The Great Maelstrom and the dangers beyond the Roaring Shallows reveal the true scale of the conflict.",
-      "buy_url": "https://www.amazon.co.uk/s?k=Maelstrom+D.J.+O%27Brien",
+      "buy_url": "https://www.amazon.com/dp/B0DBQ2ML6C",
       "video_url": "https://www.instagram.com/reel/C9pujGItp6h/?utm_source=ig_embed&utm_campaign=loading",
       "subtitle": "Book Two",
       "cover_image": "/assets/maelstrom-cover.jpg"
@@ -51,7 +51,7 @@
       "title": "Dragon Knight",
       "number": "Book Three",
       "description": "The final battle brings heroes, enemies, prophecy and ancient power together in the concluding volume of the completed trilogy.",
-      "buy_url": "https://www.amazon.co.uk/s?k=Dragon+Knight+D.J.+O%27Brien",
+      "buy_url": "https://www.amazon.com/dp/B0FNRPHPK5",
       "video_url": "https://www.instagram.com/reel/DPRsSW9DWW-/?utm_source=ig_embed&utm_campaign=loading",
       "subtitle": "Book Three",
       "cover_image": "/assets/dragon-knight-cover.jpg"
@@ -141,10 +141,10 @@
     },
     {
       "quote": "A compelling narrative filled with tension and intrigue... richly imagined and immersive.",
-      "source": "Readers\u2019 Favorite"
+      "source": "Readers’ Favorite"
     },
     {
-      "quote": "I couldn\u2019t put it down... finished in two days.",
+      "quote": "I couldn’t put it down... finished in two days.",
       "source": "Booksprout reviewer"
     },
     {
@@ -157,9 +157,9 @@
     }
   ],
   "about": {
-    "heading": "About D.J. O\u2019Brien",
+    "heading": "About D.J. O’Brien",
     "paragraphs": [
-      "D.J. O\u2019Brien is an Irish fantasy author and the creator of the completed Dark Lair Trilogy.",
+      "D.J. O’Brien is an Irish fantasy author and the creator of the completed Dark Lair Trilogy.",
       "His fiction combines ancient prophecy, war, unlikely heroes, divided kingdoms and the return of a darkness believed defeated three thousand years ago."
     ]
   },
@@ -196,7 +196,7 @@
       "subtitle": "Manuscript I",
       "date": "2026-08-01",
       "category": "Personal Papers",
-      "newsletter_excerpt": "A finished illuminated manuscript from Brihanon\u2019s Archives: A Tale of Terror.",
+      "newsletter_excerpt": "A finished illuminated manuscript from Brihanon’s Archives: A Tale of Terror.",
       "hero_image": "/assets/uploads/archive-scrolls/a-tale-of-terror.png",
       "hero_alt": "A Tale of Terror, recorded by Brihanon.",
       "manuscript_image": "/assets/uploads/archive-scrolls/a-tale-of-terror.png",
@@ -205,7 +205,7 @@
       "video_file": "",
       "video_url": "",
       "video_caption": "",
-      "seo_description": "Read A Tale of Terror, an illuminated manuscript from Brihanon\u2019s Archives in the world of The Dark Lair Trilogy."
+      "seo_description": "Read A Tale of Terror, an illuminated manuscript from Brihanon’s Archives in the world of The Dark Lair Trilogy."
     },
     {
       "slug": "a-treatise-concerning-dragons-and-wyverns",
@@ -213,16 +213,16 @@
       "subtitle": "Scroll III",
       "date": "2026-08-01",
       "category": "Bestiary",
-      "newsletter_excerpt": "A finished illuminated manuscript from Brihanon\u2019s Archives: A Treatise Concerning Dragons and Wyverns.",
+      "newsletter_excerpt": "A finished illuminated manuscript from Brihanon’s Archives: A Treatise Concerning Dragons and Wyverns.",
       "hero_image": "/assets/uploads/archive-scrolls/a-treatise-concerning-dragons-and-wyverns.png",
-      "hero_alt": "Brihanon\u2019s treatise concerning dragons and wyverns.",
+      "hero_alt": "Brihanon’s treatise concerning dragons and wyverns.",
       "manuscript_image": "/assets/uploads/archive-scrolls/a-treatise-concerning-dragons-and-wyverns.png",
       "body": "",
       "gallery": [],
       "video_file": "",
       "video_url": "",
       "video_caption": "",
-      "seo_description": "Read A Treatise Concerning Dragons and Wyverns, an illuminated manuscript from Brihanon\u2019s Archives in the world of The Dark Lair Trilogy."
+      "seo_description": "Read A Treatise Concerning Dragons and Wyverns, an illuminated manuscript from Brihanon’s Archives in the world of The Dark Lair Trilogy."
     },
     {
       "slug": "the-three-crystals",
@@ -230,16 +230,16 @@
       "subtitle": "Scroll IV",
       "date": "2026-08-01",
       "category": "Ancient Lore",
-      "newsletter_excerpt": "A finished illuminated manuscript from Brihanon\u2019s Archives: The Three Crystals.",
+      "newsletter_excerpt": "A finished illuminated manuscript from Brihanon’s Archives: The Three Crystals.",
       "hero_image": "/assets/uploads/archive-scrolls/the-three-crystals.png",
-      "hero_alt": "Brihanon\u2019s archive scroll concerning the Three Crystals.",
+      "hero_alt": "Brihanon’s archive scroll concerning the Three Crystals.",
       "manuscript_image": "/assets/uploads/archive-scrolls/the-three-crystals.png",
       "body": "",
       "gallery": [],
       "video_file": "",
       "video_url": "",
       "video_caption": "",
-      "seo_description": "Read The Three Crystals, an illuminated manuscript from Brihanon\u2019s Archives in the world of The Dark Lair Trilogy."
+      "seo_description": "Read The Three Crystals, an illuminated manuscript from Brihanon’s Archives in the world of The Dark Lair Trilogy."
     },
     {
       "slug": "the-wars-of-men-before-the-great-darkness",
@@ -247,16 +247,16 @@
       "subtitle": "Scroll V",
       "date": "2026-08-01",
       "category": "Histories",
-      "newsletter_excerpt": "A finished illuminated manuscript from Brihanon\u2019s Archives: The Wars of Men Before the Great Darkness.",
+      "newsletter_excerpt": "A finished illuminated manuscript from Brihanon’s Archives: The Wars of Men Before the Great Darkness.",
       "hero_image": "/assets/uploads/archive-scrolls/the-wars-of-men-before-the-great-darkness.png",
-      "hero_alt": "Brihanon\u2019s record of the wars of men before the Great Darkness.",
+      "hero_alt": "Brihanon’s record of the wars of men before the Great Darkness.",
       "manuscript_image": "/assets/uploads/archive-scrolls/the-wars-of-men-before-the-great-darkness.png",
       "body": "",
       "gallery": [],
       "video_file": "",
       "video_url": "",
       "video_caption": "",
-      "seo_description": "Read The Wars of Men Before the Great Darkness, an illuminated manuscript from Brihanon\u2019s Archives in the world of The Dark Lair Trilogy."
+      "seo_description": "Read The Wars of Men Before the Great Darkness, an illuminated manuscript from Brihanon’s Archives in the world of The Dark Lair Trilogy."
     },
     {
       "slug": "concerning-the-elders",
@@ -264,16 +264,16 @@
       "subtitle": "Scroll VI",
       "date": "2026-08-01",
       "category": "Ancient Lore",
-      "newsletter_excerpt": "A finished illuminated manuscript from Brihanon\u2019s Archives: Concerning the Elders.",
+      "newsletter_excerpt": "A finished illuminated manuscript from Brihanon’s Archives: Concerning the Elders.",
       "hero_image": "/assets/uploads/archive-scrolls/concerning-the-elders.png",
-      "hero_alt": "Brihanon\u2019s manuscript concerning the Elders.",
+      "hero_alt": "Brihanon’s manuscript concerning the Elders.",
       "manuscript_image": "/assets/uploads/archive-scrolls/concerning-the-elders.png",
       "body": "",
       "gallery": [],
       "video_file": "",
       "video_url": "",
       "video_caption": "",
-      "seo_description": "Read Concerning the Elders, an illuminated manuscript from Brihanon\u2019s Archives in the world of The Dark Lair Trilogy."
+      "seo_description": "Read Concerning the Elders, an illuminated manuscript from Brihanon’s Archives in the world of The Dark Lair Trilogy."
     },
     {
       "slug": "of-wizards-and-warlocks",
@@ -281,16 +281,16 @@
       "subtitle": "Scroll VII",
       "date": "2026-08-01",
       "category": "Ancient Lore",
-      "newsletter_excerpt": "A finished illuminated manuscript from Brihanon\u2019s Archives: Of Wizards and Warlocks, Wielders and Teachers.",
+      "newsletter_excerpt": "A finished illuminated manuscript from Brihanon’s Archives: Of Wizards and Warlocks, Wielders and Teachers.",
       "hero_image": "/assets/uploads/archive-scrolls/of-wizards-and-warlocks.png",
-      "hero_alt": "Brihanon\u2019s manuscript concerning wizards, warlocks, wielders and teachers.",
+      "hero_alt": "Brihanon’s manuscript concerning wizards, warlocks, wielders and teachers.",
       "manuscript_image": "/assets/uploads/archive-scrolls/of-wizards-and-warlocks.png",
       "body": "",
       "gallery": [],
       "video_file": "",
       "video_url": "",
       "video_caption": "",
-      "seo_description": "Read Of Wizards and Warlocks, Wielders and Teachers, an illuminated manuscript from Brihanon\u2019s Archives in the world of The Dark Lair Trilogy."
+      "seo_description": "Read Of Wizards and Warlocks, Wielders and Teachers, an illuminated manuscript from Brihanon’s Archives in the world of The Dark Lair Trilogy."
     },
     {
       "slug": "the-kingdoms-of-the-west",
@@ -298,16 +298,16 @@
       "subtitle": "Scroll IX",
       "date": "2026-08-01",
       "category": "Geography",
-      "newsletter_excerpt": "A finished illuminated manuscript from Brihanon\u2019s Archives: The Kingdoms of the West.",
+      "newsletter_excerpt": "A finished illuminated manuscript from Brihanon’s Archives: The Kingdoms of the West.",
       "hero_image": "/assets/uploads/archive-scrolls/the-kingdoms-of-the-west.png",
-      "hero_alt": "Brihanon\u2019s record of the kingdoms of the West.",
+      "hero_alt": "Brihanon’s record of the kingdoms of the West.",
       "manuscript_image": "/assets/uploads/archive-scrolls/the-kingdoms-of-the-west.png",
       "body": "",
       "gallery": [],
       "video_file": "",
       "video_url": "",
       "video_caption": "",
-      "seo_description": "Read The Kingdoms of the West, an illuminated manuscript from Brihanon\u2019s Archives in the world of The Dark Lair Trilogy."
+      "seo_description": "Read The Kingdoms of the West, an illuminated manuscript from Brihanon’s Archives in the world of The Dark Lair Trilogy."
     },
     {
       "slug": "the-golden-city",
@@ -315,16 +315,16 @@
       "subtitle": "Scroll XI",
       "date": "2026-08-01",
       "category": "Geography",
-      "newsletter_excerpt": "A finished illuminated manuscript from Brihanon\u2019s Archives: The Golden City.",
+      "newsletter_excerpt": "A finished illuminated manuscript from Brihanon’s Archives: The Golden City.",
       "hero_image": "/assets/uploads/archive-scrolls/the-golden-city.png",
-      "hero_alt": "Brihanon\u2019s archive scroll concerning the Golden City.",
+      "hero_alt": "Brihanon’s archive scroll concerning the Golden City.",
       "manuscript_image": "/assets/uploads/archive-scrolls/the-golden-city.png",
       "body": "",
       "gallery": [],
       "video_file": "",
       "video_url": "",
       "video_caption": "",
-      "seo_description": "Read The Golden City, an illuminated manuscript from Brihanon\u2019s Archives in the world of The Dark Lair Trilogy."
+      "seo_description": "Read The Golden City, an illuminated manuscript from Brihanon’s Archives in the world of The Dark Lair Trilogy."
     },
     {
       "slug": "of-witches-hags-and-the-undead",
@@ -332,16 +332,16 @@
       "subtitle": "Scroll X",
       "date": "2026-08-01",
       "category": "Bestiary",
-      "newsletter_excerpt": "A finished illuminated manuscript from Brihanon\u2019s Archives: Of Witches, Hags, and the Undead.",
+      "newsletter_excerpt": "A finished illuminated manuscript from Brihanon’s Archives: Of Witches, Hags, and the Undead.",
       "hero_image": "/assets/uploads/archive-scrolls/of-witches-hags-and-the-undead.png",
-      "hero_alt": "Brihanon\u2019s manuscript concerning witches, hags and the undead.",
+      "hero_alt": "Brihanon’s manuscript concerning witches, hags and the undead.",
       "manuscript_image": "/assets/uploads/archive-scrolls/of-witches-hags-and-the-undead.png",
       "body": "",
       "gallery": [],
       "video_file": "",
       "video_url": "",
       "video_caption": "",
-      "seo_description": "Read Of Witches, Hags, and the Undead, an illuminated manuscript from Brihanon\u2019s Archives in the world of The Dark Lair Trilogy."
+      "seo_description": "Read Of Witches, Hags, and the Undead, an illuminated manuscript from Brihanon’s Archives in the world of The Dark Lair Trilogy."
     },
     {
       "slug": "the-karesh-people",
@@ -349,21 +349,21 @@
       "subtitle": "Scroll VII",
       "date": "2026-08-01",
       "category": "Histories",
-      "newsletter_excerpt": "A finished illuminated manuscript from Brihanon\u2019s Archives: The Karesh People.",
+      "newsletter_excerpt": "A finished illuminated manuscript from Brihanon’s Archives: The Karesh People.",
       "hero_image": "/assets/uploads/archive-scrolls/the-karesh-people.png",
-      "hero_alt": "Brihanon\u2019s archive scroll concerning the Karesh people.",
+      "hero_alt": "Brihanon’s archive scroll concerning the Karesh people.",
       "manuscript_image": "/assets/uploads/archive-scrolls/the-karesh-people.png",
       "body": "",
       "gallery": [],
       "video_file": "",
       "video_url": "",
       "video_caption": "",
-      "seo_description": "Read The Karesh People, an illuminated manuscript from Brihanon\u2019s Archives in the world of The Dark Lair Trilogy."
+      "seo_description": "Read The Karesh People, an illuminated manuscript from Brihanon’s Archives in the world of The Dark Lair Trilogy."
     }
   ],
   "social": {
     "instagram": "https://www.instagram.com/djobrien.author/",
-    "amazon": "https://www.amazon.co.uk/s?k=D.J.+O%27Brien+Dark+Lair+Trilogy",
+    "amazon": "https://www.amazon.com/s?k=D.J.+O%27Brien+Dark+Lair+Trilogy",
     "goodreads": "https://www.goodreads.com/search?q=D.J.+O%27Brien+Dark+Lair",
     "facebook": "",
     "youtube": "",

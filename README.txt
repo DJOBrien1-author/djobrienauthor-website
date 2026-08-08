@@ -1,13 +1,16 @@
-BRIHANON'S ARCHIVES — CORRECTED 50% LIGHTER PATCH
+D.J. O'BRIEN WEBSITE — US AMAZON LINKS PATCH
 
-This fixes the previous brightness mistake.
+This patch changes only Amazon URLs in the website content data.
 
-Changes made:
-1. Removes the incorrect extra body[data-page="archives"]::before overlay.
-2. Halves the opacity of the ACTUAL definitive Archives dark overlay:
-   .88 -> .44
-   .77 -> .385
-   .66 -> .33
-3. Leaves the approved red leather Dark Lair Trilogy background image unchanged.
+Wyvern:
+https://www.amazon.com/dp/B0CNBMD817
 
-No HTML, JSON, scroll images, links, navigation, or other pages are changed.
+Maelstrom:
+https://www.amazon.com/dp/B0DBQ2ML6C
+
+Dragon Knight:
+https://www.amazon.com/dp/B0FNRPHPK5
+
+The general Amazon author/trilogy link is also changed to Amazon.com.
+
+No CSS, HTML, artwork, Archives files, scrolls, navigation, layout or page styling is changed.
