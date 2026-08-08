@@ -156,65 +156,46 @@
 
     const archivesList = document.querySelector('#archives-list');
     if (archivesList && Array.isArray(data.archives)) {
-      const entries = [...data.archives]
-        .filter(item => item.slug !== 'welcome-to-the-archives')
-        .sort((a,b) => (Number(a.order)||999)-(Number(b.order)||999) || String(a.title || '').localeCompare(String(b.title || '')));
-      const ledger = document.querySelector('#archive-ledger');
-
-      const roman = number => {
-        const values = [[1000,'M'],[900,'CM'],[500,'D'],[400,'CD'],[100,'C'],[90,'XC'],[50,'L'],[40,'XL'],[10,'X'],[9,'IX'],[5,'V'],[4,'IV'],[1,'I']];
-        let n = Math.max(1, Number(number) || 1);
-        return values.map(([value,symbol]) => {
-          let out = '';
-          while (n >= value) { out += symbol; n -= value; }
-          return out;
-        }).join('');
-      };
-
-      archivesList.innerHTML = entries.length ? entries.map((item,index) => `
-        <button class="archive-roll" type="button" data-archive-slug="${esc(item.slug)}" aria-pressed="false">
-          <span class="archive-roll-number">${roman(index + 1)}</span>
-          <span class="archive-roll-title">${esc(item.title)}</span>
-          <span class="archive-roll-category">${esc(item.category || 'Archive')}</span>
-        </button>`).join('') : '<p class="archive-loading">No surviving scrolls are currently catalogued.</p>';
-
-      const openLedger = item => {
-        if (!ledger || !item) return;
-        const image = item.manuscript_image || item.hero_image || '';
-        ledger.innerHTML = `
-          <div class="archive-ledger-page">
-            <header class="archive-ledger-header">
+      const entries = [...data.archives].sort((a,b) => (Number(a.order)||999)-(Number(b.order)||999) || String(a.title || '').localeCompare(String(b.title || '')));
+      const renderArchives = category => {
+        const shown = category === 'All' ? entries : entries.filter(item => item.category === category);
+        archivesList.innerHTML = shown.length ? shown.map(item => `
+          <article class="panel archive-card${item.manuscript_image ? ' archive-scroll-card' : ''}">
+            ${(item.manuscript_image || item.hero_image) ? `<img src="${esc(item.manuscript_image || item.hero_image)}" alt="${esc(item.hero_alt || '')}" loading="lazy">` : ''}
+            <div class="archive-card-content">
               <p class="meta">${esc(item.category || 'Archive')}</p>
               <h2>${esc(item.title)}</h2>
-              ${item.subtitle ? `<p class="archive-ledger-subtitle">${esc(item.subtitle)}</p>` : ''}
-            </header>
-            ${image ? `<figure class="archive-ledger-manuscript"><a href="${esc(image)}" target="_blank" rel="noopener" aria-label="Open ${esc(item.title)} at full size"><img src="${esc(image)}" alt="${esc(item.hero_alt || item.title)}"></a></figure>` : ''}
-            ${item.body ? `<div class="archive-body">${renderMarkdown(item.body)}</div>` : ''}
-            <div class="archive-ledger-actions">
-              <a class="btn" href="archive.html?entry=${encodeURIComponent(item.slug)}">Open the full record</a>
+              ${item.subtitle ? `<p><em>${esc(item.subtitle)}</em></p>` : ''}
+              <p>${esc(item.newsletter_excerpt || '')}</p>
+              <a class="btn" href="archive.html?entry=${encodeURIComponent(item.slug)}">Open manuscript</a>
             </div>
-          </div>`;
-        ledger.scrollTop = 0;
+          </article>`).join('') : '<p class="panel">No manuscripts are filed in this section yet.</p>';
       };
+      renderArchives('All');
 
-      archivesList.addEventListener('click', event => {
-        const button = event.target.closest('[data-archive-slug]');
-        if (!button) return;
-        const item = entries.find(entry => entry.slug === button.dataset.archiveSlug);
-        if (!item) return;
-        archivesList.querySelectorAll('.archive-roll').forEach(el => el.setAttribute('aria-pressed','false'));
-        button.setAttribute('aria-pressed','true');
-        window.DarkLairSound?.playParchment?.();
-        openLedger(item);
-        if (window.matchMedia('(max-width: 920px)').matches) {
-          ledger?.scrollIntoView({behavior:'smooth', block:'start'});
-        }
-      });
+      // A permanent, public manuscript index. Every new CMS topic appears here
+      // automatically and links to its full archive entry.
+      const archiveIndex = document.querySelector('#archive-index');
+      if (archiveIndex) {
+        archiveIndex.innerHTML = entries.length ? `
+          <h2>Manuscript index</h2>
+          <p class="archive-index-intro">Select any heading to open the complete record.</p>
+          <ol class="archive-title-list">
+            ${entries.map(item => `<li><a href="archive.html?entry=${encodeURIComponent(item.slug)}"><strong>${esc(item.title)}</strong>${item.category ? `<span>${esc(item.category)}</span>` : ''}</a></li>`).join('')}
+          </ol>` : '<h2>Manuscript index</h2><p>No manuscripts have been filed yet.</p>';
+      }
 
-      if (entries[0]) {
-        const first = archivesList.querySelector('.archive-roll');
-        first?.setAttribute('aria-pressed','true');
-        openLedger(entries[0]);
+      const filters = document.querySelector('#archive-filters');
+      if (filters) {
+        const categories = ['All', ...new Set(entries.map(item => item.category).filter(Boolean))];
+        filters.innerHTML = categories.map((category,index) => `<button class="archive-filter" type="button" aria-pressed="${index===0}" data-category="${esc(category)}">${esc(category)}</button>`).join('');
+        filters.addEventListener('click', event => {
+          const button = event.target.closest('[data-category]');
+          if (!button) return;
+          filters.querySelectorAll('button').forEach(el => el.setAttribute('aria-pressed','false'));
+          button.setAttribute('aria-pressed','true');
+          renderArchives(button.dataset.category);
+        });
       }
     }
 

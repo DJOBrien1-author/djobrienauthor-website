@@ -1117,3 +1117,23 @@ body[data-page="home"] .book-card:hover{
     width:min(31%,190px);
   }
 }
+
+
+/* Brihanon Archives rebuild — 8 Aug 2026 */
+body[data-page="archives"] .archives-intro{max-width:1280px;margin:auto}
+body[data-page="archives"] .archive-welcome{max-width:900px;margin:0 auto 2rem;text-align:center;background:rgba(15,12,9,.88)}
+body[data-page="archives"] .archive-index{max-width:1050px;margin:0 auto 2rem;background:rgba(15,12,9,.86)}
+body[data-page="archives"] .archive-title-list{columns:3;column-gap:2.25rem}
+body[data-page="archives"] .archive-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem;align-items:stretch}
+body[data-page="archives"] .archive-card{display:flex;flex-direction:column;padding:.8rem;background:rgba(12,10,8,.9);border:1px solid rgba(190,150,83,.5)}
+body[data-page="archives"] .archive-scroll-card>img{width:100%;aspect-ratio:3/4;object-fit:contain;padding:0;background:#17120d;border:1px solid rgba(213,177,109,.38);box-shadow:0 12px 28px rgba(0,0,0,.4)}
+body[data-page="archives"] .archive-card-content{display:flex;flex:1;flex-direction:column;padding:.85rem .35rem .25rem;text-align:center}
+body[data-page="archives"] .archive-card-content h2{font-size:1.45rem;margin:.15rem 0 .25rem;color:var(--gold-light)}
+body[data-page="archives"] .archive-card-content .meta{text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;margin:0;color:var(--gold)}
+body[data-page="archives"] .archive-card-content .btn{margin-top:auto;align-self:center}
+body[data-page="archive"] .archive-entry{max-width:960px;background:rgba(12,10,8,.9)}
+body[data-page="archive"] .archive-entry-header{text-align:center}
+body[data-page="archive"] .archive-scroll-view img{max-width:min(100%,820px);background:#17120d}
+.art-credits{font-size:.78rem;opacity:.78;margin-top:.65rem}
+@media(max-width:900px){body[data-page="archives"] .archive-grid{grid-template-columns:repeat(2,minmax(0,1fr))}body[data-page="archives"] .archive-title-list{columns:2}}
+@media(max-width:620px){body[data-page="archives"] .archive-grid{grid-template-columns:1fr}body[data-page="archives"] .archive-title-list{columns:1}}

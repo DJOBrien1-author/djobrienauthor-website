@@ -1,0 +1,20 @@
+D.J. O'BRIEN WEBSITE — CUMULATIVE SAFE UPDATE
+
+Built from the protected MAIN FALLBACK WEBSITE.
+
+Approved post-baseline changes included:
+1. Rebuilt Brihanon's Archives with the twelve-manuscript index/cards.
+2. Installed the approved corrected manuscript images.
+3. Installed the red leather repeating Dark Lair Trilogy Archives background.
+4. Installed the final corrected A Tale of Terror manuscript with black surround.
+
+Safety method:
+- Global commissioned-artwork page backgrounds from the fallback website were preserved.
+- The old Archives patch stylesheet was NOT copied wholesale.
+- Only Archives-specific markup, data, loader logic and CSS were merged.
+- The faulty Read Preview / UK-to-US patch is NOT included because it caused regression.
+
+Known unresolved items intentionally NOT changed here:
+- Read a Preview brightness/readability.
+- Amazon UK-to-US link correction.
+- Homepage book-thumbnail reduction/background brightening discussed after recovery.
