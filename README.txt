@@ -1,8 +1,8 @@
-THE THREE CRYSTALS SCROLL PATCH
+BRIHANON'S ARCHIVES BACKGROUND PATCH
 
-This patch replaces only:
-assets/uploads/archive-scrolls/the-three-crystals.png
+This patch changes only the Archives background image.
+It replaces:
+assets/uploads/backgrounds/archives-brihanons-library.webp
 
-No code, content JSON, links, routes, CMS settings, or other assets are changed.
-
-Apply by copying the assets folder into the root of the current website project and allowing it to replace the existing file.
+No HTML, CSS, JSON, scroll images, navigation, links, or other website files are changed.
+Built to apply safely over the current ULTIMATE BASE VERSION.
