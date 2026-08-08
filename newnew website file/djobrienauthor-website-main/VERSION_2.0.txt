@@ -1,0 +1,10 @@
+VERSION 2.0
+
+Fixes reported live-site audio problems:
+- removes regular rhythmic gain modulation that sounded like a distant train
+- makes Home, Archives and World ambience more distinct
+- dynamically observes archive content loaded after the page opens
+- does not discard parchment/battle triggers before browser audio unlock
+- adds quicker parchment and quill timing
+- adds irregular fireplace crackles in Brihanon's Archives
+- retries scroll and battle detection after content loads

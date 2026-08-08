@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1200" role="img" aria-labelledby="title desc">
+<title id="title">media-dragon-war</title><desc id="desc">Atmospheric epic fantasy background artwork for the D.J. O'Brien author website.</desc>
+<defs>
+ <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#1b151f"/><stop offset=".58" stop-color="#6d2b23"/><stop offset="1" stop-color="#090807"/></linearGradient>
+ <radialGradient id="glow" cx="72%" cy="22%" r="48%"><stop stop-color="#ef6d37" stop-opacity=".56"/><stop offset="1" stop-color="#ef6d37" stop-opacity="0"/></radialGradient>
+ <linearGradient id="fog" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#e8dfc6" stop-opacity="0"/><stop offset=".5" stop-color="#e8dfc6" stop-opacity=".22"/><stop offset="1" stop-color="#e8dfc6" stop-opacity="0"/></linearGradient>
+ <filter id="blur"><feGaussianBlur stdDeviation="18"/></filter>
+</defs>
+<rect width="1920" height="1200" fill="url(#sky)"/>
+<rect width="1920" height="1200" fill="url(#glow)"/>
+<circle cx="1510" cy="210" r="88" fill="#f3d995" opacity=".58"/>
+<g opacity=".52" fill="#20150f"><path d="M0 690L180 470l140 170 170-260 210 300 210-230 190 235 160-180 180 190 180-250 340 325v330H0z"/></g>
+<g opacity=".8" fill="#120d0a"><path d="M0 820l220-210 190 145 240-270 270 285 180-160 230 190 230-220 380 270v360H0z"/></g>
+<path d="M1130 310q230-170 410 10-122-35-188 30 68 30 118 108-160-62-340-148z" fill="#080706"/><path d="M1230 350q-55 145-190 200 105-100 88-225z" fill="#080706"/><g fill="#0a0807"><path d="M160 950l20-135 20 135z"/><circle cx="180" cy="805" r="14"/><path d="M250 950l20-135 20 135z"/><circle cx="270" cy="805" r="14"/><path d="M340 950l20-135 20 135z"/><circle cx="360" cy="805" r="14"/><path d="M430 950l20-135 20 135z"/><circle cx="450" cy="805" r="14"/><path d="M520 950l20-135 20 135z"/><circle cx="540" cy="805" r="14"/><path d="M610 950l20-135 20 135z"/><circle cx="630" cy="805" r="14"/><path d="M700 950l20-135 20 135z"/><circle cx="720" cy="805" r="14"/><path d="M790 950l20-135 20 135z"/><circle cx="810" cy="805" r="14"/><path d="M880 950l20-135 20 135z"/><circle cx="900" cy="805" r="14"/><path d="M970 950l20-135 20 135z"/><circle cx="990" cy="805" r="14"/><path d="M1060 950l20-135 20 135z"/><circle cx="1080" cy="805" r="14"/><path d="M1150 950l20-135 20 135z"/><circle cx="1170" cy="805" r="14"/><path d="M1240 950l20-135 20 135z"/><circle cx="1260" cy="805" r="14"/><path d="M1330 950l20-135 20 135z"/><circle cx="1350" cy="805" r="14"/><path d="M1420 950l20-135 20 135z"/><circle cx="1440" cy="805" r="14"/><path d="M1510 950l20-135 20 135z"/><circle cx="1530" cy="805" r="14"/><path d="M1600 950l20-135 20 135z"/><circle cx="1620" cy="805" r="14"/><path d="M1690 950l20-135 20 135z"/><circle cx="1710" cy="805" r="14"/></g>
+<path d="M0 940C360 860 590 1010 900 930s570-120 1020 12v258H0z" fill="#0a0807" opacity=".96"/>
+<g filter="url(#blur)" opacity=".62"><ellipse cx="520" cy="855" rx="520" ry="55" fill="url(#fog)"/><ellipse cx="1390" cy="740" rx="430" ry="42" fill="url(#fog)"/></g>
+</svg>

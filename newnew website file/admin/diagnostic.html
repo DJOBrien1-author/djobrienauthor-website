@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>CMS Diagnostic</title></head>
+<body style="font-family:Arial,sans-serif;padding:2rem">
+<h1>CMS Diagnostic</h1>
+<p id="identity">Checking Netlify Identity...</p>
+<p id="cms">Checking Decap CMS...</p>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+<script>
+document.getElementById("identity").textContent =
+  window.netlifyIdentity ? "Netlify Identity loaded." : "Netlify Identity did not load.";
+document.getElementById("cms").textContent =
+  window.CMS ? "Decap CMS loaded." : "Decap CMS did not load.";
+</script>
+</body>
+</html>

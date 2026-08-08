@@ -1,0 +1,686 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+:root{
+  --bg:#090807;
+  --panel:#17120e;
+  --panel2:#21170f;
+  --gold:#c99d50;
+  --gold-light:#efd28a;
+  --text:#eadfc8;
+  --muted:#b9ac92;
+  --line:rgba(201,157,80,.45);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  color:var(--text);
+  background:
+    radial-gradient(circle at 15% 0%,rgba(111,64,26,.18),transparent 34rem),
+    linear-gradient(rgba(8,7,6,.93),rgba(8,7,6,.98)),
+    repeating-linear-gradient(120deg,#16110d 0,#16110d 3px,#0d0b09 3px,#0d0b09 7px);
+  font-family:"EB Garamond",Georgia,"Times New Roman",serif;
+  line-height:1.65;
+}
+a{color:inherit}
+img{display:block;max-width:100%}
+button,input,textarea{font:inherit}
+.skip-link{position:absolute;left:-9999px}
+.skip-link:focus{left:1rem;top:1rem;background:#fff;color:#000;padding:.7rem;z-index:1000}
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(9,8,7,.96);
+  border-bottom:1px solid var(--line);
+  backdrop-filter:blur(8px);
+}
+.nav-wrap{max-width:1450px;margin:auto;padding:.8rem 1.2rem;display:flex;align-items:center;gap:1rem}
+.brand{text-decoration:none;display:flex;align-items:center;gap:.8rem}
+.brand-mark{width:42px;height:42px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold-light)}
+.brand strong{display:block;color:var(--gold-light);font-family:"Palatino Linotype","Book Antiqua",Georgia,serif;font-size:1.12rem}
+.brand small{display:block;color:var(--gold);font-size:.86rem}
+.nav-toggle{display:none;margin-left:auto;background:transparent;color:var(--gold-light);border:1px solid var(--line);padding:.45rem .65rem}
+nav{margin-left:auto}
+nav ul{list-style:none;margin:0;padding:0;display:flex;gap:1rem}
+nav a{text-decoration:none;color:#dfd2ba;font-size:.9rem}
+nav a:hover,nav a:focus{color:var(--gold-light)}
+.hero{
+  min-height:690px;
+  display:grid;
+  grid-template-columns:minmax(340px,.9fr) minmax(560px,1.25fr);
+  align-items:center;
+  gap:2.4rem;
+  padding:5rem max(4vw,1.25rem);
+  border-bottom:1px solid var(--line);
+}
+.eyebrow{color:var(--gold);font-size:.95rem;letter-spacing:.08em}
+.hero-title{
+  font-family:"Palatino Linotype","Book Antiqua",Georgia,serif;
+  font-size:clamp(3.7rem,7vw,7.2rem);
+  line-height:.96;
+  font-weight:600;
+  color:var(--gold-light);
+  text-shadow:0 3px 0 #6d461e,0 10px 28px rgba(0,0,0,.75);
+  margin:.25rem 0 1rem;
+}
+.hero-title span{display:block}
+.hero-title .trilogy{font-size:.5em;letter-spacing:.08em;margin-top:.35em;color:#d7b56b}
+.tagline{font-size:1.25rem;color:#f1e6cf}
+.lead{max-width:650px;color:#d6c9b2;font-size:1.08rem}
+.hero-actions{display:flex;gap:.8rem;flex-wrap:wrap}
+.btn{
+  display:inline-block;
+  text-decoration:none;
+  margin-top:1.2rem;
+  padding:.85rem 1.25rem;
+  border:1px solid var(--gold);
+  background:linear-gradient(#6d3217,#421b0d);
+  color:#f5dda4;
+  box-shadow:0 14px 35px rgba(0,0,0,.45);
+}
+.btn.secondary{background:linear-gradient(#1a1510,#0f0d0b)}
+.books-stage{display:flex;align-items:flex-end;justify-content:center;gap:1.2rem;perspective:1000px}
+.book-card{width:min(30%,285px);filter:drop-shadow(0 24px 26px rgba(0,0,0,.8));transition:.3s ease}
+.book-card:nth-child(1){transform:rotateY(6deg)}
+.book-card:nth-child(2){transform:translateY(-14px)}
+.book-card:nth-child(3){transform:rotateY(-6deg)}
+.book-card:hover{transform:translateY(-16px) scale(1.02)}
+.section{max-width:1320px;margin:auto;padding:4.5rem 1.25rem}
+.section-title{text-align:center;margin-bottom:2rem}
+.section-title h1,.section-title h2{
+  font-family:"Palatino Linotype","Book Antiqua",Georgia,serif;
+  color:var(--gold-light);
+  margin:.3rem 0;
+  font-weight:600;
+}
+.section-title h1{font-size:clamp(3rem,6vw,5.8rem)}
+.section-title h2{font-size:clamp(2rem,4vw,3.8rem)}
+.section-title p{max-width:800px;margin:auto;color:var(--muted)}
+.ornament{display:flex;align-items:center;justify-content:center;gap:.7rem;color:var(--gold);margin:1rem 0}
+.ornament:before,.ornament:after{content:"";height:1px;width:min(24vw,220px);background:linear-gradient(90deg,transparent,var(--gold))}
+.ornament:after{background:linear-gradient(90deg,var(--gold),transparent)}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.panel{
+  position:relative;
+  background:linear-gradient(145deg,rgba(34,23,15,.97),rgba(12,11,9,.97));
+  border:1px solid var(--line);
+  padding:1.4rem;
+  box-shadow:0 18px 45px rgba(0,0,0,.5);
+}
+.panel h3{font-family:"Palatino Linotype","Book Antiqua",Georgia,serif;color:var(--gold-light);font-size:1.45rem}
+.crystals{display:flex;justify-content:center;gap:.8rem;margin:1.3rem 0}
+.crystal{width:58px;height:86px;clip-path:polygon(50% 0,88% 24%,76% 83%,50% 100%,24% 83%,12% 24%)}
+.red{background:linear-gradient(135deg,#ff8277,#8d1212 60%,#3f0000)}
+.blue{background:linear-gradient(135deg,#8bd4ff,#205fcb 60%,#051e5a)}
+.green{background:linear-gradient(135deg,#9dffb1,#2c9b52 60%,#063a17)}
+.quote{font-style:italic}
+.review-source{color:var(--gold);margin-top:.7rem}
+.book-detail{display:grid;grid-template-columns:290px 1fr;gap:2rem;align-items:start;margin-bottom:3rem}
+.book-detail img{border:1px solid var(--line);box-shadow:0 18px 45px rgba(0,0,0,.55)}
+.meta{color:var(--gold)}
+.map-switch{display:flex;gap:.6rem;justify-content:center;margin-bottom:1rem;flex-wrap:wrap}
+.map-switch button{background:#17130f;color:var(--gold-light);border:1px solid var(--line);padding:.6rem 1rem;cursor:pointer}
+.map-switch button.active{background:#633117}
+.map-frame{background:#0b0a09;border:1px solid var(--line);padding:.7rem}
+.timeline{display:grid;gap:1rem;max-width:900px;margin:auto}
+.timeline-item{display:grid;grid-template-columns:170px 1fr;gap:1.3rem;border-left:2px solid var(--gold);padding-left:1.2rem}
+.timeline-item time{color:var(--gold-light)}
+.contact-form{max-width:760px;margin:auto}
+label{display:block;margin-top:1rem;color:var(--gold-light)}
+input,textarea{width:100%;padding:.8rem;background:#0d0c0b;border:1px solid var(--line);color:#fff}
+textarea{min-height:150px}
+.notice{border-left:3px solid var(--gold);padding:.8rem 1rem;background:rgba(201,157,80,.08)}
+.site-footer{border-top:1px solid var(--line);padding:2.5rem 1.2rem;text-align:center;color:#aa9d87;background:#080706}
+.site-footer strong{color:var(--gold-light)}
+.footer-links{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap}
+.fade-up{opacity:0;transform:translateY(15px);transition:.6s ease}
+.fade-up.visible{opacity:1;transform:none}
+@media(max-width:1040px){
+  .nav-toggle{display:block}
+  nav{display:none;position:absolute;left:0;right:0;top:100%;background:#080706;border-bottom:1px solid var(--line)}
+  nav.open{display:block}
+  nav ul{flex-direction:column;padding:1rem 1.2rem}
+  .hero{grid-template-columns:1fr}
+}
+@media(max-width:760px){
+  .grid-3{grid-template-columns:1fr}
+  .book-detail{grid-template-columns:1fr}
+  .book-detail img{max-width:280px;margin:auto}
+  .timeline-item{grid-template-columns:1fr}
+  .hero-title{font-size:3.4rem}
+  .brand small{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+  *{scroll-behavior:auto!important;transition:none!important}
+}
+
+/* Final homepage title and Instagram video presentation */
+.hero-title{
+  font-size:clamp(2.6rem,4.5vw,5.2rem);
+  line-height:1.08;
+  white-space:nowrap;
+}
+.hero-title span,
+.hero-title .trilogy{
+  display:inline;
+  font-size:1em;
+  letter-spacing:.01em;
+  margin:0;
+  color:var(--gold-light);
+}
+.video-section{
+  max-width:1180px;
+  margin:0 auto;
+  padding:4rem 1.25rem;
+}
+.video-frame{
+  max-width:590px;
+  margin:1.5rem auto;
+  padding:1rem;
+  background:linear-gradient(145deg,rgba(34,23,15,.97),rgba(12,11,9,.97));
+  border:1px solid var(--line);
+  box-shadow:0 18px 45px rgba(0,0,0,.5);
+}
+.video-frame h2,.video-frame h3{
+  text-align:center;
+  color:var(--gold-light);
+  font-family:"Palatino Linotype","Book Antiqua",Georgia,serif;
+}
+.video-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1.5rem;
+  align-items:start;
+}
+.instagram-media{
+  margin:0 auto!important;
+  min-width:0!important;
+  width:100%!important;
+}
+@media(max-width:900px){
+  .hero-title{white-space:normal;font-size:clamp(2.4rem,8vw,4rem)}
+  .video-grid{grid-template-columns:1fr}
+}
+
+
+/* Official Dark Lair typography */
+body{
+  font-family:"EB Garamond",Georgia,"Times New Roman",serif;
+}
+.hero-title,
+.section-title h1,
+.section-title h2,
+.panel h3,
+.book-detail h2,
+.video-frame h2,
+.video-frame h3{
+  font-family:"Cormorant Garamond",Georgia,serif;
+}
+nav a,
+.brand small,
+.eyebrow,
+.btn{
+  font-family:"Cinzel",Georgia,serif;
+}
+
+/* Animated trilogy title */
+.animated-title{
+  position:relative;
+  display:inline-block;
+  color:#f2d78f;
+  text-shadow:
+    0 0 4px rgba(255,197,91,.75),
+    0 0 12px rgba(255,119,32,.35),
+    0 3px 0 #6b431d,
+    0 10px 24px rgba(0,0,0,.8);
+  animation:titleGlow 4.8s ease-in-out infinite;
+  isolation:isolate;
+}
+.animated-title::before,
+.animated-title::after{
+  content:"";
+  position:absolute;
+  left:4%;
+  right:4%;
+  bottom:-.12em;
+  height:.24em;
+  pointer-events:none;
+  border-radius:50%;
+  opacity:.55;
+  filter:blur(6px);
+  z-index:-1;
+}
+.animated-title::before{
+  background:linear-gradient(90deg,transparent,#ff9a3d,#ffd27a,#ff7026,transparent);
+  animation:emberSweep 5.5s linear infinite;
+}
+.animated-title::after{
+  background:radial-gradient(circle at center,rgba(255,184,77,.65),transparent 70%);
+  animation:emberPulse 3.8s ease-in-out infinite;
+}
+
+/* Character-name animation */
+.animated-name{
+  position:relative;
+  display:inline-block;
+  color:#f0cf85;
+  text-shadow:0 0 5px rgba(240,207,133,.38);
+  animation:nameGlow 4.2s ease-in-out infinite;
+}
+.animated-name::after{
+  content:"";
+  position:absolute;
+  left:8%;
+  right:8%;
+  bottom:-.08em;
+  height:2px;
+  background:linear-gradient(90deg,transparent,currentColor,transparent);
+  transform-origin:center;
+  animation:underlineFlare 4.2s ease-in-out infinite;
+  opacity:.65;
+}
+
+/* Individual character accents */
+.name-brinn{color:#d9a15c}
+.name-megan{color:#f3d99a}
+.name-ben{color:#d56d55}
+.name-ultor{color:#9db276}
+.name-helfen{color:#87b9b1}
+.name-shade{color:#8e7aa8}
+
+.spark-layer{
+  position:absolute;
+  inset:-.25em -.4em;
+  overflow:visible;
+  pointer-events:none;
+}
+.spark{
+  position:absolute;
+  width:3px;
+  height:3px;
+  border-radius:50%;
+  background:#ffd27a;
+  box-shadow:0 0 7px #ff8b2c;
+  opacity:0;
+  animation:sparkRise var(--dur,3.8s) ease-out infinite;
+  animation-delay:var(--delay,0s);
+}
+.spark:nth-child(1){left:12%;bottom:4%;--delay:.2s;--dur:4.2s}
+.spark:nth-child(2){left:36%;bottom:0;--delay:1.5s;--dur:3.6s}
+.spark:nth-child(3){left:63%;bottom:2%;--delay:2.4s;--dur:4.7s}
+.spark:nth-child(4){left:84%;bottom:5%;--delay:.9s;--dur:3.9s}
+
+@keyframes titleGlow{
+  0%,100%{filter:brightness(1)}
+  50%{filter:brightness(1.16)}
+}
+@keyframes emberSweep{
+  0%{transform:translateX(-10%) scaleX(.85);opacity:.25}
+  50%{transform:translateX(10%) scaleX(1.05);opacity:.75}
+  100%{transform:translateX(-10%) scaleX(.85);opacity:.25}
+}
+@keyframes emberPulse{
+  0%,100%{transform:scaleX(.82);opacity:.25}
+  50%{transform:scaleX(1.08);opacity:.65}
+}
+@keyframes nameGlow{
+  0%,100%{filter:brightness(1);text-shadow:0 0 4px currentColor}
+  50%{filter:brightness(1.12);text-shadow:0 0 10px currentColor}
+}
+@keyframes underlineFlare{
+  0%,100%{transform:scaleX(.35);opacity:.18}
+  50%{transform:scaleX(1);opacity:.75}
+}
+@keyframes sparkRise{
+  0%{transform:translateY(0) scale(.7);opacity:0}
+  18%{opacity:.9}
+  100%{transform:translateY(-1.7em) translateX(.5em) scale(.1);opacity:0}
+}
+
+@media(max-width:900px){
+  .spark{display:none}
+  .animated-title::before,.animated-title::after{opacity:.35}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .animated-title,
+  .animated-title::before,
+  .animated-title::after,
+  .animated-name,
+  .animated-name::after,
+  .spark{
+    animation:none!important;
+  }
+}
+
+.hero-title{
+  font-size:clamp(2.4rem,4.2vw,4.8rem);
+  white-space:nowrap;
+  line-height:1.05;
+}
+.hero-title .animated-title{display:inline-block}
+.crystal-lore-wrap{max-width:920px;margin:0 auto 2rem}
+.crystal-button{border:0;padding:0;cursor:pointer;appearance:none}
+.crystal-button:focus-visible{outline:2px solid var(--gold-light);outline-offset:5px}
+.crystal-button[aria-expanded="true"]{transform:translateY(-6px) scale(1.05)}
+.crystal-panels{margin-top:1rem}
+.crystal-panel{max-width:760px;margin:0 auto;text-align:center}
+.crystal-panel[hidden]{display:none}
+@media(max-width:900px){
+  .hero-title{white-space:normal;font-size:clamp(2.2rem,8vw,3.6rem)}
+}
+
+/* Definitive site additions */
+.center-actions{justify-content:center}
+.start-grid{max-width:1000px;margin:0 auto 2rem}
+.start-feature{display:grid;grid-template-columns:260px 1fr;gap:2rem;align-items:center}
+.start-feature img{box-shadow:0 18px 45px rgba(0,0,0,.55);border:1px solid var(--line)}
+.news-list{display:grid;gap:1.2rem;max-width:960px;margin:auto}
+.news-card h2{font-family:"Cormorant Garamond",Georgia,serif;color:var(--gold-light)}
+.reading-page{max-width:980px}
+.manuscript{font-size:1.18rem;background:linear-gradient(rgba(235,220,188,.96),rgba(211,191,150,.96));color:#2a2118}
+.manuscript p{color:#2a2118}
+.dropcap:first-letter{float:left;font-family:"Cormorant Garamond",Georgia,serif;font-size:4.2rem;line-height:.8;padding-right:.5rem;color:#7a3a18}
+.sample-note{font-style:italic;border-top:1px solid rgba(80,50,20,.3);padding-top:1rem}
+.character-role{color:var(--gold);font-family:"Cinzel",Georgia,serif;font-size:.82rem}
+.atlas-frame{overflow:auto;max-height:72vh}
+.atlas-frame img{transform-origin:center center;transition:transform .25s ease}
+.atlas-frame figcaption{text-align:center;color:var(--muted);padding:.65rem}
+.map-tools{display:flex;justify-content:center;gap:.6rem;flex-wrap:wrap;margin:1rem 0 2rem}
+.map-tools .btn{margin-top:0}
+.map-modal{position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:1000;padding:2rem}
+.map-modal-inner{position:relative;height:100%;display:flex;flex-direction:column}
+.map-close{align-self:flex-end;background:#21170f;color:var(--gold-light);border:1px solid var(--gold);padding:.6rem 1rem;cursor:pointer}
+.map-viewport{flex:1;overflow:auto;display:grid;place-items:center}
+.map-viewport img{max-width:none;width:1400px;transform-origin:center;cursor:grab}
+@media(max-width:820px){
+  .start-feature{grid-template-columns:1fr}
+  .start-feature img{max-width:260px;margin:auto}
+  .map-modal{padding:.8rem}
+}
+
+.admin-shortcut{
+  text-align:center;
+  margin-top:1rem;
+  font-size:.9rem;
+}
+.admin-shortcut a{
+  color:var(--muted);
+  text-decoration:none;
+}
+.admin-shortcut a:hover,
+.admin-shortcut a:focus{
+  color:var(--gold-light);
+}
+
+
+/* Version 2 integrated epic-fantasy scenery */
+:root{
+  --page-bg:url('/assets/scenery/home.webp');
+  --scene-overlay:.50;
+}
+body{
+  position:relative;
+  min-height:100vh;
+  background:#090807;
+  isolation:isolate;
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-3;
+  background-image:var(--page-bg);
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  transform:scale(1.015);
+}
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-2;
+  background:
+    linear-gradient(90deg,rgba(5,6,8,.60) 0%,rgba(5,6,8,calc(var(--scene-overlay) - .05)) 38%,rgba(5,6,8,calc(var(--scene-overlay) - .18)) 70%,rgba(5,6,8,calc(var(--scene-overlay) - .08)) 100%),
+    linear-gradient(180deg,rgba(4,5,7,.12),rgba(4,5,7,.46));
+  pointer-events:none;
+}
+body[data-page="home"]{--page-bg:url('/assets/uploads/backgrounds/home-amberlay-benteer-mountains.webp')}
+body[data-page="start"]{--page-bg:url('/assets/uploads/backgrounds/trilogy-deel-roat-road.webp')}
+body[data-page="trilogy"]{--page-bg:url('/assets/uploads/backgrounds/home-gathering-storm.webp')}
+body[data-page="world"]{--page-bg:url('/assets/uploads/backgrounds/world-dark-lair-lands.webp')}
+body[data-page="characters"]{--page-bg:url('/assets/uploads/backgrounds/characters-great-hall.webp')}
+body[data-page="timeline"]{--page-bg:url('/assets/uploads/backgrounds/timeline-echoes-3000-years.webp')}
+body[data-page="reviews"]{--page-bg:url('/assets/uploads/backgrounds/reviews-hall-of-legends.webp')}
+body[data-page="news"]{--page-bg:url('/assets/uploads/backgrounds/newsletter-scribes-desk.webp')}
+body[data-page="about"]{--page-bg:url('/assets/uploads/backgrounds/about-writers-study.webp')}
+body[data-page="media"]{--page-bg:url('/assets/scenery/media.webp')}
+body[data-page="contact"]{--page-bg:url('/assets/uploads/backgrounds/contact-messengers-tower.webp')}
+body[data-page="sample"]{--page-bg:url('/assets/scenery/sample.webp')}
+body[data-page="privacy"]{--page-bg:url('/assets/scenery/privacy.webp')}
+body[data-page="thanks"]{--page-bg:url('/assets/scenery/thanks.webp')}
+body[data-page="404"]{--page-bg:url('/assets/scenery/404.webp')}
+main{background:transparent}
+.hero{
+  position:relative;
+  background:linear-gradient(90deg,rgba(6,7,9,.48),rgba(6,7,9,.08));
+}
+.section{
+  position:relative;
+}
+.section:not(.hero) > .section-title,
+.section:not(.hero) > .panel,
+.section:not(.hero) > .grid-3,
+.section:not(.hero) > .timeline,
+.section:not(.hero) > .book-detail,
+.section:not(.hero) > .map-switch,
+.section:not(.hero) > .map-frame,
+.section:not(.hero) > .contact-form,
+.video-section > *{
+  backdrop-filter:blur(2px);
+}
+.panel,.video-frame,.map-frame{
+  background:linear-gradient(145deg,rgba(31,23,17,.91),rgba(8,10,13,.92));
+}
+.site-header{background:rgba(5,7,11,.92)}
+.site-footer{background:rgba(5,7,11,.94)}
+:focus-visible{outline:2px solid var(--gold-light);outline-offset:3px}
+@media(max-width:760px){
+  body::before{background-position:62% center}
+  body::after{background:linear-gradient(rgba(5,6,8,.52),rgba(5,6,8,.64))}
+  .hero{background:rgba(5,6,8,.22)}
+}
+@media(prefers-reduced-motion:reduce){body::before{transform:none}}
+
+/* Brihanon's Archives */
+body[data-page="archives"]{--page-bg:url('/assets/uploads/backgrounds/archives-brihanons-library.webp');--scene-overlay:.60}
+body[data-page="archive"]{--page-bg:url('/assets/uploads/backgrounds/archive-brihanon-at-work.webp');--scene-overlay:.60}
+.archives-intro{max-width:1180px;margin:auto}
+.archive-welcome{max-width:820px;margin:0 auto 2rem;text-align:center}
+.archive-welcome h2,.archive-entry h1,.archive-entry h2{font-family:"Cormorant Garamond",Georgia,serif;color:var(--gold-light)}
+.archive-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1.25rem}
+.archive-card{overflow:hidden;padding:0;display:flex;flex-direction:column}
+.archive-card img{width:100%;aspect-ratio:16/10;object-fit:cover;border-bottom:1px solid var(--line)}
+.archive-card-content{padding:1.25rem;display:flex;flex-direction:column;flex:1}
+.archive-card h2{margin:.25rem 0 .55rem;font-family:"Cormorant Garamond",Georgia,serif;color:var(--gold-light)}
+.archive-card .btn{align-self:flex-start;margin-top:auto}
+.archive-filters{display:flex;justify-content:center;gap:.55rem;flex-wrap:wrap;margin:0 0 1.5rem}
+.archive-filter{border:1px solid var(--line);background:rgba(15,13,11,.8);color:var(--gold-light);padding:.5rem .8rem;cursor:pointer}
+.archive-filter[aria-pressed="true"]{background:var(--gold);color:#17110b}
+.archive-entry{max-width:900px;margin:3rem auto;padding:clamp(1.3rem,4vw,3.5rem)}
+.archive-entry-header{text-align:center;margin-bottom:2rem}
+.archive-entry-header .meta{color:var(--gold)}
+.archive-hero{margin:1.5rem 0 2rem}
+.archive-hero img{width:100%;max-height:620px;object-fit:cover;border:1px solid var(--line)}
+.archive-body{font-size:1.12rem;line-height:1.85}
+.archive-body p:first-child:first-letter{float:left;font-family:"Cormorant Garamond",Georgia,serif;font-size:4.5rem;line-height:.78;padding:.12rem .5rem 0 0;color:var(--gold-light)}
+.archive-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:2rem 0}
+.archive-gallery figure{margin:0}.archive-gallery img{width:100%;height:260px;object-fit:cover}.archive-gallery figcaption,.archive-video figcaption{color:var(--muted);font-style:italic;padding:.45rem 0}
+.archive-video{margin:2rem 0}.archive-video video,.archive-video iframe{width:100%;aspect-ratio:16/9;border:1px solid var(--line);background:#000}
+.archive-signature{text-align:right;margin-top:2.5rem;font-family:"Cormorant Garamond",Georgia,serif;font-size:1.2rem;color:var(--gold-light)}
+.related-manuscripts{max-width:900px;margin:0 auto 3rem}.related-manuscripts h2{text-align:center;color:var(--gold-light)}
+@media(max-width:700px){.archive-entry{margin:1rem .6rem}.archive-gallery img{height:auto}}
+
+/* Public, automatically generated list of every Brihanon topic */
+.archive-index{margin:1.5rem 0 2rem}
+.archive-index h2{margin-top:0}
+.archive-index-intro{margin-top:-.35rem;color:var(--muted,#d7cfbf)}
+.archive-title-list{margin:.75rem 0 0;padding-left:1.4rem;columns:2;column-gap:2rem}
+.archive-title-list li{break-inside:avoid;margin:.35rem 0 .65rem;padding-left:.2rem}
+.archive-title-list a{display:inline-flex;flex-direction:column;gap:.1rem;text-decoration:none}
+.archive-title-list a:hover strong,.archive-title-list a:focus strong{text-decoration:underline}
+.archive-title-list span{font-size:.82rem;opacity:.78}
+.archive-body h2,.archive-body h3,.archive-body h4,.archive-body h5{margin-top:1.6em;margin-bottom:.55em}
+.archive-body ul,.archive-body ol{margin:1rem 0 1.2rem;padding-left:1.6rem}
+.archive-body li{margin:.35rem 0}
+.archive-body blockquote{margin:1.4rem 0;padding:.2rem 1rem;border-left:3px solid rgba(222,183,94,.75);font-style:italic}
+.archive-body hr{border:0;border-top:1px solid rgba(255,255,255,.22);margin:2rem 0}
+.archive-body code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.92em;background:rgba(0,0,0,.25);padding:.08em .3em;border-radius:.2rem}
+@media (max-width:700px){.archive-title-list{columns:1}}
+
+/* Final scenery visibility correction: keep text readable while revealing artwork */
+:root{--scene-overlay:.28}
+body::after{
+  background:
+    linear-gradient(90deg,rgba(5,6,8,.30) 0%,rgba(5,6,8,.20) 40%,rgba(5,6,8,.14) 72%,rgba(5,6,8,.22) 100%),
+    linear-gradient(180deg,rgba(4,5,7,.06),rgba(4,5,7,.28));
+}
+.hero{background:linear-gradient(90deg,rgba(6,7,9,.24),rgba(6,7,9,.04))}
+body[data-page="archives"]::after,
+body[data-page="archive"]::after{
+  background:
+    linear-gradient(90deg,rgba(5,6,8,.46),rgba(5,6,8,.30),rgba(5,6,8,.24)),
+    linear-gradient(180deg,rgba(4,5,7,.12),rgba(4,5,7,.40));
+}
+@media(max-width:760px){
+  body::after{background:linear-gradient(rgba(5,6,8,.26),rgba(5,6,8,.38))}
+  .hero{background:rgba(5,6,8,.12)}
+  body[data-page="archives"]::after,
+  body[data-page="archive"]::after{background:linear-gradient(rgba(5,6,8,.42),rgba(5,6,8,.52))}
+}
+/* Finished illuminated manuscripts */
+.archive-scroll-card img{aspect-ratio:3/4;object-fit:contain;background:rgba(5,4,3,.72);padding:.55rem}
+.archive-scroll-view{margin:1.25rem auto 0;text-align:center}
+.archive-scroll-view a{display:inline-block;max-width:100%;cursor:zoom-in}
+.archive-scroll-view img{display:block;width:auto;max-width:100%;max-height:none;margin:auto;border:1px solid var(--line);box-shadow:0 18px 45px rgba(0,0,0,.48)}
+.archive-scroll-view figcaption{margin-top:.75rem;color:var(--muted);font-style:italic}
+@media(max-width:700px){.archive-scroll-card img{padding:.25rem}.archive-scroll-view{margin-top:.5rem}}
+
+
+/* Trilogy page: immersive saga layout */
+body[data-page="trilogy"] .trilogy-page{max-width:1120px;margin:0 auto;padding:4rem 1.25rem 5rem}
+.trilogy-intro{text-align:center;max-width:920px;margin:0 auto 3.5rem;padding:3.2rem clamp(1.4rem,5vw,4rem);background:linear-gradient(rgba(26,21,17,.92),rgba(10,10,10,.94));border:1px solid rgba(215,181,107,.42)}
+.trilogy-intro h1{margin:.25rem 0 .65rem;font-size:clamp(2.4rem,6vw,4.5rem)}
+.trilogy-kicker{margin:0;color:var(--gold-light);letter-spacing:.18em;text-transform:uppercase;font-size:.78rem;font-weight:700}
+.trilogy-legend{font-family:"Palatino Linotype","Book Antiqua",Georgia,serif;color:#f0d28b;font-size:clamp(1.1rem,2.5vw,1.45rem);letter-spacing:.08em}
+.trilogy-opening{max-width:720px;margin:1.15rem auto 0;font-size:1.08rem;line-height:1.8}
+.trilogy-actions{justify-content:center;margin-top:1.6rem}
+.saga-book{display:grid;grid-template-columns:minmax(230px,340px) 1fr;gap:clamp(1.6rem,5vw,4rem);align-items:center;margin:0 auto 2rem;padding:clamp(1.3rem,4vw,3rem);overflow:visible}
+.saga-book-featured{border-color:rgba(235,202,125,.68);box-shadow:0 24px 70px rgba(0,0,0,.55),0 0 35px rgba(215,181,107,.12)}
+.saga-cover-wrap{position:relative;max-width:340px;margin:auto;filter:drop-shadow(0 24px 30px rgba(0,0,0,.7));transition:transform .3s ease,filter .3s ease}
+.saga-cover-wrap:hover{transform:translateY(-8px) scale(1.018);filter:drop-shadow(0 30px 34px rgba(0,0,0,.8)) drop-shadow(0 0 14px rgba(215,181,107,.24))}
+.saga-cover-wrap img{display:block;width:100%;border:1px solid rgba(215,181,107,.45)}
+.start-badge{position:absolute;top:1rem;left:-.65rem;padding:.45rem .8rem;background:#6f1d1b;color:#f8e9bd;border:1px solid #d7b56b;box-shadow:0 8px 18px rgba(0,0,0,.5);font-size:.76rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.saga-copy h2{font-size:clamp(2.2rem,5vw,3.6rem);margin:.15rem 0 .15rem;color:var(--gold-light)}
+.saga-copy p{line-height:1.8}
+.saga-stage{margin:0 0 1.2rem;color:#d7b56b;font-family:"Palatino Linotype","Book Antiqua",Georgia,serif;font-size:1.2rem;font-style:italic}
+.saga-tagline{color:#ead9ad}
+.book-actions{margin-top:1.4rem}
+.journey-divider{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:1rem;max-width:850px;margin:3rem auto;color:#d7b56b;text-align:center;font-family:"Palatino Linotype","Book Antiqua",Georgia,serif;letter-spacing:.08em}
+.journey-divider span{height:1px;background:linear-gradient(90deg,transparent,rgba(215,181,107,.65),transparent)}
+.trilogy-video{max-width:650px;margin:1.2rem auto 3rem}
+.continue-journey{margin:4rem auto 0;padding:clamp(1.5rem,4vw,3rem);text-align:center}
+.continue-journey h2{font-size:clamp(2rem,4vw,3rem);margin:.35rem 0 1.8rem;color:var(--gold-light)}
+.explore-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;text-align:left}
+.explore-links a{display:block;padding:1.25rem;border:1px solid rgba(215,181,107,.3);background:rgba(0,0,0,.22);transition:transform .25s ease,border-color .25s ease,background .25s ease}
+.explore-links a:hover{transform:translateY(-4px);border-color:rgba(215,181,107,.75);background:rgba(215,181,107,.08)}
+.explore-links strong{display:block;color:var(--gold-light);font-family:"Palatino Linotype","Book Antiqua",Georgia,serif;font-size:1.15rem}
+.explore-links span{display:block;margin-top:.35rem;color:var(--text-muted);font-size:.94rem}
+@media (max-width:760px){
+  body[data-page="trilogy"] .trilogy-page{padding-top:2.2rem}
+  .saga-book{grid-template-columns:1fr;text-align:center}
+  .saga-cover-wrap{max-width:270px}
+  .book-actions{justify-content:center}
+  .journey-divider{grid-template-columns:1fr;gap:.55rem}
+  .journey-divider span{display:none}
+  .explore-links{grid-template-columns:1fr}
+}
+/* Read a Preview: light parchment and readable text */
+body[data-page="sample"] article.manuscript.panel {
+  background: linear-gradient(180deg, #f7eed3 0%, #e2cfa6 100%) !important;
+  color: #2f261d !important;
+  opacity: 1 !important;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  font-size: clamp(1.08rem, 1.5vw, 1.22rem);
+  line-height: 1.85;
+  border: 1px solid rgba(142, 101, 38, .72);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, .48),
+              inset 0 0 36px rgba(255, 255, 255, .28);
+}
+
+body[data-page="sample"] article.manuscript.panel h2,
+body[data-page="sample"] article.manuscript.panel p,
+body[data-page="sample"] article.manuscript.panel em,
+body[data-page="sample"] article.manuscript.panel strong {
+  color: #2f261d !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+
+body[data-page="sample"] article.manuscript.panel h2 {
+  margin: 0 0 1.3rem;
+}
+
+body[data-page="sample"] article.manuscript.panel p {
+  margin-bottom: 1.35rem;
+}
+
+body[data-page="sample"] article.manuscript.panel hr {
+  border: 0;
+  border-top: 1px solid rgba(80, 50, 20, .32);
+  margin: 1.8rem 0;
+}
+
+/* Read a Preview: wider manuscript and stronger ending */
+body[data-page="sample"] article.manuscript.panel {
+  width: min(800px, calc(100% - 2rem));
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body[data-page="sample"] .sample-ending {
+  margin-top: 2rem;
+  padding-top: 1.8rem;
+  border-top: 1px solid rgba(80, 50, 20, .32);
+  text-align: center;
+}
+
+body[data-page="sample"] .sample-ending-kicker {
+  color: #704516 !important;
+  font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-size: 1.05rem;
+  font-style: italic;
+  letter-spacing: .04em;
+  margin-bottom: .5rem;
+}
+
+body[data-page="sample"] .sample-ending h2 {
+  color: #3c2b1d !important;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  margin: .4rem 0 1rem;
+}
+
+body[data-page="sample"] .sample-ending .hero-actions {
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 760px) {
+  body[data-page="sample"] article.manuscript.panel {
+    width: calc(100% - 1.2rem);
+  }
+}
+
+
+html{scroll-behavior:smooth;} body{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;}

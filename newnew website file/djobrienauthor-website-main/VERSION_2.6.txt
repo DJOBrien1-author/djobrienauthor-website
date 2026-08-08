@@ -1,0 +1,12 @@
+VERSION 2.6
+
+Manuscript opening refinement:
+- uses the selected ZapSplat paper unfold recording
+- trims the initial silence
+- shortens it to approximately 1.15 seconds
+- lowers its volume by 20 percent
+- adds a smooth fade-out
+- plays immediately when a manuscript link is clicked
+- pauses briefly before opening the manuscript page
+- archive index scrolling remains silent
+- quill begins shortly after the manuscript opens

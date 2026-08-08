@@ -1,0 +1,151 @@
+
+(async () => {
+  const getPath = (obj, path) => path.split('.').reduce((acc, part) => {
+    if (acc == null) return undefined;
+    return /^\d+$/.test(part) ? acc[Number(part)] : acc[part];
+  }, obj);
+
+  try {
+    const response = await fetch('/content/site.json', { cache: 'no-store' });
+    if (!response.ok) throw new Error(`Content request failed: ${response.status}`);
+    const data = await response.json();
+
+    const pageKey = document.body.dataset.page;
+    const pageBackground = pageKey ? getPath(data, `appearance.backgrounds.${pageKey}`) : null;
+    if (pageBackground) document.documentElement.style.setProperty('--page-bg', `url("${pageBackground}")`);
+    const overlay = Number(getPath(data, 'appearance.overlay_strength'));
+    if (Number.isFinite(overlay)) document.documentElement.style.setProperty('--scene-overlay', Math.min(90, Math.max(45, overlay)) / 100);
+
+    document.querySelectorAll('[data-content]').forEach(el => {
+      const value = getPath(data, el.dataset.content);
+      if (value !== undefined && value !== null) el.textContent = value;
+    });
+
+    document.querySelectorAll('[data-content-href]').forEach(el => {
+      const value = getPath(data, el.dataset.contentHref);
+      if (value) el.setAttribute('href', value);
+    });
+
+    document.querySelectorAll('[data-content-src]').forEach(el => {
+      const value = getPath(data, el.dataset.contentSrc);
+      if (value) el.setAttribute('src', value);
+    });
+
+    document.querySelectorAll('[data-content-attr]').forEach(el => {
+      const value = getPath(data, el.dataset.contentAttr);
+      if (value) el.setAttribute('data-instgrm-permalink', value);
+    });
+
+    const characters = document.querySelector('#characters-list');
+    if (characters && Array.isArray(data.characters)) {
+      const classes = ['name-brinn','name-megan','name-ben','name-ultor','name-helfen','name-shade'];
+      characters.innerHTML = data.characters.map((item, i) => `
+        <article class="panel">
+          <h3><span class="animated-name ${classes[i] || ''}">${item.name}</span></h3>
+          <p><span class="character-role">Role: ${item.role}</span><br>${item.description}</p>
+        </article>`).join('');
+    }
+
+    const timeline = document.querySelector('#timeline-list');
+    if (timeline && Array.isArray(data.timeline)) {
+      timeline.innerHTML = data.timeline.map(item => `
+        <div class="timeline-item panel">
+          <time>${item.period}</time>
+          <div><h3>${item.title}</h3><p>${item.description}</p></div>
+        </div>`).join('');
+    }
+
+    const reviews = document.querySelector('#reviews-list');
+    if (reviews && Array.isArray(data.reviews)) {
+      reviews.innerHTML = data.reviews.map(item => `
+        <blockquote class="panel quote">“${item.quote}”
+          <footer class="review-source">- ${item.source}</footer>
+        </blockquote>`).join('');
+    }
+
+    const news = document.querySelector('#news-list');
+    if (news && Array.isArray(data.news)) {
+      news.innerHTML = data.news.map(item => `
+        <article class="panel news-card">
+          <p class="meta">${item.category}</p>
+          <h2>${item.title}</h2>
+          <p>${item.text}</p>
+        </article>`).join('');
+    }
+
+
+
+    const esc = value => String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+    const plainParagraphs = value => esc(value).split(/\n\s*\n/).filter(Boolean).map(paragraph => `<p>${paragraph.replace(/\n/g,'<br>')}</p>`).join('');
+    const videoEmbed = url => {
+      if (!url) return '';
+      const yt = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|shorts\/))([^?&/]+)/i);
+      if (yt) return `https://www.youtube-nocookie.com/embed/${encodeURIComponent(yt[1])}`;
+      const vm = url.match(/vimeo\.com\/(?:video\/)?(\d+)/i);
+      if (vm) return `https://player.vimeo.com/video/${encodeURIComponent(vm[1])}`;
+      return '';
+    };
+
+    const archivesList = document.querySelector('#archives-list');
+    if (archivesList && Array.isArray(data.archives)) {
+      const entries = [...data.archives].sort((a,b) => (Number(a.order)||999)-(Number(b.order)||999) || String(a.title || '').localeCompare(String(b.title || '')));
+      const renderArchives = category => {
+        const shown = category === 'All' ? entries : entries.filter(item => item.category === category);
+        archivesList.innerHTML = shown.length ? shown.map(item => `
+          <article class="panel archive-card">
+            ${item.hero_image ? `<img src="${esc(item.hero_image)}" alt="${esc(item.hero_alt || '')}" loading="lazy">` : ''}
+            <div class="archive-card-content">
+              <p class="meta">${esc(item.category || 'Archive')}</p>
+              <h2>${esc(item.title)}</h2>
+              ${item.subtitle ? `<p><em>${esc(item.subtitle)}</em></p>` : ''}
+              <p>${esc(item.newsletter_excerpt || '')}</p>
+              <a class="btn" href="archive.html?entry=${encodeURIComponent(item.slug)}">Read the manuscript</a>
+            </div>
+          </article>`).join('') : '<p class="panel">No manuscripts are filed in this section yet.</p>';
+      };
+      renderArchives('All');
+      const filters = document.querySelector('#archive-filters');
+      if (filters) {
+        const categories = ['All', ...new Set(entries.map(item => item.category).filter(Boolean))];
+        filters.innerHTML = categories.map((category,index) => `<button class="archive-filter" type="button" aria-pressed="${index===0}" data-category="${esc(category)}">${esc(category)}</button>`).join('');
+        filters.addEventListener('click', event => {
+          const button = event.target.closest('[data-category]');
+          if (!button) return;
+          filters.querySelectorAll('button').forEach(el => el.setAttribute('aria-pressed','false'));
+          button.setAttribute('aria-pressed','true');
+          renderArchives(button.dataset.category);
+        });
+      }
+    }
+
+    const archiveEntry = document.querySelector('#archive-entry');
+    if (archiveEntry && Array.isArray(data.archives)) {
+      const slug = new URLSearchParams(location.search).get('entry') || data.archives[0]?.slug;
+      const item = data.archives.find(entry => entry.slug === slug);
+      if (!item) {
+        archiveEntry.innerHTML = '<h1>Manuscript not found</h1><p>This record may have been moved or lost.</p><p><a class="btn" href="archives.html">Return to the Archives</a></p>';
+      } else {
+        document.title = `${item.title} | Brihanon’s Archives`;
+        const description = document.querySelector('meta[name="description"]');
+        if (description && item.seo_description) description.setAttribute('content', item.seo_description);
+        const gallery = Array.isArray(item.gallery) && item.gallery.length ? `<div class="archive-gallery">${item.gallery.map(image => `<figure><img src="${esc(image.image)}" alt="${esc(image.alt || '')}" loading="lazy">${image.caption ? `<figcaption>${esc(image.caption)}</figcaption>` : ''}</figure>`).join('')}</div>` : '';
+        const hosted = videoEmbed(item.video_url);
+        const video = item.video_file ? `<figure class="archive-video"><video controls preload="metadata" ${item.hero_image ? `poster="${esc(item.hero_image)}"` : ''}><source src="${esc(item.video_file)}"></video>${item.video_caption ? `<figcaption>${esc(item.video_caption)}</figcaption>` : ''}</figure>` : hosted ? `<figure class="archive-video"><iframe src="${hosted}" title="${esc(item.video_caption || item.title)}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>${item.video_caption ? `<figcaption>${esc(item.video_caption)}</figcaption>` : ''}</figure>` : '';
+        archiveEntry.innerHTML = `
+          <header class="archive-entry-header"><p class="meta">${esc(item.category || 'Archive')}</p><h1>${esc(item.title)}</h1>${item.subtitle ? `<p><em>${esc(item.subtitle)}</em></p>` : ''}</header>
+          ${item.hero_image ? `<figure class="archive-hero"><img src="${esc(item.hero_image)}" alt="${esc(item.hero_alt || '')}"></figure>` : ''}
+          <div class="archive-body">${plainParagraphs(item.body || '')}</div>${gallery}${video}
+          <p class="archive-signature">Recorded faithfully by<br><strong>Brihanon</strong><br><small>Arch Scribe of the Western Isles</small></p>`;
+        const related = document.querySelector('#archive-related');
+        if (related) {
+          const others = data.archives.filter(entry => entry.slug !== item.slug).slice(0,3);
+          related.innerHTML = others.length ? `<h2>Another scroll awaits</h2><div class="archive-grid">${others.map(entry => `<a class="panel" href="archive.html?entry=${encodeURIComponent(entry.slug)}"><strong>${esc(entry.title)}</strong><br><small>${esc(entry.category || '')}</small></a>`).join('')}</div>` : '';
+        }
+      }
+    }
+
+    if (window.instgrm?.Embeds) window.instgrm.Embeds.process();
+  } catch (error) {
+    console.warn('Editable content could not be loaded. Static fallback text remains visible.', error);
+  }
+})();

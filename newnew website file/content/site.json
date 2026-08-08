@@ -1,0 +1,429 @@
+{
+  "site": {
+    "author_name": "D.J. O’Brien",
+    "site_title": "The Dark Lair Trilogy",
+    "tagline": "Three Crystals. Three Races. One Prophecy.",
+    "hero_intro": "A completed epic fantasy trilogy of ancient evil, war, unlikely heroes and a darkness awakening after three thousand years.",
+    "start_heading": "Begin with Wyvern",
+    "start_intro": "Start with Book One and follow the completed journey through Maelstrom and Dragon Knight.",
+    "world_heading": "A World on the Edge of Darkness",
+    "world_intro": "Three crystals once sealed an ancient prison. Now the world has forgotten, the kingdoms turn against one another, and the Prince of Shade stirs in the shadows."
+  },
+  "buttons": {
+    "primary_text": "Begin the Journey",
+    "primary_url": "trilogy.html",
+    "secondary_text": "Explore the World",
+    "secondary_url": "world.html",
+    "start_primary_text": "Start Here",
+    "start_primary_url": "start.html",
+    "start_secondary_text": "Read a Preview",
+    "start_secondary_url": "sample.html"
+  },
+  "crystals": {
+    "blue_title": "Blue Crystal",
+    "blue_text": "Blue belongs to the Humans, who originally came to these lands from the sea.",
+    "green_title": "Green Crystal",
+    "green_text": "Green belongs to the Dwarves, in recognition of their woodland home.",
+    "red_title": "Red Crystal",
+    "red_text": "Red belongs to the Faerkine and their ancient connection to the fabled, long-lost magics of the Elders, also known as the Old Ones, the original bringers of magic to the world."
+  },
+  "books": {
+    "wyvern": {
+      "title": "Wyvern",
+      "number": "Book One",
+      "description": "A mother flees through snow-covered mountains while the man she loves buys her time with his life. A child is born into a war that has already begun. Three thousand years after an ancient evil was sealed away, the crystals are found again and the Prince of Shade begins to stir.",
+      "tagline": "Save a princess. Win a lost war. Defeat Evil. Stay alive.",
+      "buy_url": "https://www.amazon.co.uk/s?k=Wyvern+D.J.+O%27Brien",
+      "video_url": "https://www.instagram.com/reel/C8uxVgJNctQ/?utm_source=ig_embed&utm_campaign=loading",
+      "subtitle": "Book One",
+      "cover_image": "/assets/wyvern-cover.jpg"
+    },
+    "maelstrom": {
+      "title": "Maelstrom",
+      "number": "Book Two",
+      "description": "The struggle widens beyond the familiar kingdoms. The Great Maelstrom and the dangers beyond the Roaring Shallows reveal the true scale of the conflict.",
+      "buy_url": "https://www.amazon.co.uk/s?k=Maelstrom+D.J.+O%27Brien",
+      "video_url": "https://www.instagram.com/reel/C9pujGItp6h/?utm_source=ig_embed&utm_campaign=loading",
+      "subtitle": "Book Two",
+      "cover_image": "/assets/maelstrom-cover.jpg"
+    },
+    "dragon_knight": {
+      "title": "Dragon Knight",
+      "number": "Book Three",
+      "description": "The final battle brings heroes, enemies, prophecy and ancient power together in the concluding volume of the completed trilogy.",
+      "buy_url": "https://www.amazon.co.uk/s?k=Dragon+Knight+D.J.+O%27Brien",
+      "video_url": "https://www.instagram.com/reel/DPRsSW9DWW-/?utm_source=ig_embed&utm_campaign=loading",
+      "subtitle": "Book Three",
+      "cover_image": "/assets/dragon-knight-cover.jpg"
+    },
+    "trilogy_video_url": "https://www.instagram.com/reel/DOmZXdAASc4/?utm_source=ig_embed&utm_campaign=loading"
+  },
+  "characters": [
+    {
+      "id": "brinn",
+      "name": "Brinn Thronso",
+      "role": "Central protagonist",
+      "description": "An unlikely figure drawn towards a destiny far greater and more dangerous than the life he expected.",
+      "image": ""
+    },
+    {
+      "id": "megan",
+      "name": "Princess Megan",
+      "role": "Princess and political figure",
+      "description": "A princess caught between duty, war and the possibility of uniting a shattered world.",
+      "image": ""
+    },
+    {
+      "id": "ben",
+      "name": "Ben Preem",
+      "role": "Jarrian military officer",
+      "description": "A frontline officer fighting the invading Horde. His story follows the war itself and reveals its progress through the eyes of a soldier caught at its centre.",
+      "image": ""
+    },
+    {
+      "id": "ultor",
+      "name": "Ultor Halfbreed",
+      "role": "Warrior and outsider",
+      "description": "A formidable presence in a world divided by old hatreds, divided races and ancient secrets.",
+      "image": ""
+    },
+    {
+      "id": "helfen",
+      "name": "Helfwen and Anabel",
+      "role": "Allies within the wider conflict",
+      "description": "Key figures whose loyalties, histories and actions contribute to the trilogy's expanding conflict.",
+      "image": ""
+    },
+    {
+      "id": "shade",
+      "name": "The Prince of Shade",
+      "role": "Ancient enemy",
+      "description": "A shadow gathering behind war and prophecy, tied to the evil imprisoned three thousand years before.",
+      "image": ""
+    }
+  ],
+  "timeline": [
+    {
+      "period": "Three thousand years ago",
+      "title": "The Ancient War",
+      "description": "Three races stood together against a great evil."
+    },
+    {
+      "period": "After the war",
+      "title": "The Three Crystals",
+      "description": "The crystals seal the prison and preserve the world from the darkness within."
+    },
+    {
+      "period": "Generations later",
+      "title": "The World Forgets",
+      "description": "Old alliances fade, kingdoms divide, and prophecy becomes legend."
+    },
+    {
+      "period": "Book One",
+      "title": "Wyvern",
+      "description": "The crystals are found again. War spreads and the Prince of Shade stirs."
+    },
+    {
+      "period": "Book Two",
+      "title": "Maelstrom",
+      "description": "The conflict moves into a wider and more dangerous world."
+    },
+    {
+      "period": "Book Three",
+      "title": "Dragon Knight",
+      "description": "The prophecy, the races and the ancient enemy converge in the final struggle."
+    }
+  ],
+  "reviews": [
+    {
+      "quote": "A classic trilogy in the making.",
+      "source": "Reader Views"
+    },
+    {
+      "quote": "A compelling narrative filled with tension and intrigue... richly imagined and immersive.",
+      "source": "Readers’ Favorite"
+    },
+    {
+      "quote": "I couldn’t put it down... finished in two days.",
+      "source": "Booksprout reviewer"
+    },
+    {
+      "quote": "Full of likable characters and believable villains... highly compelling.",
+      "source": "Booksprout reviewer"
+    },
+    {
+      "quote": "A wonderful and epic adventure.",
+      "source": "The Book Review Crew"
+    }
+  ],
+  "about": {
+    "heading": "About D.J. O’Brien",
+    "paragraphs": [
+      "D.J. O’Brien is an Irish fantasy author and the creator of the completed Dark Lair Trilogy.",
+      "His fiction combines ancient prophecy, war, unlikely heroes, divided kingdoms and the return of a darkness believed defeated three thousand years ago."
+    ]
+  },
+  "contact": {
+    "heading": "Contact",
+    "intro": "Use this secure form for review, interview, media and publishing enquiries.",
+    "name_label": "Name",
+    "email_label": "Email",
+    "subject_label": "Subject",
+    "message_label": "Message",
+    "submit_text": "Send enquiry"
+  },
+  "news": [
+    {
+      "category": "Website Update",
+      "title": "The Official Home of The Dark Lair Trilogy",
+      "text": "The official website brings together the complete trilogy, original maps, character introductions, reviews and promotional videos in one place."
+    },
+    {
+      "category": "Series",
+      "title": "The Trilogy Is Complete",
+      "text": "Readers can begin with Wyvern, continue through Maelstrom, and conclude the journey with Dragon Knight."
+    },
+    {
+      "category": "World of Dark Lair",
+      "title": "Explore the Maps",
+      "text": "The regional map from Wyvern and the expanded world map from books two and three are available in the Cartographer's Atlas."
+    }
+  ],
+  "archives": [
+    {
+      "slug": "welcome-to-the-archives",
+      "title": "Welcome to the Archives",
+      "subtitle": "A note from the Arch Scribe of the Western Isles",
+      "date": "2026-08-01",
+      "category": "Personal Papers",
+      "newsletter_excerpt": "Five centuries have passed since the events now remembered as the Dark Lair Trilogy. Brihanon gathers what remains.",
+      "hero_image": "/assets/uploads/backgrounds/archive-brihanon-at-work.webp",
+      "hero_alt": "Brihanon writing by candlelight in his library",
+      "body": "I was not there when the old kingdoms faced the darkness. Five centuries separate my life from theirs. What remains are fragments: chronicles, letters, weathered maps, soldiers’ journals and songs carried across generations. Some agree. Many do not.\n\nI was born among the cloistered scribes of the Western Isles, where the histories are copied and preserved against the slow ruin of time. Five years ago, after Arch Scribe Scarro died, I was sent to the King’s Tower at Kan-Ta, Jarro. There I shall remain, advising the king when called upon and tending the records entrusted to my care.\n\nThe lands now know peace. The western kingdoms commune agreeably, and no dragon or wyvern has been seen in a hundred years. Peace, however, can persuade people that danger was never real. My purpose is not to embellish the past, but to preserve what can still be known and to admit plainly what cannot.",
+      "gallery": [],
+      "video_file": "",
+      "video_url": "",
+      "video_caption": "",
+      "seo_description": "Enter the Archives of Brihanon, Arch Scribe of the Western Isles, and explore the histories and lore of The Dark Lair Trilogy."
+    },
+    {
+      "slug": "a-tale-of-terror",
+      "title": "A Tale of Terror",
+      "subtitle": "Manuscript I",
+      "date": "2026-08-01",
+      "category": "Personal Papers",
+      "newsletter_excerpt": "A finished illuminated manuscript from Brihanon’s Archives: A Tale of Terror.",
+      "hero_image": "/assets/uploads/archive-scrolls/a-tale-of-terror.png",
+      "hero_alt": "A Tale of Terror, recorded by Brihanon.",
+      "manuscript_image": "/assets/uploads/archive-scrolls/a-tale-of-terror.png",
+      "body": "",
+      "gallery": [],
+      "video_file": "",
+      "video_url": "",
+      "video_caption": "",
+      "seo_description": "Read A Tale of Terror, an illuminated manuscript from Brihanon’s Archives in the world of The Dark Lair Trilogy."
+    },
+    {
+      "slug": "on-the-birth-of-brinn-thronso",
+      "title": "On the Birth of Brinn Thronso",
+      "subtitle": "Scroll II",
+      "date": "2026-08-01",
+      "category": "Personal Papers",
+      "newsletter_excerpt": "A finished illuminated manuscript from Brihanon’s Archives: On the Birth of Brinn Thronso.",
+      "hero_image": "/assets/uploads/archive-scrolls/on-the-birth-of-brinn-thronso.png",
+      "hero_alt": "The Royal Archives of Kan-Ta record concerning the birth of Brinn Thronso.",
+      "manuscript_image": "/assets/uploads/archive-scrolls/on-the-birth-of-brinn-thronso.png",
+      "body": "",
+      "gallery": [],
+      "video_file": "",
+      "video_url": "",
+      "video_caption": "",
+      "seo_description": "Read On the Birth of Brinn Thronso, an illuminated manuscript from Brihanon’s Archives in the world of The Dark Lair Trilogy."
+    },
+    {
+      "slug": "a-treatise-concerning-dragons-and-wyverns",
+      "title": "A Treatise Concerning Dragons and Wyverns",
+      "subtitle": "Scroll III",
+      "date": "2026-08-01",
+      "category": "Bestiary",
+      "newsletter_excerpt": "A finished illuminated manuscript from Brihanon’s Archives: A Treatise Concerning Dragons and Wyverns.",
+      "hero_image": "/assets/uploads/archive-scrolls/a-treatise-concerning-dragons-and-wyverns.png",
+      "hero_alt": "Brihanon’s treatise concerning dragons and wyverns.",
+      "manuscript_image": "/assets/uploads/archive-scrolls/a-treatise-concerning-dragons-and-wyverns.png",
+      "body": "",
+      "gallery": [],
+      "video_file": "",
+      "video_url": "",
+      "video_caption": "",
+      "seo_description": "Read A Treatise Concerning Dragons and Wyverns, an illuminated manuscript from Brihanon’s Archives in the world of The Dark Lair Trilogy."
+    },
+    {
+      "slug": "the-three-crystals",
+      "title": "The Three Crystals",
+      "subtitle": "Scroll IV",
+      "date": "2026-08-01",
+      "category": "Ancient Lore",
+      "newsletter_excerpt": "A finished illuminated manuscript from Brihanon’s Archives: The Three Crystals.",
+      "hero_image": "/assets/uploads/archive-scrolls/the-three-crystals.png",
+      "hero_alt": "Brihanon’s archive scroll concerning the Three Crystals.",
+      "manuscript_image": "/assets/uploads/archive-scrolls/the-three-crystals.png",
+      "body": "",
+      "gallery": [],
+      "video_file": "",
+      "video_url": "",
+      "video_caption": "",
+      "seo_description": "Read The Three Crystals, an illuminated manuscript from Brihanon’s Archives in the world of The Dark Lair Trilogy."
+    },
+    {
+      "slug": "the-wars-of-men-before-the-great-darkness",
+      "title": "The Wars of Men Before the Great Darkness",
+      "subtitle": "Scroll V",
+      "date": "2026-08-01",
+      "category": "Histories",
+      "newsletter_excerpt": "A finished illuminated manuscript from Brihanon’s Archives: The Wars of Men Before the Great Darkness.",
+      "hero_image": "/assets/uploads/archive-scrolls/the-wars-of-men-before-the-great-darkness.png",
+      "hero_alt": "Brihanon’s record of the wars of men before the Great Darkness.",
+      "manuscript_image": "/assets/uploads/archive-scrolls/the-wars-of-men-before-the-great-darkness.png",
+      "body": "",
+      "gallery": [],
+      "video_file": "",
+      "video_url": "",
+      "video_caption": "",
+      "seo_description": "Read The Wars of Men Before the Great Darkness, an illuminated manuscript from Brihanon’s Archives in the world of The Dark Lair Trilogy."
+    },
+    {
+      "slug": "concerning-the-elders",
+      "title": "Concerning the Elders",
+      "subtitle": "Scroll VI",
+      "date": "2026-08-01",
+      "category": "Ancient Lore",
+      "newsletter_excerpt": "A finished illuminated manuscript from Brihanon’s Archives: Concerning the Elders.",
+      "hero_image": "/assets/uploads/archive-scrolls/concerning-the-elders.png",
+      "hero_alt": "Brihanon’s manuscript concerning the Elders.",
+      "manuscript_image": "/assets/uploads/archive-scrolls/concerning-the-elders.png",
+      "body": "",
+      "gallery": [],
+      "video_file": "",
+      "video_url": "",
+      "video_caption": "",
+      "seo_description": "Read Concerning the Elders, an illuminated manuscript from Brihanon’s Archives in the world of The Dark Lair Trilogy."
+    },
+    {
+      "slug": "of-wizards-and-warlocks",
+      "title": "Of Wizards and Warlocks, Wielders and Teachers",
+      "subtitle": "Scroll VII",
+      "date": "2026-08-01",
+      "category": "Ancient Lore",
+      "newsletter_excerpt": "A finished illuminated manuscript from Brihanon’s Archives: Of Wizards and Warlocks, Wielders and Teachers.",
+      "hero_image": "/assets/uploads/archive-scrolls/of-wizards-and-warlocks.png",
+      "hero_alt": "Brihanon’s manuscript concerning wizards, warlocks, wielders and teachers.",
+      "manuscript_image": "/assets/uploads/archive-scrolls/of-wizards-and-warlocks.png",
+      "body": "",
+      "gallery": [],
+      "video_file": "",
+      "video_url": "",
+      "video_caption": "",
+      "seo_description": "Read Of Wizards and Warlocks, Wielders and Teachers, an illuminated manuscript from Brihanon’s Archives in the world of The Dark Lair Trilogy."
+    },
+    {
+      "slug": "the-kingdoms-of-the-west",
+      "title": "The Kingdoms of the West",
+      "subtitle": "Scroll IX",
+      "date": "2026-08-01",
+      "category": "Geography",
+      "newsletter_excerpt": "A finished illuminated manuscript from Brihanon’s Archives: The Kingdoms of the West.",
+      "hero_image": "/assets/uploads/archive-scrolls/the-kingdoms-of-the-west.png",
+      "hero_alt": "Brihanon’s record of the kingdoms of the West.",
+      "manuscript_image": "/assets/uploads/archive-scrolls/the-kingdoms-of-the-west.png",
+      "body": "",
+      "gallery": [],
+      "video_file": "",
+      "video_url": "",
+      "video_caption": "",
+      "seo_description": "Read The Kingdoms of the West, an illuminated manuscript from Brihanon’s Archives in the world of The Dark Lair Trilogy."
+    },
+    {
+      "slug": "the-golden-city",
+      "title": "The Golden City",
+      "subtitle": "Scroll XI",
+      "date": "2026-08-01",
+      "category": "Geography",
+      "newsletter_excerpt": "A finished illuminated manuscript from Brihanon’s Archives: The Golden City.",
+      "hero_image": "/assets/uploads/archive-scrolls/the-golden-city.png",
+      "hero_alt": "Brihanon’s archive scroll concerning the Golden City.",
+      "manuscript_image": "/assets/uploads/archive-scrolls/the-golden-city.png",
+      "body": "",
+      "gallery": [],
+      "video_file": "",
+      "video_url": "",
+      "video_caption": "",
+      "seo_description": "Read The Golden City, an illuminated manuscript from Brihanon’s Archives in the world of The Dark Lair Trilogy."
+    },
+    {
+      "slug": "of-witches-hags-and-the-undead",
+      "title": "Of Witches, Hags, and the Undead",
+      "subtitle": "Scroll X",
+      "date": "2026-08-01",
+      "category": "Bestiary",
+      "newsletter_excerpt": "A finished illuminated manuscript from Brihanon’s Archives: Of Witches, Hags, and the Undead.",
+      "hero_image": "/assets/uploads/archive-scrolls/of-witches-hags-and-the-undead.png",
+      "hero_alt": "Brihanon’s manuscript concerning witches, hags and the undead.",
+      "manuscript_image": "/assets/uploads/archive-scrolls/of-witches-hags-and-the-undead.png",
+      "body": "",
+      "gallery": [],
+      "video_file": "",
+      "video_url": "",
+      "video_caption": "",
+      "seo_description": "Read Of Witches, Hags, and the Undead, an illuminated manuscript from Brihanon’s Archives in the world of The Dark Lair Trilogy."
+    },
+    {
+      "slug": "the-karesh-people",
+      "title": "The Karesh People",
+      "subtitle": "Scroll VII",
+      "date": "2026-08-01",
+      "category": "Histories",
+      "newsletter_excerpt": "A finished illuminated manuscript from Brihanon’s Archives: The Karesh People.",
+      "hero_image": "/assets/uploads/archive-scrolls/the-karesh-people.png",
+      "hero_alt": "Brihanon’s archive scroll concerning the Karesh people.",
+      "manuscript_image": "/assets/uploads/archive-scrolls/the-karesh-people.png",
+      "body": "",
+      "gallery": [],
+      "video_file": "",
+      "video_url": "",
+      "video_caption": "",
+      "seo_description": "Read The Karesh People, an illuminated manuscript from Brihanon’s Archives in the world of The Dark Lair Trilogy."
+    }
+  ],
+  "social": {
+    "instagram": "https://www.instagram.com/djobrien.author/",
+    "amazon": "https://www.amazon.co.uk/s?k=D.J.+O%27Brien+Dark+Lair+Trilogy",
+    "goodreads": "https://www.goodreads.com/search?q=D.J.+O%27Brien+Dark+Lair",
+    "facebook": "",
+    "youtube": "",
+    "tiktok": "",
+    "website": ""
+  },
+  "appearance": {
+    "overlay_strength": 28,
+    "backgrounds": {
+      "404": "/assets/scenery/404.webp",
+      "home": "/assets/uploads/backgrounds/home-amberlay-benteer-mountains.webp",
+      "start": "/assets/uploads/backgrounds/trilogy-deel-roat-road.webp",
+      "trilogy": "/assets/uploads/backgrounds/home-gathering-storm.webp",
+      "world": "/assets/uploads/backgrounds/world-dark-lair-lands.webp",
+      "characters": "/assets/uploads/backgrounds/characters-great-hall.webp",
+      "timeline": "/assets/uploads/backgrounds/timeline-echoes-3000-years.webp",
+      "reviews": "/assets/uploads/backgrounds/reviews-hall-of-legends.webp",
+      "news": "/assets/uploads/backgrounds/newsletter-scribes-desk.webp",
+      "about": "/assets/uploads/backgrounds/about-writers-study.webp",
+      "media": "/assets/scenery/media.webp",
+      "contact": "/assets/uploads/backgrounds/contact-messengers-tower.webp",
+      "sample": "/assets/scenery/sample.webp",
+      "privacy": "/assets/scenery/privacy.webp",
+      "thanks": "/assets/scenery/thanks.webp",
+      "archives": "/assets/uploads/backgrounds/archives-brihanons-library.webp",
+      "archive": "/assets/uploads/backgrounds/archive-brihanon-at-work.webp",
+      "newsletter": "/assets/uploads/backgrounds/newsletter-scribes-desk.webp"
+    }
+  }
+}
