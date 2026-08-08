@@ -585,22 +585,3 @@ body[data-page="archive"] .archive-scroll-view img{max-width:min(100%,820px);bac
 .art-credits{font-size:.78rem;opacity:.78;margin-top:.65rem}
 @media(max-width:900px){body[data-page="archives"] .archive-grid{grid-template-columns:repeat(2,minmax(0,1fr))}body[data-page="archives"] .archive-title-list{columns:2}}
 @media(max-width:620px){body[data-page="archives"] .archive-grid{grid-template-columns:1fr}body[data-page="archives"] .archive-title-list{columns:1}}
-
-
-/* Read a Preview: keep the manuscript parchment light and readable.
-   Scoped to the sample page so no other panels/pages are affected. */
-body[data-page="sample"] .reading-page > .manuscript.panel{
-  background:linear-gradient(rgba(242,230,202,.98),rgba(221,201,164,.98));
-  color:#251c14;
-  backdrop-filter:none;
-}
-body[data-page="sample"] .reading-page > .manuscript.panel p,
-body[data-page="sample"] .reading-page > .manuscript.panel h2,
-body[data-page="sample"] .reading-page > .manuscript.panel strong,
-body[data-page="sample"] .reading-page > .manuscript.panel em{
-  color:#251c14;
-}
-body[data-page="sample"] .reading-page > .manuscript.panel hr{
-  border:0;
-  border-top:1px solid rgba(80,50,20,.35);
-}
