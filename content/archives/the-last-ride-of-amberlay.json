@@ -1,18 +1,18 @@
 {
-  "order": 9,
-  "slug": "the-widows-wheel",
-  "title": "The Widow’s Wheel",
-  "subtitle": "Manuscript 9",
-  "date": "2026-08-08",
+  "order": 1,
+  "slug": "a-tale-of-terror",
+  "title": "A Tale of Terror",
+  "subtitle": "Scroll I",
+  "date": "2026-08-01",
   "category": "Personal Papers",
-  "newsletter_excerpt": "A surviving record transcribed and preserved in Brihanon’s Archives: The Widow’s Wheel.",
-  "hero_image": "/assets/uploads/archive-scrolls/the-widows-wheel.png",
-  "hero_alt": "Brihanon’s manuscript, The Widow’s Wheel.",
-  "manuscript_image": "/assets/uploads/archive-scrolls/the-widows-wheel.png",
+  "newsletter_excerpt": "A finished illuminated manuscript from Brihanon’s Archives: A Tale of Terror.",
+  "hero_image": "/assets/uploads/archive-scrolls/a-tale-of-terror.png",
+  "hero_alt": "A Tale of Terror, recorded by Brihanon.",
+  "manuscript_image": "/assets/uploads/archive-scrolls/a-tale-of-terror.png",
   "body": "",
   "gallery": [],
   "video_file": "",
   "video_url": "",
   "video_caption": "",
-  "seo_description": "Read The Widow’s Wheel, preserved in Brihanon’s Archives in the world of The Dark Lair Trilogy."
+  "seo_description": "Read A Tale of Terror, an illuminated manuscript from Brihanon’s Archives in the world of The Dark Lair Trilogy."
 }

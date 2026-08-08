@@ -1,7 +1,8 @@
-A TALE OF TERROR — SCROLL REPLACEMENT PATCH
+THE THREE CRYSTALS SCROLL PATCH
 
-Replace only:
-assets/uploads/archive-scrolls/a-tale-of-terror.png
+This patch replaces only:
+assets/uploads/archive-scrolls/the-three-crystals.png
 
-This patch uses the approved corrected scroll image exactly as supplied.
-No other website files are changed.
+No code, content JSON, links, routes, CMS settings, or other assets are changed.
+
+Apply by copying the assets folder into the root of the current website project and allowing it to replace the existing file.
