@@ -1,16 +1,7 @@
-BRIHANON'S ARCHIVES BACKGROUND PATCH
+A TALE OF TERROR — SCROLL REPLACEMENT PATCH
 
-Purpose:
-Replaces ONLY the Brihanon's Archives page background.
+Replace only:
+assets/uploads/archive-scrolls/a-tale-of-terror.png
 
-Replacement file:
-assets/uploads/backgrounds/archives-brihanons-library.webp
-
-Source:
-The red leather repeating Dark Lair Trilogy image supplied by D.J. O'Brien in chat.
-
-No HTML, CSS, JavaScript, scroll images, content files, or other page backgrounds are changed.
-
-Artwork credit to retain on the website:
-Artwork by Jesus Da Silva
-Cover title design by Lesia S. (germancreative)
+This patch uses the approved corrected scroll image exactly as supplied.
+No other website files are changed.
