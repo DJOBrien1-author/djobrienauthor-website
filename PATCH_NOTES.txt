@@ -4,7 +4,7 @@ Contains:
 - all 12 newly completed manuscript images, renamed cleanly for the website
 - exactly 12 archive records, in a clean sequential index
 - corrected “Wielders and Leechers” wording
-- The Golden City (Lee’s’e), The Widow’s Wheel, Pirates and Slavers, The Karesh
+- The Golden City (Lee'se), The Widow’s Wheel, Pirates and Slavers, The Karesh
 - rebuilt Archives landing page and manuscript display styling
 - regenerated content/site.json so the patch works immediately
 - archive-page artwork credits preserved in the footer

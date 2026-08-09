@@ -1,10 +1,10 @@
-A TALE OF TERROR CORRECTED SCROLL PATCH
+LEE'SE SPELLING PATCH
 
-Copy the folders in this ZIP over the matching folders in your website.
-Choose Replace when prompted.
+Corrects the website text spelling from the anomalous “Lee’s’e” to the canonical “Lee'se”.
 
-Replaced website image:
-/assets/uploads/archive-scrolls/a-tale-of-terror.png
+Files included:
+- content/site.json
+- content/archives/the-kingdoms-of-the-west.json
+- PATCH_NOTES.txt
 
-This version uses the corrected A Tale of Terror scroll supplied by you.
-The archive title, category, numbering, links and source record remain unchanged.
+No images, layout, URLs, archive ordering, or other content are changed.
