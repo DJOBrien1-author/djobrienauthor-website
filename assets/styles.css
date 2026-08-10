@@ -456,10 +456,10 @@ body[data-page="news"]{--page-bg:url('/assets/artwork/jesus-da-silva/news-origin
 body[data-page="about"]{--page-bg:url('/assets/artwork/jesus-da-silva/about-original-dragon.webp');--scene-overlay:.72}
 body[data-page="media"]{--page-bg:url('/assets/artwork/jesus-da-silva/media-original-maelstrom.webp');--scene-overlay:.66}
 body[data-page="contact"]{--page-bg:url('/assets/artwork/jesus-da-silva/contact-original-dragons.webp');--scene-overlay:.72}
-body[data-page="sample"]{--page-bg:url('/assets/artwork/jesus-da-silva/home-wyvern-original.webp');--scene-overlay:.56}
-body[data-page="privacy"]{--page-bg:url('/assets/scenery/privacy.webp')}
-body[data-page="thanks"]{--page-bg:url('/assets/scenery/thanks.webp')}
-body[data-page="404"]{--page-bg:url('/assets/scenery/404.webp')}
+body[data-page="sample"]{--page-bg:url('/assets/scenery/sample.webp')}
+body[data-page="privacy"]{--page-bg:url('/assets/wyvern-cover.jpg')}
+body[data-page="thanks"]{--page-bg:url('/assets/maelstrom-cover.jpg')}
+body[data-page="404"]{--page-bg:url('/assets/dragon-knight-cover.jpg')}
 main{background:transparent}
 .hero{
   position:relative;
