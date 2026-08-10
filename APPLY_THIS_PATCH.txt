@@ -1,10 +1,11 @@
-LEE'SE SPELLING PATCH
+D.J. O'Brien website patch — Sample page human artwork v2
 
-Corrects the website text spelling from the anomalous “Lee’s’e” to the canonical “Lee'se”.
+This corrected patch has NO enclosing folder. Extract/copy these files directly into the repository root:
+- sample.html
+- assets/styles.css
 
-Files included:
-- content/site.json
-- content/archives/the-kingdoms-of-the-west.json
-- PATCH_NOTES.txt
+It replaces the Sample page AI scenery background with the existing commissioned Wyvern artwork by Jesus Da Silva and cache-busts the stylesheet so browsers load the change immediately.
 
-No images, layout, URLs, archive ordering, or other content are changed.
+After deploying, open:
+https://djobrienauthor.com/sample
+and hard-refresh once with Ctrl+F5 if needed.
