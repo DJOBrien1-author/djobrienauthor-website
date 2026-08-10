@@ -1,0 +1,12 @@
+D.J. O'Brien website patch — Sample page human artwork
+
+Purpose:
+- Replaces the old /sample page background (assets/scenery/sample.webp) with the existing original commissioned Wyvern artwork by Jesus Da Silva.
+- Adds "Artwork by Jesus Da Silva" to the Sample page footer.
+
+Files to copy into the website repository root, preserving paths:
+- sample.html
+- assets/styles.css
+
+No image file needs to be uploaded: the replacement artwork already exists at:
+assets/artwork/jesus-da-silva/home-wyvern-original.webp
